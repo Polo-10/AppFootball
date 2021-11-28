@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: auto;
+  background: #1d1e2c;
+}
+
+.main__page__header {
+  position: relative;
+  width: 80%;
+  left: 20%;
+}
+
+.main__page__aside {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background: #b24c63;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  position: relative;
+  left: 13%;
+  -webkit-transform: translate(-13%, 0);
+          transform: translate(-13%, 0);
+  border-radius: 10px;
+  height: 450px;
+  width: 450px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* horizontally center */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* vertically center */
+  background: linear-gradient(132.02deg, rgba(178, 76, 99, 0.989229) 15%, #1d1e2c 86.7%);
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 113%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 220px;
+}
+
+.text {
+  padding: 10px;
+  padding-top: 25px;
+  color: white;
+  font-size: 38px;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  height: 100px;
+  margin: 5px;
+  padding-left: 220px;
+  inline-size: 550px;
+  overflow-wrap: break-word;
+  letter-spacing: 1px;
+  font-family: "Quantico", sans-serif;
+}
+
+.lorem {
+  padding-top: 65px;
+  inline-size: 520px;
+  font-size: 20px;
+  color: white;
+  overflow-wrap: break-word;
+}
+
+.liveScore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 13px 41px;
+  position: absolute;
+  width: 180px;
+  height: 57px;
+  left: calc(50% - 180px / 2 - 202px);
+  top: calc(50% - 57px / 2 + 281.5px);
+  background: #1d7874;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  font-size: 22px;
+  line-height: 141.62%;
+  color: #ffffff;
+  inline-size: 215px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
