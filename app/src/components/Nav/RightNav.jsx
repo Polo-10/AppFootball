@@ -9,7 +9,7 @@ import { RiTeamFill } from "react-icons/ri";
 import { IoPeopleSharp } from "react-icons/io5";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
-import Lewandowski from "../../img/Robert Lewandowski.png";
+// import Lewandowski from "../../img/Robert Lewandowski.png";
 
 const Ul = styled.ul`
   list-style: none;
@@ -18,9 +18,10 @@ const Ul = styled.ul`
   border-radius: 10px;
   padding-left: 20px;
   user-select: none;
+  padding-top: 200px;
   /* z-index: 999; */
   li {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 18px 0px;
     list-style: none;
     text-decoration: none;
@@ -80,14 +81,14 @@ const RightNav = ({ open }) => {
                 </span>
               </NavLink>
             </li>
-            <li className="liHover">
+            {/* <li className="liHover">
               <NavLink to="/teams">
                 <RiTeamFill className="icon" /> Teams
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
                 </span>
               </NavLink>
-            </li>
+            </li> */}
             <li className="liHover">
               <NavLink to="/footballers">
                 <IoFootball className="icon" /> Footballers

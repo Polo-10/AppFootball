@@ -55,8 +55,8 @@ function App() {
 
     <div className="Wrapper">
       {/* <div className="team">
-        <img src={Ronaldo} alt="dziewczyna 1 kolor" className="color" />
-        <img src={Messi} alt="dziewczyna 1 szara" className="gray" />
+        <img src={Ronaldo} alt="" className="color" />
+        <img src={Messi} alt="" className="gray" />
         <div className="member">
           <h1>Anna Baugart</h1>
           <h2>Programistka JS</h2>

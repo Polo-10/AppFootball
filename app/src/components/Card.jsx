@@ -1,6 +1,7 @@
 import Messi from "../../src/img//LionelMessi.png";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/mainPage/card.module.scss";
+import { AiOutlineDoubleRight } from "react-icons/ai";
 
 const Card = () => {
   const navigate = useNavigate();
@@ -23,6 +24,9 @@ const Card = () => {
 
         <button onClick={handleRoute} className={styles.liveScore}>
           LIVE SCORE
+          {/* <span className="spanHover2">
+            <AiOutlineDoubleRight />
+          </span> */}
         </button>
       </div>
     </div>

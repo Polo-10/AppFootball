@@ -6,19 +6,16 @@
 }
 
 body {
-  position: relative;
   overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-  top: 0;
+  width: 100vw;
   overflow: auto;
   background: #1d1e2c;
+  min-height: 100vh;
 }
 
-.main__page__header {
-  position: relative;
-  width: 80%;
-  left: 20%;
+.Wrapper {
+  width: 100%;
+  min-height: 100%;
 }
 
 .main__page__aside {
@@ -33,66 +30,91 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.card {
-  position: relative;
-  left: 13%;
-  -webkit-transform: translate(-13%, 0);
-          transform: translate(-13%, 0);
-  border-radius: 10px;
-  height: 450px;
-  width: 450px;
+.aside {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background: #1d7874;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: -10;
+}
+
+.containerRonaldo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 5.5%;
+  -webkit-transform: translate(-5.5%, -50%);
+          transform: translate(-5.5%, -50%);
   z-index: 100;
+}
+
+.ronaldo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* horizontally center */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* vertically center */
-  background: linear-gradient(132.02deg, rgba(178, 76, 99, 0.989229) 15%, #1d1e2c 86.7%);
+  position: relative;
+  border-radius: 10px;
+  height: 450px;
+  width: 450px;
 }
 
-.card img {
+.ronaldo img {
   max-width: 100%;
   max-height: 113%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 100;
 }
 
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 220px;
+.container2 {
+  position: absolute;
+  padding: 16px;
+  top: 30%;
+  left: 65%;
+  -webkit-transform: translate(-65%, -30%);
+          transform: translate(-65%, -30%);
+  width: 50%;
+  background-color: #fafafa;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 999;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 10px;
+  -webkit-box-shadow: white 0px 5px 5px;
+          box-shadow: white 0px 5px 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 }
 
-.text {
-  padding: 10px;
-  padding-top: 25px;
-  color: white;
-  font-size: 38px;
-  -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
-  height: 100px;
-  margin: 5px;
-  padding-left: 220px;
-  inline-size: 550px;
-  overflow-wrap: break-word;
-  letter-spacing: 1px;
-  font-family: "Quantico", sans-serif;
+.container2::-webkit-scrollbar {
+  width: 1em;
 }
 
-.lorem {
-  padding-top: 65px;
-  inline-size: 520px;
-  font-size: 20px;
-  color: white;
-  overflow-wrap: break-word;
-}
-
-.liveScore {
+.title-box {
+  margin: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,24 +122,64 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 13px 41px;
-  position: absolute;
-  width: 180px;
-  height: 57px;
-  left: calc(50% - 180px / 2 - 202px);
-  top: calc(50% - 57px / 2 + 281.5px);
-  background: #1d7874;
-  border-radius: 10px;
-  outline: 0;
-  border: 0;
-  font-size: 22px;
-  line-height: 141.62%;
-  color: #ffffff;
-  inline-size: 215px;
-  letter-spacing: 0px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1.5em;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+.title-box #goals {
+  font-size: 1.8em;
+}
+
+.title-box::-webkit-scrollbar {
+  width: 1em;
+}
+
+.team {
+  width: 100px;
+}
+
+.team img {
+  height: 54px;
+  width: 54px;
+}
+
+.icon {
+  margin-bottom: 6px;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 24px;
   cursor: pointer;
+}
+
+.liHover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.liHover:hover {
+  font-size: 25.5px;
+  margin-left: 8px;
+}
+
+.spanHover {
+  visibility: hidden;
+  vertical-align: middle;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.liHover:hover .spanHover {
+  visibility: visible;
+  margin-left: 7px;
+  -webkit-transition-property: none;
+  transition-property: none;
 }
 /*# sourceMappingURL=style.css.map */

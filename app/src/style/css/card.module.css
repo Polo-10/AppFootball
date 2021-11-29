@@ -1,0 +1,103 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  -webkit-transform: translate(-15%, -50%);
+          transform: translate(-15%, -50%);
+  font-size: Quantico;
+}
+
+.card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  height: 450px;
+  width: 450px;
+  background: linear-gradient(132.02deg, rgba(178, 76, 99, 0.989229) 15%, #1d1e2c 86.7%);
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 113%;
+  padding-left: 45px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.containerDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  padding: 55px 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.text {
+  font-size: 35px;
+  color: white;
+  padding: 10px;
+  padding-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.lorem {
+  font-size: 22px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.liveScore {
+  width: 42%;
+  font-size: 22px;
+  line-height: 140.62%;
+  background: #1d7874;
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 0;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-shadow: 10px 10px 25px #1d7874, -10px 10px 25px #1d7874, -10px -10px 25px #1d7874, 10px -10px 25px #1d7874;
+}
+
+.liveScore:hover {
+  margin-left: 25px;
+}
+/*# sourceMappingURL=card.module.css.map */

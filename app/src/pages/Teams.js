@@ -1,6 +1,6 @@
 import React from "react";
 
 const Teams = () => {
-  return <div>Teams</div>;
+  return <div></div>;
 };
 export default Teams;
