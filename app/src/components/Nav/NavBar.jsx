@@ -8,6 +8,7 @@ const Nav = styled.nav`
   padding: 0 0;
   display: flex;
   justify-content: space-between;
+  opacity: 0.85;
 `;
 
 const Navbar = () => {

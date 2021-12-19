@@ -74,8 +74,8 @@ const RightNav = ({ open }) => {
               </NavLink>
             </li>
             <li className="liHover">
-              <NavLink to="/leagues">
-                <IoPeopleSharp className="icon" /> Leagues
+              <NavLink to="/teams">
+                <IoPeopleSharp className="icon" /> Teams
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
                 </span>
@@ -97,14 +97,14 @@ const RightNav = ({ open }) => {
                 </span>
               </NavLink>
             </li>
-            <li className="liHover">
+            {/* <li className="liHover">
               <NavLink to="/search">
                 <BsSearch className="icon" /> Search
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
                 </span>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
           {/* <img
             src={Lewandowski}

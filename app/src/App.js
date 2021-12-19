@@ -5,7 +5,6 @@ import axios from "axios";
 
 import Navbar from "./components/Nav/NavBar";
 
-import Leagues from "./pages/Leagues";
 import Teams from "./pages/Teams";
 import Footballers from "./pages/Footballers";
 import Search from "./pages/Search";
@@ -71,7 +70,6 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/LiveScore" element={<LiveScore />} />
-            <Route path="/leagues" element={<Leagues />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/footballers" element={<Footballers />} />
             <Route path="/search" element={<Search />} />

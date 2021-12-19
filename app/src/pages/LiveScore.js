@@ -3,7 +3,7 @@ import Ronaldo from "../img/Ronaldo.png";
 import { useState, useEffect } from "react";
 
 const url =
-  "https://apiv3.apifootball.com/?action=get_events&APIkey=b92f032d9c7618db7859b66bcc32e92af91ddca6fb5106ed34a108e3ae167114&match_live=1";
+  "https://apiv3.apifootball.com/?action=get_events&APIkey=97d9664621e7c934b8045ceda543fa95f0dd62e332fac2ba8cbc723d308ffe14&match_live=1";
 
 const ScoreElement = ({
   match_awayteam_name,
@@ -46,7 +46,7 @@ const LiveScore = () => {
     getData();
   }, []);
 
-  console.log(liveScoreState);
+  // console.log(liveScoreState);
   return (
     <>
       <div className="containerBgc">

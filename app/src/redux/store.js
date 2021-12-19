@@ -1,18 +1,18 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { searchReducer } from "./reducers/searchReducer";
-export const localStorageKey = "reduxState";
+// import { createStore, combineReducers, applyMiddleware } from "redux";
+// import thunk from "redux-thunk";
+// import { composeWithDevTools } from "redux-devtools-extension";
+// import { searchReducer } from "./reducers/searchReducer";
+// export const localStorageKey = "reduxState";
 
-const middlewares = [thunk];
+// const middlewares = [thunk];
 
-const composedEnhancers = composeWithDevTools(applyMiddleware(...middlewares));
+// const composedEnhancers = composeWithDevTools(applyMiddleware(...middlewares));
 
-const rootReducer = combineReducers({
-  search: searchReducer,
-});
+// const rootReducer = combineReducers({
+//   search: searchReducer,
+// });
 
-// TODO: initialState from localStorage
-const store = createStore(rootReducer, {}, composedEnhancers);
+// // TODO: initialState from localStorage
+// const store = createStore(rootReducer, {}, composedEnhancers);
 
-export default store;
+// export default store;
