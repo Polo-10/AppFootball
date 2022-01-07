@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { MdLiveTv } from "react-icons/md";
 import { IoFootball } from "react-icons/io5";
@@ -9,7 +9,28 @@ import { RiTeamFill } from "react-icons/ri";
 import { IoPeopleSharp } from "react-icons/io5";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
-// import Lewandowski from "../../img/Robert Lewandowski.png";
+import Slide from "react-reveal/Slide";
+// import { glide } from "react-tiger-transition";
+// import { Navigation, Route, Link, Screen, glide } from "react-tiger-transition";
+// import "react-tiger-transition/styles/main.min.css";
+
+// const glide = ( =>{
+//   name: "glide-right",
+//   direction: "right",
+// });
+
+const linkStyle = {
+  fontSize: 30,
+  textDecoration: "none",
+  color: "black",
+  fontFamily: "Arial",
+};
+
+// const screenStyle = {
+//   display: "flex",
+//   alignItems: "center",
+//   justifyContent: "center",
+// };
 
 const Ul = styled.ul`
   list-style: none;
@@ -21,13 +42,13 @@ const Ul = styled.ul`
   padding-top: 200px;
   /* z-index: 999; */
   li {
-    margin-top: 40px;
+    margin-top: 60px;
     padding: 18px 0px;
     list-style: none;
     text-decoration: none;
     color: white;
-    font-size: 24px;
-    padding-top: 50px;
+    font-size: 25px;
+    padding-top: 55px;
     /* padding-left: 10px; */
   }
   @media (max-width: 2000px) {
@@ -58,44 +79,40 @@ const RightNav = ({ open }) => {
         <nav>
           <ul>
             <li id="1" className="liHover">
-              <NavLink to="/">
-                <BiHomeAlt className="icon" /> MainPage{" "}
-                <span id="2" className="spanHover">
-                  <AiOutlineDoubleRight />
-                </span>
-              </NavLink>
+              <Slide left>
+                <Link to="/">
+                  <BiHomeAlt className="icon" /> MainPage
+                  <span id="2" className="spanHover">
+                    <AiOutlineDoubleRight />
+                  </span>
+                </Link>
+              </Slide>
             </li>
+
             <li className="liHover">
-              <NavLink to="/LiveScore">
+              <Link to="/LiveScore">
                 <MdLiveTv className="icon" /> Live Score
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
                 </span>
-              </NavLink>
+              </Link>
             </li>
             <li className="liHover">
-              <NavLink to="/teams">
+              <Link to="/teams">
                 <IoPeopleSharp className="icon" /> Teams
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
                 </span>
-              </NavLink>
+              </Link>
             </li>
-            {/* <li className="liHover">
-              <NavLink to="/teams">
-                <RiTeamFill className="icon" /> Teams
-                <span className="spanHover">
-                  <AiOutlineDoubleRight />
-                </span>
-              </NavLink>
-            </li> */}
+
             <li className="liHover">
-              <NavLink to="/footballers">
+              <Link to="/footballers">
                 <IoFootball className="icon" /> Footballers
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
                 </span>
-              </NavLink>
+              </Link>
             </li>
             {/* <li className="liHover">
               <NavLink to="/search">
@@ -106,11 +123,6 @@ const RightNav = ({ open }) => {
               </NavLink>
             </li> */}
           </ul>
-          {/* <img
-            src={Lewandowski}
-            style={{ width: "300px", height: "300px" }}
-            alt=""
-          /> */}
         </nav>
       </div>
     </Ul>

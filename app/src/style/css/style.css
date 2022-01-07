@@ -10,6 +10,7 @@ body {
   width: 100vw;
   overflow: auto;
   background: #1d1e2c;
+  background: #666cc5;
   min-height: 100vh;
 }
 
@@ -118,10 +119,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

@@ -1,13 +1,22 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/team/search?api_key=${API_KEY}`;
 
-const TeamsElements = ({ logo }) => {
+const TeamsElements = ({ logo, name, area, venue }) => {
+  const addDefaultImg = (e) => {
+    e.target.src = "https://via.placeholder.com/150/771796";
+  };
+
+  console.log(addDefaultImg);
+
   return (
     <>
-      <img src={logo} alt="" />
+      <p>{name}</p>
+      <img onError={addDefaultImg} src={logo} alt="" />
+      {/* <p>{area}</p>
+      <p>{venue}</p> */}
     </>
   );
 };
@@ -21,7 +30,15 @@ const Teams = () => {
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
-      .then((res) => setTeams(res.data))
+      .then((res) =>
+        setTeams(
+          Array.from(
+            res.data
+              .reduce((map, obj) => map.set(obj.logo, obj), new Map())
+              .values()
+          )
+        )
+      )
       .catch((err) => console.log(err));
   };
 
@@ -35,7 +52,14 @@ const Teams = () => {
       </form>
       <div>
         {teams.length > 0 &&
-          teams.map((item, index) => <TeamsElements logo={item.logo} />)}
+          teams.map((item, index) => (
+            <TeamsElements
+              logo={item.logo}
+              name={item.name}
+              // area={item.area}
+              // venue={item.venue}
+            />
+          ))}
       </div>
     </div>
   );

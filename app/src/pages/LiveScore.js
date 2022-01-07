@@ -2,8 +2,10 @@ import Ronaldo from "../img/Ronaldo.png";
 
 import { useState, useEffect } from "react";
 
+import Slide from "react-reveal/Slide";
+
 const url =
-  "https://apiv3.apifootball.com/?action=get_events&APIkey=97d9664621e7c934b8045ceda543fa95f0dd62e332fac2ba8cbc723d308ffe14&match_live=1";
+  "https://apiv3.apifootball.com/?action=get_events&APIkey=90d5e0c94a9ac18b5cfd5477f3e75d22affab2e0a8f64dad1eafae4564eab3eb&match_live=1";
 
 const ScoreElement = ({
   match_awayteam_name,
@@ -12,13 +14,30 @@ const ScoreElement = ({
   match_hometeam_score,
   team_away_badge,
   team_home_badge,
+  leagueName,
+  matchTime,
+  status,
+  homeRed,
+  awayRed,
+  homeYellow,
+  awayYellow,
+  location,
+  weather,
+  homeScore,
+  awayScore,
+  hasLineup,
 }) => {
+  const addDefaultImg = (e) => {
+    e.target.src = "https://via.placeholder.com/150/771796";
+  };
+
   return (
     <>
       <div className="title-box">
         <div className="team">
-          <img src={team_home_badge} alt="homelogo" />
+          <img onError={addDefaultImg} src={team_home_badge} alt="homelogo" />
           <p>{match_hometeam_name}</p>
+          <p>{homeYellow}</p>
         </div>
       </div>
       <p>
@@ -26,7 +45,7 @@ const ScoreElement = ({
       </p>
       <div className="title-box">
         <div className="team">
-          <img src={team_away_badge} alt="awaylogo" />
+          <img onError={addDefaultImg} src={team_away_badge} alt="awaylogo" />
           <p>{match_awayteam_name}</p>
         </div>
       </div>
@@ -36,6 +55,7 @@ const ScoreElement = ({
 
 const LiveScore = () => {
   const [liveScoreState, setLiveScoreState] = useState([]);
+
   useEffect(() => {
     const getData = async () =>
       fetch(url)
@@ -46,13 +66,16 @@ const LiveScore = () => {
     getData();
   }, []);
 
-  // console.log(liveScoreState);
+  console.log(liveScoreState);
+
   return (
     <>
       <div className="containerBgc">
         <div className="containerRonaldo">
           <div className="ronaldo">
-            <img src={Ronaldo} alt="" />
+            <Slide left>
+              <img src={Ronaldo} alt="" />
+            </Slide>
           </div>
         </div>
         <div className="bgc">
@@ -79,6 +102,7 @@ const LiveScore = () => {
               match_hometeam_score={item.match_hometeam_score}
               team_away_badge={item.team_away_badge}
               team_home_badge={item.team_home_badge}
+              homeYellow={console.log(item.homeYellow)}
             />
           ))}
       </div>

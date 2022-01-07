@@ -2,6 +2,7 @@ import Messi from "../../src/img//LionelMessi.png";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/mainPage/card.module.scss";
 import { AiOutlineDoubleRight } from "react-icons/ai";
+import Zoom from "react-reveal/Zoom";
 
 const Card = () => {
   const navigate = useNavigate();
@@ -12,7 +13,9 @@ const Card = () => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <img src={Messi} alt="" />
+        <Zoom>
+          <img src={Messi} alt="" />
+        </Zoom>
       </div>
 
       <div className={styles.containerDetails}>
