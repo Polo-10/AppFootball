@@ -1,6 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
+import AnimationPages from "../components/AnimatePages";
+import DropDownDetails from "../components/DropDownDetails";
+
+import { Helmet } from "react-helmet";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/team/search?api_key=${API_KEY}`;
 
@@ -44,7 +49,10 @@ const Teams = () => {
 
   console.log(teams);
   return (
-    <div>
+    <AnimationPages>
+      <Helmet>
+        <style>{`body {background-color: red;}`}</style>
+      </Helmet>
       <h2>Teams</h2>
       <form onSubmit={handleFormSubmit} action="">
         <input onChange={(e) => setSearchValue(e.target.value)} type="text" />
@@ -61,7 +69,8 @@ const Teams = () => {
             />
           ))}
       </div>
-    </div>
+      <DropDownDetails />
+    </AnimationPages>
   );
 };
 export default Teams;

@@ -4,33 +4,11 @@ import { NavLink, Link } from "react-router-dom";
 import { BiHomeAlt } from "react-icons/bi";
 import { MdLiveTv } from "react-icons/md";
 import { IoFootball } from "react-icons/io5";
-import { BsSearch } from "react-icons/bs";
-import { RiTeamFill } from "react-icons/ri";
+
 import { IoPeopleSharp } from "react-icons/io5";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
-import Slide from "react-reveal/Slide";
-// import { glide } from "react-tiger-transition";
-// import { Navigation, Route, Link, Screen, glide } from "react-tiger-transition";
-// import "react-tiger-transition/styles/main.min.css";
-
-// const glide = ( =>{
-//   name: "glide-right",
-//   direction: "right",
-// });
-
-const linkStyle = {
-  fontSize: 30,
-  textDecoration: "none",
-  color: "black",
-  fontFamily: "Arial",
-};
-
-// const screenStyle = {
-//   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "center",
-// };
+import { useState } from "react";
 
 const Ul = styled.ul`
   list-style: none;
@@ -40,6 +18,7 @@ const Ul = styled.ul`
   padding-left: 20px;
   user-select: none;
   padding-top: 200px;
+  /* position: fixed; */
   /* z-index: 999; */
   li {
     margin-top: 60px;
@@ -73,20 +52,49 @@ const Ul = styled.ul`
 `;
 
 const RightNav = ({ open }) => {
+  const [changeUrlBackgroundColor, setChangeUrlBackgroundColor] = useState("");
+
+  const [bgFlag, setBgflag] = useState(false);
+
+  const changeUrl = (document.body.style.backgroundColor = "");
+
+  if (!bgFlag) {
+    setChangeUrlBackgroundColor(
+      changeUrl == "/teams"
+        ? (document.body.style.backgroundColor = "red")
+        : "yellow"
+    );
+    setBgflag(true);
+  }
+  //   this.state = { color: "#282c34" };
+  // }
+
+  //  const changeColor = () => {
+  //   this.setState();
+  // };
+  // const haha = (document.body.style.backgroundColor = "red");
+  // const [changeBgcColor, setChangeBgcColor] = useState(
+  //   (document.body.style.backgroundColor = "red")
+  // );
+  // const haha = () => {
+  //   document.body.style.backgroundColor = "red";
+  // };
+  // const changeColor = () => {
+
+  // };
+
   return (
     <Ul open={open}>
       <div className="main__page">
         <nav>
           <ul>
             <li id="1" className="liHover">
-              <Slide left>
-                <Link to="/">
-                  <BiHomeAlt className="icon" /> MainPage
-                  <span id="2" className="spanHover">
-                    <AiOutlineDoubleRight />
-                  </span>
-                </Link>
-              </Slide>
+              <Link to="/">
+                <BiHomeAlt className="icon" /> MainPage
+                <span id="2" className="spanHover">
+                  <AiOutlineDoubleRight />
+                </span>
+              </Link>
             </li>
 
             <li className="liHover">
@@ -114,14 +122,6 @@ const RightNav = ({ open }) => {
                 </span>
               </Link>
             </li>
-            {/* <li className="liHover">
-              <NavLink to="/search">
-                <BsSearch className="icon" /> Search
-                <span className="spanHover">
-                  <AiOutlineDoubleRight />
-                </span>
-              </NavLink>
-            </li> */}
           </ul>
         </nav>
       </div>

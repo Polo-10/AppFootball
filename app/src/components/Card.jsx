@@ -1,8 +1,10 @@
 import Messi from "../../src/img//LionelMessi.png";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/mainPage/card.module.scss";
-import { AiOutlineDoubleRight } from "react-icons/ai";
-import Zoom from "react-reveal/Zoom";
+
+import Zoom from "react-reveal/Bounce";
+import Slide from "react-reveal/Bounce";
+import HeadShake from "react-reveal/Bounce";
 
 const Card = () => {
   const navigate = useNavigate();
@@ -12,25 +14,28 @@ const Card = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
-        <Zoom>
+      <Slide top duration={1000}>
+        <div className={styles.card}>
           <img src={Messi} alt="" />
-        </Zoom>
-      </div>
+        </div>
+      </Slide>
 
       <div className={styles.containerDetails}>
-        <p className={styles.text}>Enter The World of Football</p>
-        <p className={styles.lorem}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
-          blanditiis ducimus odit magni dolores.
-        </p>
-
-        <button onClick={handleRoute} className={styles.liveScore}>
-          LIVE SCORE
-          {/* <span className="spanHover2">
+        <Zoom right delay={550} duration={1000}>
+          <p className={styles.text}>Enter The World of Football</p>
+          <p className={styles.lorem}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
+            blanditiis ducimus odit magni dolores.
+          </p>
+        </Zoom>
+        <HeadShake bottom delay={750} duration={1000}>
+          <button onClick={handleRoute} className={styles.liveScore}>
+            LIVE SCORE
+            {/* <span className="spanHover2">
             <AiOutlineDoubleRight />
           </span> */}
-        </button>
+          </button>
+        </HeadShake>
       </div>
     </div>
   );

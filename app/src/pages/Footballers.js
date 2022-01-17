@@ -2,6 +2,8 @@ import React from "react";
 
 import { useState } from "react";
 
+import AnimationPages from "../components/AnimatePages";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/player/search?api_key=${API_KEY}`;
 
@@ -40,7 +42,7 @@ const Footballers = () => {
   console.log(footballers);
 
   return (
-    <div>
+    <AnimationPages>
       Footballers
       <h2>Search</h2>
       <form onSubmit={handleFormSubmit} action="">
@@ -53,7 +55,7 @@ const Footballers = () => {
             <FootballersElement photo={item.photo} />
           ))}
       </div>
-    </div>
+    </AnimationPages>
   );
 };
 
