@@ -15,27 +15,6 @@ body {
   min-height: 100%;
 }
 
-#container {
-  visibility: hidden;
-}
-
-#loader {
-  color: #008cff;
-  height: 40px;
-  left: 45%;
-  position: absolute;
-  top: 45%;
-  width: 30%;
-}
-
-.e-menu::before {
-  content: "\e984";
-}
-
-#button {
-  margin: 25px 5px 20px 20px;
-}
-
 .main__page__aside {
   position: fixed;
   width: 20%;
@@ -120,7 +99,7 @@ body {
   -webkit-transform: translateX(-65%);
           transform: translateX(-65%);
   height: 900px;
-  width: 50%;
+  width: 70%;
   background-color: #fafafa;
   border-radius: 10px;
   text-transform: uppercase;

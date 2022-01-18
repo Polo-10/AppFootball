@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 import AnimationPages from "../components/AnimatePages";
-import DropDownDetails from "../components/DropDownDetails";
 
 import { Helmet } from "react-helmet";
 
@@ -69,7 +68,6 @@ const Teams = () => {
             />
           ))}
       </div>
-      <DropDownDetails />
     </AnimationPages>
   );
 };

@@ -15,8 +15,6 @@ import "./style/mainPage/style.scss";
 
 import { AnimatePresence } from "framer-motion";
 
-// import AnimatedCursor from "react-animated-cursor";
-
 const App = () => {
   const location = useLocation();
 

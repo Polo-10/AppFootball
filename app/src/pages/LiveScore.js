@@ -4,18 +4,20 @@ import { useState, useEffect } from "react";
 
 import Slide from "react-reveal/Slide";
 import AnimationPages from "../components/AnimatePages";
+// import DetailsELement from "../components/DetailsElement";
 
 import { Helmet } from "react-helmet";
 
 import Aside from "../components/Aside";
 
 const url =
-  "https://apiv3.apifootball.com/?action=get_events&APIkey=90d5e0c94a9ac18b5cfd5477f3e75d22affab2e0a8f64dad1eafae4564eab3eb&match_live=1";
+  "https://apiv3.apifootball.com/?action=get_events&APIkey=92c52f62d781874adc780c755fecb174ef2245354500417f642c0d00d5a75502&match_live=1";
+
 const ScoreA = ({ home_scorer, time }) => {
   return (
     <>
-      <p></p>
-      <p></p>
+      <p>{home_scorer}</p>
+      <p>{time}</p>
     </>
   );
 };
@@ -27,8 +29,7 @@ const ScoreElement = ({
   match_hometeam_score,
   team_away_badge,
   team_home_badge,
-  home_scorer,
-  ScoreA,
+  DetailsELement,
 }) => {
   const addDefaultImg = (e) => {
     e.target.src = "https://via.placeholder.com/150/771796";
@@ -36,15 +37,13 @@ const ScoreElement = ({
 
   return (
     <>
-      <div class="title-box">
-        {/* <p className="text">Local Team</p>
-        <p className="text">Visitor Team</p> */}
-      </div>
+      <div class="title-box"></div>
 
       <div className="title-box">
         <div className="team">
           <img onError={addDefaultImg} src={team_home_badge} alt="homelogo" />
           <p className="nameTeam">{match_hometeam_name}</p>
+          <p>{DetailsELement}</p>
         </div>
 
         <p className="score">
@@ -55,7 +54,6 @@ const ScoreElement = ({
           <img onError={addDefaultImg} src={team_away_badge} alt="awaylogo" />
           <p className="nameTeam">{match_awayteam_name}</p>
         </div>
-        <p>{home_scorer}</p>
       </div>
     </>
   );
@@ -111,6 +109,18 @@ const LiveScore = () => {
               match_hometeam_score={item.match_hometeam_score}
               team_away_badge={item.team_away_badge}
               team_home_badge={item.team_home_badge}
+              DetailsELement={liveScoreState.map((item) => {
+                return (
+                  <div key={item.id}>
+                    {item.goalscorer.map((item2) => (
+                      <ScoreA
+                        home_scorer={item2.home_scorer}
+                        time={`${item2.time} min`}
+                      />
+                    ))}
+                  </div>
+                );
+              })}
             />
           ))}
         {/* {liveScoreState.map((item) => {
@@ -119,14 +129,14 @@ const LiveScore = () => {
               {item.goalscorer.map((item2) => (
                 <ScoreA
                   home_scorer={item2.home_scorer}
-                  time={console.log(item2.time)}
+                  time={`${item2.time} min`}
                 />
               ))}
             </div>
           );
-        })}{" "}
-        *
-        {liveScoreState.map((item) => {
+        })} */}
+
+        {/* {liveScoreState.map((item) => {
           return (
             <div>
               {item.goalscorer.map((item2) => (
@@ -138,12 +148,12 @@ const LiveScore = () => {
                   team_away_badge={item.team_away_badge}
                   team_home_badge={item.team_home_badge}
                   home_scorer={console.log(item2.home_scorer)}
+                  DropDownDetails={<ScoreA />}
                 />
               ))}
             </div>
           );
-        })}
-         */}
+        })} */}
       </div>
     </AnimationPages>
   );
