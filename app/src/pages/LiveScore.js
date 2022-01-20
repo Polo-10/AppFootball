@@ -82,7 +82,7 @@ const LiveScore = () => {
   return (
     <AnimationPages>
       <Helmet>
-        <style>{`body {background-color: #C9C9C5;}`}</style>
+        <style>{`body {background-color: #1d1e2c;}`}</style>
       </Helmet>
       <div>
         <div className="containerRonaldo">
@@ -92,9 +92,9 @@ const LiveScore = () => {
             </Slide>
           </div>
         </div>
-        <div className="bgc">
+        {/* <div className="bgc">
           <aside className="aside"></aside>
-        </div>
+        </div> */}
       </div>
       <div className="container2">
         <h1 className="scoreBoard">Score Board</h1>
@@ -111,11 +111,11 @@ const LiveScore = () => {
               team_home_badge={item.team_home_badge}
               DetailsELement={liveScoreState.map((item) => {
                 return (
-                  <div key={item.id}>
-                    {item.goalscorer.map((item2) => (
+                  <div key={item}>
+                    {item.goalscorer.map((item2, index2) => (
                       <ScoreA
                         home_scorer={item2.home_scorer}
-                        time={`${item2.time} min`}
+                        // time={`${item2.time} min`}
                       />
                     ))}
                   </div>
@@ -123,6 +123,7 @@ const LiveScore = () => {
               })}
             />
           ))}
+
         {/* {liveScoreState.map((item) => {
           return (
             <div key={item.id}>
@@ -134,9 +135,9 @@ const LiveScore = () => {
               ))}
             </div>
           );
-        })} */}
+        })}
 
-        {/* {liveScoreState.map((item) => {
+        {liveScoreState.map((item) => {
           return (
             <div>
               {item.goalscorer.map((item2) => (
@@ -148,7 +149,6 @@ const LiveScore = () => {
                   team_away_badge={item.team_away_badge}
                   team_home_badge={item.team_home_badge}
                   home_scorer={console.log(item2.home_scorer)}
-                  DropDownDetails={<ScoreA />}
                 />
               ))}
             </div>

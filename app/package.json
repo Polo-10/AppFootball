@@ -30,6 +30,7 @@
     "react-spinners": "^0.11.0",
     "react-tiger-transition": "^4.1.2",
     "react-transition-group": "^4.4.2",
+    "reactjs-popup": "^2.0.5",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.0",
     "rsuite": "^5.4.4",

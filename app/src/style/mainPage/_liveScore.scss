@@ -10,17 +10,17 @@
   z-index: 999;
 }
 
-.aside {
-  position: fixed;
-  width: 20%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  background: #1d7874;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 999;
-}
+// .aside {
+//   position: fixed;
+//   width: 20%;
+//   height: 100%;
+//   left: 0;
+//   top: 0;
+//   overflow: auto;
+//   background: #1d7874;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   z-index: 999;
+// }
 
 .containerRonaldo {
   display: flex;
@@ -56,7 +56,7 @@
   left: 65%;
   transform: translateX(-65%);
   height: 900px;
-  width: 70%;
+  width: 50%;
   background-color: #fafafa;
   border-radius: 10px;
   text-transform: uppercase;
