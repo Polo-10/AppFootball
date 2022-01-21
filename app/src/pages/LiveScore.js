@@ -85,7 +85,7 @@ const LiveScore = () => {
         <style>{`body {background-color: #1d1e2c;}`}</style>
       </Helmet>
       {/* <aside className="aside"> */}
-      <Bounce top duration={1000}>
+      <Bounce top duration={1000} delay={200}>
         <div className="containerRonaldo">
           <div className="ronaldo">
             <img src={Ronaldo} alt="" />

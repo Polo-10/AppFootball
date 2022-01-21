@@ -4,11 +4,17 @@ import { useState } from "react";
 import AnimationPages from "../components/AnimatePages";
 
 import { Helmet } from "react-helmet";
+import Footballers from "./Footballers";
+
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/team/search?api_key=${API_KEY}`;
 
 const TeamsElements = ({ logo, name, area, venue }) => {
+  const [openTeams, setOpenTeams] = useState(false);
+  const closeModalTeams = () => setOpenTeams(false);
   const addDefaultImg = (e) => {
     e.target.src = "https://via.placeholder.com/150/771796";
   };
@@ -17,10 +23,30 @@ const TeamsElements = ({ logo, name, area, venue }) => {
 
   return (
     <>
-      <p>{name}</p>
-      <img onError={addDefaultImg} src={logo} alt="" />
-      {/* <p>{area}</p>
-      <p>{venue}</p> */}
+      <div className="containerTeams">
+        <p>{name}</p>
+        <img
+          className="teams"
+          onClick={() => setOpenTeams((o) => !o)}
+          onError={addDefaultImg}
+          src={logo}
+          alt=""
+        />
+      </div>
+
+      <Popup open={openTeams} onClose={closeModalTeams}>
+        <div className="flip-box-teams">
+          <div className="flip-box-inner-teams">
+            <div className="flip-box-front-teams">
+              <img className="modalPhoto-teams" src={logo} alt="" />
+            </div>
+
+            <div className="flip-box-back-teams">
+              <h1>name</h1>
+            </div>
+          </div>
+        </div>
+      </Popup>
     </>
   );
 };
