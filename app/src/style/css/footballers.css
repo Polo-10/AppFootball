@@ -20,6 +20,61 @@
 
 .footballers {
   cursor: pointer;
+  border-radius: 10px;
+}
+
+.flip-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 370px;
+  height: 370px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #bbb;
+  color: white;
+  -webkit-box-shadow: 0px 0px 13px 0px #7085c6;
+  box-shadow: 0px 0px 13px 0px #7085c6;
+  border-radius: 10px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .modalPhoto {
@@ -28,19 +83,19 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
   border-radius: 10px;
-  width: 50%;
-  -webkit-box-shadow: 8px 8px 24px 0px #42445a;
-  box-shadow: 8px 8px 24px 0px #42445a;
 }
 
 .popup-content {
-  width: 30%;
-  height: 20%;
+  width: 35em;
   background-color: transparent;
   padding: 5px;
   border: none;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+  border-radius: 10px;
 }
 
 .popup-overlay {

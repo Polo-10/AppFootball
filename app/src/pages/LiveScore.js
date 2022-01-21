@@ -2,7 +2,7 @@ import Ronaldo from "../img/Ronaldo.png";
 
 import { useState, useEffect } from "react";
 
-import Slide from "react-reveal/Slide";
+import Bounce from "react-reveal/Bounce";
 import AnimationPages from "../components/AnimatePages";
 // import DetailsELement from "../components/DetailsElement";
 
@@ -16,8 +16,8 @@ const url =
 const ScoreA = ({ home_scorer, time }) => {
   return (
     <>
-      <p>{home_scorer}</p>
-      <p>{time}</p>
+      {/* <p>{home_scorer}</p>
+      <p>{time}</p> */}
     </>
   );
 };
@@ -84,18 +84,21 @@ const LiveScore = () => {
       <Helmet>
         <style>{`body {background-color: #1d1e2c;}`}</style>
       </Helmet>
-      <div>
+      {/* <aside className="aside"> */}
+      <Bounce top duration={1000}>
         <div className="containerRonaldo">
           <div className="ronaldo">
-            <Slide left duration={1100}>
-              <img src={Ronaldo} alt="" />
-            </Slide>
+            <img src={Ronaldo} alt="" />
           </div>
         </div>
+      </Bounce>
+      {/* </aside> */}
+      <div>
         {/* <div className="bgc">
           <aside className="aside"></aside>
         </div> */}
       </div>
+
       <div className="container2">
         <h1 className="scoreBoard">Score Board</h1>
         {liveScoreState.length > 0 &&

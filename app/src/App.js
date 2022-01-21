@@ -10,6 +10,7 @@ import Teams from "./pages/Teams";
 import Footballers from "./pages/Footballers";
 import LiveScore from "./pages/LiveScore";
 import MainPage from "./pages/MainPage";
+import Aside from "./components/Aside";
 
 import "./style/mainPage/style.scss";
 
@@ -20,6 +21,7 @@ const App = () => {
 
   return (
     <div>
+      <Aside />
       <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
