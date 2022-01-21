@@ -1,6 +1,4 @@
 import React from "react";
-// import { BrowserRouter as Router } from "react-router-dom"
-import { useState, useEffect } from "react";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 
@@ -10,9 +8,10 @@ import Teams from "./pages/Teams";
 import Footballers from "./pages/Footballers";
 import LiveScore from "./pages/LiveScore";
 import MainPage from "./pages/MainPage";
-import Aside from "./components/Aside";
 
 import "./style/mainPage/style.scss";
+
+import Cursor from "./components/Cursor";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -21,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <Aside />
+      <Cursor />
       <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>

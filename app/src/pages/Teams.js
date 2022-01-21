@@ -4,7 +4,8 @@ import { useState } from "react";
 import AnimationPages from "../components/AnimatePages";
 
 import { Helmet } from "react-helmet";
-import Footballers from "./Footballers";
+
+import { GiTrophy } from "react-icons/gi";
 
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -76,13 +77,32 @@ const Teams = () => {
   return (
     <AnimationPages>
       <Helmet>
-        <style>{`body {background-color: red;}`}</style>
+        <style>{`body {background-image: linear-gradient(to right top, #070506, #180f16, #211624, #281d34, #292646, #202b4b, #142f4f, #003351, #003144, #072d36, #13282a, #1b2322);}`}</style>
       </Helmet>
-      <h2>Teams</h2>
-      <form onSubmit={handleFormSubmit} action="">
-        <input onChange={(e) => setSearchValue(e.target.value)} type="text" />
-        <button type="submit">Search</button>
-      </form>
+
+      <div className="containerFormTeams">
+        <h2 className="searchTeamsText">
+          Teams
+          <span className=" TeamsIcon">
+            <GiTrophy />
+          </span>
+        </h2>
+        <form
+          className="teamsFootballers"
+          onSubmit={handleFormSubmit}
+          action=""
+        >
+          <input
+            className="inputTeams"
+            onChange={(e) => setSearchValue(e.target.value)}
+            type="text"
+          />
+          <button className="buttonTeams" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+
       <div>
         {teams.length > 0 &&
           teams.map((item, index) => (

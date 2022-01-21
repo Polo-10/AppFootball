@@ -19,7 +19,7 @@
 }
 
 .footballers {
-  cursor: pointer;
+  cursor: none;
   border-radius: 10px;
 }
 
@@ -34,6 +34,7 @@
   height: 370px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+  cursor: pointer;
 }
 
 .flip-box-inner {
@@ -47,6 +48,7 @@
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .flip-box:hover .flip-box-inner {
@@ -61,10 +63,12 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .flip-box-front {
   color: black;
+  cursor: pointer;
 }
 
 .flip-box-back {
@@ -75,6 +79,7 @@
   border-radius: 10px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .modalPhoto {
@@ -87,6 +92,8 @@
   height: 350px;
   cursor: pointer;
   border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 13px 0px #7085c6;
+  box-shadow: 0px 0px 13px 0px #7085c6;
 }
 
 .popup-content {
@@ -95,10 +102,50 @@
   border: none;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .popup-overlay {
   background: rgba(0, 0, 0, 0.76);
+}
+
+.containerForm {
+  text-align: center;
+}
+
+.searchFootballersText {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 2px;
+}
+
+.formFootballers {
+  display: inline-block;
+}
+
+.inputFootballers {
+  margin: 40px 10px 0 10px;
+  width: 450px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.buttonFootballers {
+  width: 150px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.FootballersIcon {
+  color: white;
+  font-size: 50px;
+  vertical-align: middle;
+  padding-left: 20px;
 }
 
 @-webkit-keyframes anvil {

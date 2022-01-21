@@ -66,22 +66,6 @@ const RightNav = ({ open }) => {
     );
     setBgflag(true);
   }
-  //   this.state = { color: "#282c34" };
-  // }
-
-  //  const changeColor = () => {
-  //   this.setState();
-  // };
-  // const haha = (document.body.style.backgroundColor = "red");
-  // const [changeBgcColor, setChangeBgcColor] = useState(
-  //   (document.body.style.backgroundColor = "red")
-  // );
-  // const haha = () => {
-  //   document.body.style.backgroundColor = "red";
-  // };
-  // const changeColor = () => {
-
-  // };
 
   return (
     <Ul open={open}>

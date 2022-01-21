@@ -4,17 +4,17 @@ const AnimationPages = ({ children }) => {
   const pageVariants = {
     initial: {
       opacity: 0,
-      x: "-100vw",
+      yield: "-100vw",
       // scale: 0.8,
     },
     in: {
       opacity: 1,
-      x: 0,
+      y: 0,
       scale: 1,
     },
     out: {
       opacity: 0,
-      x: "100vw",
+      y: "100vw",
       // scale: 1.2,
     },
   };
@@ -35,7 +35,7 @@ const AnimationPages = ({ children }) => {
       style={pageStyle}
       initial="initial"
       animate="in"
-      exit="out"
+      exit={{ opacity: 0 }}
       variants={pageVariants}
       transition={pageTransition}
     >

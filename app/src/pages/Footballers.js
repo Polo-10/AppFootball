@@ -1,14 +1,14 @@
-// import React from "react";
+import React from "react";
 
 import { useState } from "react";
 
 import AnimationPages from "../components/AnimatePages";
 import { Helmet } from "react-helmet";
 
-import Slide from "react-reveal/Slide";
-
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+
+import { GiSoccerKick } from "react-icons/gi";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/player/search?api_key=${API_KEY}`;
@@ -72,14 +72,30 @@ const Footballers = () => {
   return (
     <AnimationPages>
       <Helmet>
-        <style>{`body {background-color: #ACC8E5}`}</style>
+        <style>{`body {background-image: linear-gradient(to right top, #070506, #180f16, #211624, #281d34, #292646, #202b4b, #142f4f, #003351, #003144, #072d36, #13282a, #1b2322);}`}</style>
       </Helmet>
-      <h2>Search Footballers</h2>
-      <form className="form1" onSubmit={handleFormSubmit} action="">
-        <input onChange={(e) => setSearchValue(e.target.value)} type="text" />
-        <button type="submit">Search</button>
-      </form>
-      {/* <div className="footcar"> */}
+
+      <div className="containerForm">
+        <h2 className="searchFootballersText">
+          Search Footballers
+          <span className="FootballersIcon">
+            <GiSoccerKick />
+          </span>
+        </h2>
+
+        <form className="formFootballers" onSubmit={handleFormSubmit} action="">
+          <input
+            className="inputFootballers"
+            onChange={(e) => setSearchValue(e.target.value)}
+            type="text"
+          />
+
+          <button className="buttonFootballers" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+
       {footballers.length > 0 &&
         footballers.map((item, index) => (
           <FootballersElement name={item.name} photo={item.photo} />
