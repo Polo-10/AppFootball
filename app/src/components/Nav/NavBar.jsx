@@ -11,6 +11,7 @@ const Nav = styled.nav`
   opacity: 0.85;
   opacity: 0.8;
   cursor: none;
+  /* z-index: 999; */
 `;
 
 const Navbar = () => {

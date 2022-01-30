@@ -1,4 +1,5 @@
 .containerTeams {
+  // z-index: -1;
 }
 
 .ContainerTeamsBig {
@@ -9,7 +10,8 @@
   align-content: stretch;
   align-items: flex-start;
   margin: auto;
-  width: 70%;
+  width: 80.5%;
+  // z-index: -1;
 }
 
 .teams {
@@ -127,7 +129,7 @@
 
 .teamsFootballers {
   display: inline-block;
-  margin: 40px 2px 90px 20px;
+  margin: 40px 2px 0 20px;
 }
 
 .inputTeams {

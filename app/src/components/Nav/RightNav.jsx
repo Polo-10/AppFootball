@@ -12,7 +12,7 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  border-radius: 10px;
+  border-radius: 20px 0 0 20px;
   padding-left: 20px;
   user-select: none;
   padding-top: 200px;
@@ -20,17 +20,18 @@ const Ul = styled.ul`
   /* z-index: 999; */
   cursor: none;
   li {
-    margin-top: 60px;
-    padding: 18px 0px;
+    margin-top: 140px;
+    padding: 1px 0px;
+
     list-style: none;
     text-decoration: none;
     color: white;
     font-size: 25px;
-    padding-top: 55px;
+    /* padding-top: 55px; */
     cursor: none;
     /* padding-left: 10px; */
   }
-  @media (max-width: 2000px) {
+  @media (max-width: 3000px) {
     flex-flow: column nowrap;
     background-color: #1d7874;
     position: fixed;
@@ -38,10 +39,11 @@ const Ul = styled.ul`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 250px;
+    width: 222px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     cursor: none;
+
     li {
       color: #fff;
       cursor: none;

@@ -64,10 +64,14 @@ const TeamsElements = ({ logo, name, area, venue }) => {
 const Teams = () => {
   const [teams, setTeams] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  // const [error, setError] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setSearchValue((prevState) => (prevState = ""));
+    // setSearchValue((prevState) => (prevState = ""));
+    // if (error == "") {
+    //   alert("dupa");
+    // }
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())

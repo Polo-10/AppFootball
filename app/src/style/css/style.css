@@ -185,7 +185,7 @@ body {
   margin-right: 8px;
   vertical-align: middle;
   font-size: 24px;
-  cursor: pointer;
+  cursor: none;
 }
 
 .liHover {
@@ -195,7 +195,7 @@ body {
 
 .liHover:hover {
   font-size: 25.5px;
-  margin-left: 8px;
+  margin-left: 7px;
 }
 
 .spanHover {
@@ -207,7 +207,7 @@ body {
 
 .liHover:hover .spanHover {
   visibility: visible;
-  margin-left: 7px;
+  margin-left: 6px;
   -webkit-transition-property: none;
   transition-property: none;
 }
@@ -460,7 +460,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: auto;
-  width: 70%;
+  width: 80.5%;
 }
 
 .teams {
@@ -583,7 +583,7 @@ body {
 
 .teamsFootballers {
   display: inline-block;
-  margin: 40px 2px 90px 20px;
+  margin: 40px 2px 0 20px;
 }
 
 .inputTeams {
