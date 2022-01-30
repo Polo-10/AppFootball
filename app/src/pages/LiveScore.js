@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 import Bounce from "react-reveal/Bounce";
 import AnimationPages from "../components/AnimatePages";
-// import DetailsELement from "../components/DetailsElement";
 
 import { Helmet } from "react-helmet";
 
@@ -37,11 +36,16 @@ const ScoreElement = ({
 
   return (
     <>
-      <div class="title-box"></div>
+      <div className="title-box"></div>
 
       <div className="title-box">
         <div className="team">
-          <img onError={addDefaultImg} src={team_home_badge} alt="homelogo" />
+          <img
+            onError={addDefaultImg}
+            src={team_home_badge}
+            alt="homelogo"
+            loading="lazy"
+          />
           <p className="nameTeam">{match_hometeam_name}</p>
           <p>{DetailsELement}</p>
         </div>
@@ -51,7 +55,12 @@ const ScoreElement = ({
         </p>
 
         <div className="team">
-          <img onError={addDefaultImg} src={team_away_badge} alt="awaylogo" />
+          <img
+            onError={addDefaultImg}
+            src={team_away_badge}
+            alt="awaylogo"
+            loading="lazy"
+          />
           <p className="nameTeam">{match_awayteam_name}</p>
         </div>
       </div>
@@ -77,7 +86,7 @@ const LiveScore = () => {
     getData();
   }, []);
 
-  console.log(liveScoreState);
+  // console.log(liveScoreState);
 
   return (
     <>
@@ -90,7 +99,7 @@ const LiveScore = () => {
         <Bounce top duration={1000} delay={200}>
           <div className="containerRonaldo">
             <div className="ronaldo">
-              <img src={Ronaldo} alt="" />
+              <img src={Ronaldo} alt="" loading="lazy" />
             </div>
           </div>
         </Bounce>
@@ -114,19 +123,20 @@ const LiveScore = () => {
                 match_hometeam_score={item.match_hometeam_score}
                 team_away_badge={item.team_away_badge}
                 team_home_badge={item.team_home_badge}
-                DetailsELement={liveScoreState.map((item) => {
-                  return (
-                    <div key={item}>
-                      {item.goalscorer.map((item2, index2) => (
-                        <ScoreA
-                          home_scorer={item2.home_scorer}
-                          // time={`${item2.time} min`}
-                        />
-                      ))}
-                    </div>
-                  );
-                })}
               />
+              //   DetailsELement={liveScoreState.map((item) => {
+              //     return (
+              //       <div key={item}>
+              //         {item.goalscorer.map((item2, index2) => (
+              //           <ScoreA
+              //             home_scorer={item2.home_scorer}
+              //             // time={`${item2.time} min`}
+              //           />
+              //         ))}
+              //       </div>
+              //     );
+              //   })}
+              // />
             ))}
 
           {/* {liveScoreState.map((item) => {

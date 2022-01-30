@@ -1,18 +1,18 @@
-.containerTeams {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-  justify-content: start;
-  align-items: auto;
-  align-content: space-between;
-}
+// .containerTeams {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: row-reverse;
+//   justify-content: start;
+//   align-items: auto;
+//   align-content: space-between;
+// }
 
 .teams {
   // flex: 1;
   // margin: 10px;
   cursor: none;
   border-radius: 10px;
-  width: 14em;
+  width: 10em;
   margin: 15px 0 15px 0;
 }
 
@@ -107,25 +107,71 @@
 
 .teamsFootballers {
   display: inline-block;
+  margin: 40px 2px 0 20px;
 }
 
 .inputTeams {
-  margin: 40px 10px 0 10px;
+  margin: 0px 40px;
+  padding: 5px 0;
+  text-align: center;
   width: 450px;
   font-size: 25px;
   border-radius: 10px;
+  outline: 0;
+  border: none;
+  cursor: none;
+  background-color: white;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.inputTeams:focus {
+  outline: 0;
+  // border: 2px solid black;
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .buttonTeams {
-  width: 150px;
+  width: 80px;
+  padding: 5px 5px;
   font-size: 25px;
-  border-radius: 10px;
-  background-color: #fff;
+  border-radius: 20px;
+  color: black;
+  transition: 0.5s;
+  background: 0;
+  background-color: white;
+  outline: none;
+  border: 0;
+  cursor: none;
+}
+
+.buttonTeams:hover {
+  background-color: black;
+  color: white;
+  cursor: none;
+}
+
+.TeamsSearch {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  line-height: 25px;
+  // padding-left: 2px;
+  transition: 0.3s;
+  color: black;
+}
+
+.buttonTeams:hover .TeamsSearch {
+  visibility: visible;
+  color: white;
 }
 
 .TeamsIcon {
   color: white;
-  font-size: 37px;
+  font-size: 30px;
+  line-height: 30px;
   vertical-align: middle;
   padding-left: 20px;
 }

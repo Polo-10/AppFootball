@@ -2,7 +2,6 @@ import Messi from "../../src/img//LionelMessi.png";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/mainPage/card.module.scss";
 
-import Slide from "react-reveal/Slide";
 import Bounce from "react-reveal/Bounce";
 import HeadShake from "react-reveal/Bounce";
 
@@ -16,7 +15,7 @@ const Card = () => {
     <div className={styles.container}>
       <Bounce top duration={1000}>
         <div className={styles.card}>
-          <img src={Messi} alt="" />
+          <img src={Messi} alt="" loading="lazy" />
         </div>
       </Bounce>
 

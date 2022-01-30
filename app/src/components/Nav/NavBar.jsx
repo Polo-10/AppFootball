@@ -9,6 +9,8 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   opacity: 0.85;
+  opacity: 0.8;
+  cursor: none;
 `;
 
 const Navbar = () => {

@@ -3,13 +3,13 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  cursor: none;
 }
 
 body {
-  overflow-x: hidden;
   height: 100vh;
-  cursor: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .Wrapper {
@@ -121,6 +121,8 @@ body {
 
 .scoreBoard {
   text-align: center;
+  text-shadow: -2px 0px 0px rgba(0, 0, 0, 0.77);
+  padding: 20px 0 0 0;
 }
 
 .title-box {
@@ -408,30 +410,10 @@ body {
   }
 }
 
-.containerTeams {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: auto;
-      -ms-flex-align: auto;
-          align-items: auto;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-}
-
 .teams {
   cursor: none;
   border-radius: 10px;
-  width: 14em;
+  width: 10em;
   margin: 15px 0 15px 0;
 }
 
@@ -530,25 +512,72 @@ body {
 
 .teamsFootballers {
   display: inline-block;
+  margin: 40px 2px 0 20px;
 }
 
 .inputTeams {
-  margin: 40px 10px 0 10px;
+  margin: 0px 40px;
+  padding: 5px 0;
+  text-align: center;
   width: 450px;
   font-size: 25px;
   border-radius: 10px;
+  outline: 0;
+  border: none;
+  cursor: none;
+  background-color: white;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.inputTeams:focus {
+  outline: 0;
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .buttonTeams {
-  width: 150px;
+  width: 80px;
+  padding: 5px 5px;
   font-size: 25px;
-  border-radius: 10px;
-  background-color: #fff;
+  border-radius: 20px;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: 0;
+  background-color: white;
+  outline: none;
+  border: 0;
+  cursor: none;
+}
+
+.buttonTeams:hover {
+  background-color: black;
+  color: white;
+  cursor: none;
+}
+
+.TeamsSearch {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 25px;
+  line-height: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: black;
+}
+
+.buttonTeams:hover .TeamsSearch {
+  visibility: visible;
+  color: white;
 }
 
 .TeamsIcon {
   color: white;
-  font-size: 37px;
+  font-size: 30px;
+  line-height: 30px;
   vertical-align: middle;
   padding-left: 20px;
 }

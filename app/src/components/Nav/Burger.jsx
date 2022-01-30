@@ -11,6 +11,7 @@ const StyledBurger = styled.div`
   z-index: 20;
   display: none;
   cursor: none;
+
   @media (max-width: 2000px) {
     display: flex;
     justify-content: space-around;

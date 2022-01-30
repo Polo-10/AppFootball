@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Aside from "../components/Aside";
 import Card from "../components/Card";
 
@@ -11,7 +10,7 @@ const MainPage = () => {
         <style>{`body {background-color: #1d1e2c}`}</style>
         <style>{`body {overflow: hidden}`}</style>
       </Helmet>
-      <Header />
+
       <Aside />
       <Card />
     </div>

@@ -2,24 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
+  // cursor: none;
 }
 
 body {
-  // position: relative;
-  overflow-x: hidden;
-  // overflow-y: auto;
-  // width: 100vw;
-  // overflow: auto;
-  // background: #1d1e2c;
-  // background: #666cc5;
-  // min-height: 100vh;
   height: 100vh;
-  cursor: none;
+  // cursor: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .Wrapper {
-  // position: relative;
   width: 100%;
   min-height: 100%;
 }

@@ -6,6 +6,9 @@ import AnimationPages from "../components/AnimatePages";
 import { Helmet } from "react-helmet";
 
 import { GiTrophy } from "react-icons/gi";
+import { BiSearchAlt2 } from "react-icons/bi";
+
+import Zoom from "react-reveal/Zoom";
 
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -20,7 +23,7 @@ const TeamsElements = ({ logo, name, area, venue }) => {
     e.target.src = "https://via.placeholder.com/150/771796";
   };
 
-  console.log(addDefaultImg);
+  // console.log(addDefaultImg);
 
   return (
     <>
@@ -32,6 +35,7 @@ const TeamsElements = ({ logo, name, area, venue }) => {
           onError={addDefaultImg}
           src={logo}
           alt=""
+          loading="lazy"
         />
       </div>
 
@@ -39,7 +43,12 @@ const TeamsElements = ({ logo, name, area, venue }) => {
         <div className="flip-box-teams">
           <div className="flip-box-inner-teams">
             <div className="flip-box-front-teams">
-              <img className="modalPhoto-teams" src={logo} alt="" />
+              <img
+                className="modalPhoto-teams"
+                src={logo}
+                alt=""
+                loading="lazy"
+              />
             </div>
 
             <div className="flip-box-back-teams">
@@ -73,7 +82,7 @@ const Teams = () => {
       .catch((err) => console.log(err));
   };
 
-  console.log(teams);
+  // console.log(teams);
   return (
     <AnimationPages>
       <Helmet>
@@ -83,9 +92,11 @@ const Teams = () => {
       <div className="containerFormTeams">
         <h2 className="searchTeamsText">
           Teams
-          <span className=" TeamsIcon">
-            <GiTrophy />
-          </span>
+          <Zoom duration={1500} delay={600}>
+            <span className=" TeamsIcon">
+              <GiTrophy />
+            </span>
+          </Zoom>
         </h2>
         <form
           className="teamsFootballers"
@@ -98,7 +109,10 @@ const Teams = () => {
             type="text"
           />
           <button className="buttonTeams" type="submit">
-            Search
+            {/* Search */}
+            <span className="TeamsSearch">
+              <BiSearchAlt2 />
+            </span>
           </button>
         </form>
       </div>
