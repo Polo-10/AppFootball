@@ -28,7 +28,7 @@ const TeamsElements = ({ logo, name, area, venue }) => {
   return (
     <>
       <div className="containerTeams">
-        <p>{name}</p>
+        <p className="teamsName">{name}</p>
         <img
           className="teams"
           onClick={() => setOpenTeams((o) => !o)}
@@ -67,6 +67,7 @@ const Teams = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setSearchValue((prevState) => (prevState = ""));
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
@@ -106,10 +107,10 @@ const Teams = () => {
           <input
             className="inputTeams"
             onChange={(e) => setSearchValue(e.target.value)}
+            value={searchValue}
             type="text"
           />
           <button className="buttonTeams" type="submit">
-            {/* Search */}
             <span className="TeamsSearch">
               <BiSearchAlt2 />
             </span>
@@ -117,7 +118,7 @@ const Teams = () => {
         </form>
       </div>
 
-      <div>
+      <div className="ContainerTeamsBig">
         {teams.length > 0 &&
           teams.map((item, index) => (
             <TeamsElements

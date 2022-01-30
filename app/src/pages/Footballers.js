@@ -10,6 +10,7 @@ import "reactjs-popup/dist/index.css";
 
 import { GiSoccerKick } from "react-icons/gi";
 import Zoom from "react-reveal/Zoom";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/player/search?api_key=${API_KEY}`;
@@ -54,6 +55,7 @@ const Footballers = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setSearchValue((prevState) => (prevState = ""));
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
@@ -79,7 +81,7 @@ const Footballers = () => {
 
       <div className="containerForm">
         <h2 className="searchFootballersText">
-          Search Footballers
+          Footballers
           <Zoom duration={1500} delay={600}>
             <span className="FootballersIcon">
               <GiSoccerKick />
@@ -91,11 +93,14 @@ const Footballers = () => {
           <input
             className="inputFootballers"
             onChange={(e) => setSearchValue(e.target.value)}
+            value={searchValue}
             type="text"
           />
 
           <button className="buttonFootballers" type="submit">
-            Search
+            <span className="TeamsSearch">
+              <BiSearchAlt2 />
+            </span>
           </button>
         </form>
       </div>

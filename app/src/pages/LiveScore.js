@@ -86,7 +86,7 @@ const LiveScore = () => {
     getData();
   }, []);
 
-  // console.log(liveScoreState);
+  console.log(liveScoreState);
 
   return (
     <>

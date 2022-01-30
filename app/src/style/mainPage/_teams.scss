@@ -1,19 +1,31 @@
-// .containerTeams {
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: row-reverse;
-//   justify-content: start;
-//   align-items: auto;
-//   align-content: space-between;
-// }
+.containerTeams {
+}
+
+.ContainerTeamsBig {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  margin: auto;
+  width: 70%;
+}
 
 .teams {
-  // flex: 1;
-  // margin: 10px;
   cursor: none;
   border-radius: 10px;
   width: 10em;
-  margin: 15px 0 15px 0;
+  margin: 15px 25px 65px 25px;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 .flip-box-teams {
@@ -21,7 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: transparent;
+  // background-color: transparent;
   width: 370px;
   height: 370px;
   perspective: 1000px;
@@ -67,6 +79,14 @@
   cursor: pointer;
 }
 
+.teamsName {
+  color: white;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .modalPhoto-teams {
   position: absolute;
   top: 50%;
@@ -87,7 +107,7 @@
   background-color: transparent;
   // padding: 5px;
   border: none;
-  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+  animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   border-radius: 10px;
 }
 
@@ -107,7 +127,7 @@
 
 .teamsFootballers {
   display: inline-block;
-  margin: 40px 2px 0 20px;
+  margin: 40px 2px 90px 20px;
 }
 
 .inputTeams {
@@ -116,7 +136,7 @@
   text-align: center;
   width: 450px;
   font-size: 25px;
-  border-radius: 10px;
+  border-radius: 20px;
   outline: 0;
   border: none;
   cursor: none;
@@ -179,6 +199,7 @@
 .popup-overlay {
   background: rgba(0, 0, 0, 0.76);
 }
+
 @keyframes anvil {
   0% {
     transform: scale(1) translateY(0px);

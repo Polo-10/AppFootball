@@ -339,20 +339,51 @@ body {
 
 .formFootballers {
   display: inline-block;
+  margin: 20.9px 2px 0 20px;
 }
 
 .inputFootballers {
-  margin: 40px 10px 0 10px;
+  margin: 0px 40px;
+  padding: 5px 0;
+  text-align: center;
   width: 450px;
   font-size: 25px;
-  border-radius: 10px;
+  border-radius: 20px;
+  outline: 0;
+  border: none;
+  cursor: none;
+  background-color: white;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.inputFootballers:focus {
+  outline: 0;
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .buttonFootballers {
-  width: 150px;
+  width: 80px;
+  padding: 5px 5px;
   font-size: 25px;
-  border-radius: 10px;
-  background-color: #fff;
+  border-radius: 20px;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: 0;
+  background-color: white;
+  outline: none;
+  border: 0;
+  cursor: none;
+}
+
+.buttonFootballers:hover {
+  background-color: black;
+  color: white;
+  cursor: none;
 }
 
 .FootballersIcon {
@@ -410,11 +441,43 @@ body {
   }
 }
 
+.ContainerTeamsBig {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto;
+  width: 70%;
+}
+
 .teams {
   cursor: none;
   border-radius: 10px;
   width: 10em;
-  margin: 15px 0 15px 0;
+  margin: 15px 25px 65px 25px;
+  -ms-flex-order: 0;
+  -webkit-box-ordinal-group: 1;
+          order: 0;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+          flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+      align-self: auto;
 }
 
 .flip-box-teams {
@@ -423,7 +486,6 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: transparent;
   width: 370px;
   height: 370px;
   -webkit-perspective: 1000px;
@@ -475,6 +537,14 @@ body {
   cursor: pointer;
 }
 
+.teamsName {
+  color: white;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .modalPhoto-teams {
   position: absolute;
   top: 50%;
@@ -493,6 +563,7 @@ body {
   background-color: transparent;
   border: none;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+          animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   border-radius: 10px;
 }
 
@@ -512,7 +583,7 @@ body {
 
 .teamsFootballers {
   display: inline-block;
-  margin: 40px 2px 0 20px;
+  margin: 40px 2px 90px 20px;
 }
 
 .inputTeams {
@@ -521,7 +592,7 @@ body {
   text-align: center;
   width: 450px;
   font-size: 25px;
-  border-radius: 10px;
+  border-radius: 20px;
   outline: 0;
   border: none;
   cursor: none;
