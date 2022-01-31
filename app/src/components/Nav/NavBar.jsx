@@ -3,15 +3,15 @@ import styled from "styled-components";
 import Burger from "./Burger";
 
 const Nav = styled.nav`
-  /* width: 100%; */
+  width: 100%;
   height: 55px;
   padding: 0 0;
   display: flex;
   justify-content: space-between;
-  opacity: 0.85;
+  /* opacity: 0.85; */
   opacity: 0.8;
   cursor: none;
-  /* z-index: 999; */
+  z-index: 999;
 `;
 
 const Navbar = () => {

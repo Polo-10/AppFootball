@@ -11,6 +11,7 @@ const StyledBurger = styled.div`
   z-index: 20;
   display: none;
   cursor: none;
+  z-index: 999;
 
   @media (max-width: 2000px) {
     display: flex;
@@ -23,6 +24,7 @@ const StyledBurger = styled.div`
     background-color: ${({ open }) => (open ? "#ccc" : "#ccc")};
     border-radius: 10px;
     transform-origin: 1px;
+    z-index: 999;
     transition: all 0.3s linear;
     &:nth-child(1) {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

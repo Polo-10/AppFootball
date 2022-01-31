@@ -21,15 +21,17 @@ const FootballersElement = ({ photo, playerId, name }) => {
   return (
     <>
       <div className="containerFootballers">
-        <img
-          className="footballers"
-          onClick={() => setOpen((o) => !o)}
-          src={photo}
-          alt=""
-          loading="lazy"
-        />
-        <p>{playerId}</p>
-        {/* <p>{name}</p> */}
+        <div className="haha2">
+          <img
+            className="footballers"
+            onClick={() => setOpen((o) => !o)}
+            src={photo}
+            alt=""
+            loading="lazy"
+          />
+          {/* <p>{playerId}</p> */}
+          {/* <p>{name}</p>/ */}
+        </div>
       </div>
 
       <Popup open={open} onClose={closeModal}>
@@ -105,11 +107,12 @@ const Footballers = () => {
         </form>
       </div>
 
-      {footballers.length > 0 &&
-        footballers.map((item, index) => (
-          <FootballersElement name={item.name} photo={item.photo} />
-        ))}
-      {/* </div> */}
+      <div className="containerFootballersBig">
+        {footballers.length > 0 &&
+          footballers.map((item, index) => (
+            <FootballersElement name={item.name} photo={item.photo} />
+          ))}
+      </div>
     </AnimationPages>
   );
 };

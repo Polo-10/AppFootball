@@ -11,12 +11,12 @@ import { AiOutlineDoubleRight } from "react-icons/ai";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
-  flex-flow: row nowrap;
+  /* flex-flow: row nowrap; */
   border-radius: 20px 0 0 20px;
   padding-left: 20px;
   user-select: none;
   padding-top: 200px;
-  /* position: fixed; */
+  position: fixed;
   /* z-index: 999; */
   cursor: none;
   li {
@@ -29,20 +29,22 @@ const Ul = styled.ul`
     font-size: 25px;
     /* padding-top: 55px; */
     cursor: none;
+    z-index: 999;
     /* padding-left: 10px; */
   }
   @media (max-width: 3000px) {
-    flex-flow: column nowrap;
+    /* flex-flow: column nowrap; */
     background-color: #1d7874;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    top: 0;
+    /* top: 0; */
     right: 0;
     height: 100vh;
     width: 222px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     cursor: none;
+    /* z-index: 999; */
 
     li {
       color: #fff;
@@ -59,7 +61,7 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <div className="main__page">
+      <div>
         <nav>
           <ul>
             <li id="1" className="liHover">

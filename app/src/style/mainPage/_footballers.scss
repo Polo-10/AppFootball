@@ -1,18 +1,61 @@
 .containerFootballers {
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-direction: row-reverse;
+  // justify-content: start;
+  // align-items: auto;
+  // align-content: space-between;
+}
+
+.haha2 {
+  // width: 70%;
+  // max-width: 20em;
+  // max-height: 14em;
   display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.containerFootballersBig {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
-  justify-content: start;
-  align-items: auto;
-  align-content: space-between;
+  justify-content: flex-start;
+  // justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .footballers {
-  // flex: 1;
-  // margin: 10px;
   cursor: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  // justify-content: space-between;
+  // width: 10em;
+  // max-width: 8em;
+  // max-height: 9em;
+  // width: 10em;
+  height: 10em;
+  // max-height: 20em;
+  // margin: 0 10px 30px 10px;
+  // margin: 15px 25px 15px 25px;
+  margin-bottom: 80px;
+  // padding: 10px;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
+
+// .footballers:hover {
+//   cursor: pointer;
+// }
 
 .flip-box {
   position: absolute;
@@ -84,7 +127,7 @@
   width: 35em;
   background-color: transparent;
   border: none;
-  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+  animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -109,7 +152,8 @@
 
 .formFootballers {
   display: inline-block;
-  margin: 20.9px 2px 0 20px;
+  // margin: 20.9px 2px 0 20px;
+  margin: 40px 2px 140px 20px;
 }
 
 .inputFootballers {

@@ -212,29 +212,56 @@ body {
   transition-property: none;
 }
 
-.containerFootballers {
+.haha2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerFootballersBig {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: auto;
-      -ms-flex-align: auto;
-          align-items: auto;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+          justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .footballers {
   cursor: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  height: 10em;
+  margin-bottom: 80px;
+  -ms-flex-order: 0;
+  -webkit-box-ordinal-group: 1;
+          order: 0;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+          flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+      align-self: auto;
 }
 
 .flip-box {
@@ -315,6 +342,7 @@ body {
   background-color: transparent;
   border: none;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+          animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -339,7 +367,7 @@ body {
 
 .formFootballers {
   display: inline-block;
-  margin: 20.9px 2px 0 20px;
+  margin: 40px 2px 140px 20px;
 }
 
 .inputFootballers {
@@ -460,7 +488,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: auto;
-  width: 80.5%;
+  width: 80%;
 }
 
 .teams {
@@ -583,7 +611,7 @@ body {
 
 .teamsFootballers {
   display: inline-block;
-  margin: 40px 2px 0 20px;
+  margin: 40px 2px 140px 20px;
 }
 
 .inputTeams {

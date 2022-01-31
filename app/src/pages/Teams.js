@@ -26,7 +26,7 @@ const TeamsElements = ({ logo, name, area, venue }) => {
   // console.log(addDefaultImg);
 
   return (
-    <>
+    <div className="haha">
       <div className="containerTeams">
         <p className="teamsName">{name}</p>
         <img
@@ -57,7 +57,7 @@ const TeamsElements = ({ logo, name, area, venue }) => {
           </div>
         </div>
       </Popup>
-    </>
+    </div>
   );
 };
 
