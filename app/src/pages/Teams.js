@@ -16,7 +16,17 @@ import "reactjs-popup/dist/index.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/team/search?api_key=${API_KEY}`;
 
-const TeamsElements = ({ logo, name, area, venue }) => {
+const TeamsElements = ({
+  logo,
+  name,
+  foundingDate,
+  address,
+  area,
+  venue,
+  capacity,
+  coach,
+  website,
+}) => {
   const [openTeams, setOpenTeams] = useState(false);
   const closeModalTeams = () => setOpenTeams(false);
   const addDefaultImg = (e) => {
@@ -52,7 +62,13 @@ const TeamsElements = ({ logo, name, area, venue }) => {
             </div>
 
             <div className="flip-box-back-teams">
-              <h1>name</h1>
+              <h1 className="TeamsName">{name}</h1>
+              <p className="teamsInfo">Address: {address}</p>
+              <p className="teamsInfo">Area: {area}</p>
+              <p className="teamsInfo">Venue: {venue}</p>
+              <p className="teamsInfo">Capacity: {capacity}</p>
+              <p className="teamsInfo">Coach: {coach}</p>
+              <p className="teamsInfo">Website: {website}</p>
             </div>
           </div>
         </div>
@@ -68,10 +84,12 @@ const Teams = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // setSearchValue((prevState) => (prevState = ""));
-    // if (error == "") {
-    //   alert("dupa");
-    // }
+    setSearchValue((prevState) => (prevState = ""));
+
+    if (searchValue >= 0) {
+      alert("WPISZ NAZWĘ DRUŻYNY");
+      return false;
+    }
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
@@ -128,8 +146,13 @@ const Teams = () => {
             <TeamsElements
               logo={item.logo}
               name={item.name}
-              // area={item.area}
-              // venue={item.venue}
+              arefoundingDatea={item.foundingDate}
+              address={item.address}
+              area={item.area}
+              venue={item.venue}
+              capacity={item.capacity}
+              coach={item.coach}
+              website={item.website}
             />
           ))}
       </div>

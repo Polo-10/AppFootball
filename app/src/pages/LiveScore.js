@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 import AsideLiveScore from "../components/AsideLiveScore";
 
 const url =
-  "https://apiv3.apifootball.com/?action=get_events&APIkey=92c52f62d781874adc780c755fecb174ef2245354500417f642c0d00d5a75502&match_live=1";
+  "https://apiv3.apifootball.com/?action=get_events&APIkey=182f7c692008efceceaeb1ec9c226126d008aa81e38f0a4419d581d2de39360b&match_live=1";
 
 const ScoreA = ({ home_scorer, time }) => {
   return (

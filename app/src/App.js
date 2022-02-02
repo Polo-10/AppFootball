@@ -8,6 +8,7 @@ import Teams from "./pages/Teams";
 import Footballers from "./pages/Footballers";
 import LiveScore from "./pages/LiveScore";
 import MainPage from "./pages/MainPage";
+import NotFound from "./pages/NotFound";
 
 import "./style/mainPage/style.scss";
 
@@ -26,8 +27,9 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<MainPage />} />
           <Route path="/LiveScore" element={<LiveScore />} />
-          <Route path="/teams" element={<Teams />} />
-          <Route path="/footballers" element={<Footballers />} />
+          <Route path="/Teams" element={<Teams />} />
+          <Route path="/Footballers" element={<Footballers />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </div>

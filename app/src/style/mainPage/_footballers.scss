@@ -20,10 +20,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  // justify-content: space-between;
+  // justify-content: flex-start;
+  justify-content: center;
   align-content: stretch;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: center;
   margin: 0 auto;
   width: 80%;
 }
@@ -99,7 +100,10 @@
 }
 
 .flip-box-back {
-  background-color: #bbb;
+  // background-color: transparent;
+  // background-color: #bbb;
+  width: 350px;
+  height: 470px;
   color: white;
   -webkit-box-shadow: 0px 0px 13px 0px rgba(112, 133, 198, 1);
   -moz-box-shadow: 0px 0px 13px 0px rgba(112, 133, 198, 1);
@@ -107,6 +111,27 @@
   border-radius: 10px;
   transform: rotateY(180deg);
   cursor: pointer;
+}
+
+.FootballersName {
+  padding: 15px;
+}
+
+.footballersInfo {
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 8px;
+}
+
+.footballersInfoDetail {
+  display: inline;
+  margin: 5px;
+}
+.boldTextInfo {
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .modalPhoto {
@@ -124,12 +149,13 @@
 }
 
 .popup-content {
-  width: 35em;
-  background-color: transparent;
+  width: 15em;
+  // background-color: #fff;
   border: none;
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   border-radius: 10px;
   cursor: pointer;
+  // width: 800px;
 }
 
 .popup-overlay {

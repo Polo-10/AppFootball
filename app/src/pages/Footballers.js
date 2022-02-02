@@ -15,7 +15,18 @@ import { BiSearchAlt2 } from "react-icons/bi";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/player/search?api_key=${API_KEY}`;
 
-const FootballersElement = ({ photo, playerId, name }) => {
+const FootballersElement = ({
+  photo,
+  playerId,
+  name,
+  birthday,
+  height,
+  weight,
+  country,
+  feet,
+  position,
+  number,
+}) => {
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   return (
@@ -29,8 +40,6 @@ const FootballersElement = ({ photo, playerId, name }) => {
             alt=""
             loading="lazy"
           />
-          {/* <p>{playerId}</p> */}
-          {/* <p>{name}</p>/ */}
         </div>
       </div>
 
@@ -42,7 +51,32 @@ const FootballersElement = ({ photo, playerId, name }) => {
             </div>
 
             <div className="flip-box-back">
-              <h1>name</h1>
+              <h1 className="FootballersName">{name}</h1>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Birthday : </strong>
+                {birthday}
+              </p>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Height : </strong>
+                {`${height} cm`}
+              </p>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Weight : </strong>
+                {`${weight} kg`}
+              </p>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Country : </strong> {country}
+              </p>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Feet : </strong>
+                {feet}
+              </p>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Position : </strong> {position}
+              </p>
+              <p className="footballersInfo">
+                <strong className="boldTextInfo">Number : </strong> {number}
+              </p>
             </div>
           </div>
         </div>
@@ -50,7 +84,6 @@ const FootballersElement = ({ photo, playerId, name }) => {
     </>
   );
 };
-
 const Footballers = () => {
   const [footballers, SetFootballers] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -58,6 +91,11 @@ const Footballers = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
+
+    if (searchValue >= 0) {
+      alert("WPISZ NAZWĘ PIŁKARZA");
+      return false;
+    }
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
@@ -110,7 +148,17 @@ const Footballers = () => {
       <div className="containerFootballersBig">
         {footballers.length > 0 &&
           footballers.map((item, index) => (
-            <FootballersElement name={item.name} photo={item.photo} />
+            <FootballersElement
+              photo={item.photo}
+              name={item.name}
+              birthday={item.birthday}
+              height={item.height}
+              weight={item.weight}
+              country={item.country}
+              feet={item.feet}
+              position={item.position}
+              number={item.number}
+            />
           ))}
       </div>
     </AnimationPages>
