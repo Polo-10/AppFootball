@@ -17,7 +17,6 @@ const API = `/sport/football/player/search?api_key=${API_KEY}`;
 
 const FootballersElement = ({
   photo,
-  playerId,
   name,
   birthday,
   height,
@@ -33,6 +32,7 @@ const FootballersElement = ({
     <>
       <div className="containerFootballers">
         <div className="haha2">
+          {/* <p>{name}</p> */}
           <img
             className="footballers"
             onClick={() => setOpen((o) => !o)}

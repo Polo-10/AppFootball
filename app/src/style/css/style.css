@@ -212,19 +212,6 @@ body {
   transition-property: none;
 }
 
-.haha2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .containerFootballersBig {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,24 +230,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
+  margin: auto;
   width: 80%;
 }
 
 .footballers {
   cursor: none;
   border-radius: 20px;
-  height: 10em;
-  margin-bottom: 80px;
-  -ms-flex-order: 0;
   -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
           order: 0;
-  -ms-flex: 0 1 auto;
   -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  -webkit-align-self: auto;
   -ms-flex-item-align: auto;
-  -ms-grid-row-align: auto;
+      -ms-grid-row-align: auto;
       align-self: auto;
 }
 
@@ -271,11 +255,13 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: transparent;
-  width: 370px;
-  height: 370px;
+  width: 350px;
+  height: 470px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   cursor: pointer;
+  background-color: rgba(35, 57, 156, 0.993);
+  border-radius: 20px;
 }
 
 .flip-box-inner {
@@ -313,6 +299,7 @@ body {
 }
 
 .flip-box-back {
+  background-color: transparent;
   width: 350px;
   height: 470px;
   color: white;
@@ -322,6 +309,7 @@ body {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .FootballersName {
@@ -352,9 +340,13 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 250px;
-  height: 350px;
+  width: 200px;
+  height: auto;
   cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 13px 0px #7085c6;
   box-shadow: 0px 0px 13px 0px #7085c6;
@@ -518,15 +510,14 @@ body {
   border-radius: 10px;
   width: 10em;
   margin: 15px 25px 65px 25px;
-  -ms-flex-order: 0;
   -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
           order: 0;
-  -ms-flex: 0 1 auto;
   -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  -webkit-align-self: auto;
   -ms-flex-item-align: auto;
-  -ms-grid-row-align: auto;
+      -ms-grid-row-align: auto;
       align-self: auto;
 }
 
@@ -536,11 +527,21 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 370px;
-  height: 370px;
+  width: 350px;
+  height: 470px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   cursor: pointer;
+  background-color: rgba(35, 57, 156, 0.993);
+  border-radius: 20px;
+}
+
+.closeModal {
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  padding: 4px;
 }
 
 .flip-box-inner-teams {
@@ -577,11 +578,13 @@ body {
 }
 
 .flip-box-back-teams {
-  background-color: #bbb;
+  background-color: transparent;
   color: white;
+  width: 350px;
+  height: 470px;
   -webkit-box-shadow: 0px 0px 13px 0px #7085c6;
-  box-shadow: 0px 0px 13px 0px #7085c6;
-  border-radius: 10px;
+          box-shadow: 0px 0px 13px 0px #7085c6;
+  border-radius: 20px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   cursor: pointer;
@@ -605,8 +608,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 300px;
-  height: 350px;
+  width: 220px;
+  height: auto;
   cursor: pointer;
   border-radius: 10px;
 }

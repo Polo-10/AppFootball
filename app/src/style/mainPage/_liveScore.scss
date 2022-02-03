@@ -10,25 +10,7 @@
   z-index: 999;
 }
 
-// .aside {
-//   position: fixed;
-//   width: 20%;
-//   height: 100%;
-//   left: 0;
-//   top: 0;
-//   overflow: auto;
-//   background: #1d7874;
-//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   z-index: 999;
-// }
-
 .containerRonaldo {
-  // display: flex;
-  // position: absolute;
-  // top: -50%;
-  // left: 5.5%;
-  // transform: translate(-5.5%, 40%);
-  // z-index: 100;
   display: flex;
   position: absolute;
   top: 70%;
@@ -39,11 +21,6 @@
 }
 
 .ronaldo {
-  // align-items: center;
-  // display: flex;
-  // justify-content: center;
-  // position: relative;
-  // border-radius: 10px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -55,12 +32,10 @@
   background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
 }
 .ronaldo img {
-  // margin: 0 auto;
   max-width: 100%;
   max-height: 133%;
   padding: 0 60px 10px 0;
   user-select: none;
-  // z-index: 100;
 }
 
 .container2::-webkit-scrollbar-track {
@@ -90,8 +65,6 @@
   border-radius: 10px;
   text-transform: uppercase;
   overflow-y: scroll;
-  // scrollbar-color: red;
-  // margin: 450px 0 0 50px;
 }
 
 .nameTeam {
@@ -131,29 +104,14 @@
   height: 130px;
   width: 130px;
 }
-// .matches-table {
-//   // margin-top: 170px;
-//   display: flex;
-//   flex-direction: column;
-// }
+
 .match-tile {
-  // margin: 10px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-// .match-tile img {
-//   width: 52px;
-//   height: 52px;
-// }
-// .match-tile p {
-//   font-size: 2.2rem;
-// }
 
-// .match-tile #goals {
-//   font-size: 1.8rem;
-// }
 .match-tile .team {
   width: 100px;
 }

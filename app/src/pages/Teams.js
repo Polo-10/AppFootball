@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 
 import { GiTrophy } from "react-icons/gi";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { VscChromeClose } from "react-icons/vsc";
 
 import Zoom from "react-reveal/Zoom";
 
@@ -29,10 +30,15 @@ const TeamsElements = ({
 }) => {
   const [openTeams, setOpenTeams] = useState(false);
   const closeModalTeams = () => setOpenTeams(false);
+
   const addDefaultImg = (e) => {
     e.target.src = "https://via.placeholder.com/150/771796";
+    // setTeams(
+    //   Array.from(
+    //     teams.reduce((map, obj) => map.set(obj.logo, obj), new Map()).values()
+    //   )
+    // );
   };
-
   // console.log(addDefaultImg);
 
   return (
@@ -50,28 +56,33 @@ const TeamsElements = ({
       </div>
 
       <Popup open={openTeams} onClose={closeModalTeams}>
-        <div className="flip-box-teams">
-          <div className="flip-box-inner-teams">
-            <div className="flip-box-front-teams">
-              <img
-                className="modalPhoto-teams"
-                src={logo}
-                alt=""
-                loading="lazy"
-              />
-            </div>
+        {(close) => (
+          <div className="flip-box-teams">
+            <button className="closeModal" onClick={close}>
+              <VscChromeClose />
+            </button>
+            <div className="flip-box-inner-teams">
+              <div className="flip-box-front-teams">
+                <img
+                  className="modalPhoto-teams"
+                  src={logo}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
 
-            <div className="flip-box-back-teams">
-              <h1 className="TeamsName">{name}</h1>
-              <p className="teamsInfo">Address: {address}</p>
-              <p className="teamsInfo">Area: {area}</p>
-              <p className="teamsInfo">Venue: {venue}</p>
-              <p className="teamsInfo">Capacity: {capacity}</p>
-              <p className="teamsInfo">Coach: {coach}</p>
-              <p className="teamsInfo">Website: {website}</p>
+              <div className="flip-box-back-teams">
+                <h1 className="TeamsName">{name}</h1>
+                <p className="teamsInfo">Address: {address}</p>
+                <p className="teamsInfo">Area: {area}</p>
+                <p className="teamsInfo">Venue: {venue}</p>
+                <p className="teamsInfo">Capacity: {capacity}</p>
+                <p className="teamsInfo">Coach: {coach}</p>
+                <p className="teamsInfo">Website: {website}</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </Popup>
     </div>
   );
@@ -105,7 +116,7 @@ const Teams = () => {
       .catch((err) => console.log(err));
   };
 
-  // console.log(teams);
+  console.log(teams);
   return (
     <AnimationPages>
       <Helmet>
