@@ -12,9 +12,20 @@ body {
   overflow-x: hidden;
 }
 
-.Wrapper {
-  width: 100%;
-  min-height: 100%;
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #1d4c43;
 }
 
 .main__page__aside {
@@ -99,15 +110,14 @@ body {
 }
 
 .container2 {
-  margin: 0 0;
+  margin-top: 40px;
   padding: 10px;
   position: absolute;
-  left: 65%;
+  left: 68%;
   -webkit-transform: translateX(-65%);
           transform: translateX(-65%);
   height: 900px;
-  width: 50%;
-  background-color: #fafafa;
+  width: 55%;
   border-radius: 10px;
   text-transform: uppercase;
   overflow-y: scroll;
@@ -180,6 +190,10 @@ body {
   width: 100px;
 }
 
+.haha22 {
+  z-index: 999;
+}
+
 .icon {
   margin-bottom: 6px;
   margin-right: 8px;
@@ -230,8 +244,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
-  width: 80%;
+  margin: 80px auto;
+  width: calc(100% - 420px);
+  gap: 50px;
 }
 
 .footballers {
@@ -367,6 +382,7 @@ body {
 
 .containerForm {
   text-align: center;
+  padding-top: 40px;
 }
 
 .searchFootballersText {
@@ -381,7 +397,8 @@ body {
 
 .formFootballers {
   display: inline-block;
-  margin: 40px 2px 140px 20px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .inputFootballers {
@@ -493,23 +510,27 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin: auto;
-  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 80px auto;
+  width: calc(100% - 444px);
+  gap: 40px;
+}
+
+.containerTeams {
+  width: 10em;
 }
 
 .teams {
   cursor: none;
   border-radius: 10px;
   width: 10em;
-  margin: 15px 25px 65px 25px;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
@@ -590,6 +611,15 @@ body {
   cursor: pointer;
 }
 
+.teamsName {
+  color: #fff;
+  font-size: 16px;
+  padding: 0 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+}
+
 .TeamsName {
   padding: 10px;
 }
@@ -626,6 +656,7 @@ body {
 
 .containerFormTeams {
   text-align: center;
+  padding-top: 50px;
 }
 
 .searchTeamsText {
@@ -640,7 +671,8 @@ body {
 
 .teamsFootballers {
   display: inline-block;
-  margin: 40px 2px 140px 20px;
+  margin: 0 auto;
+  padding-top: 35px;
 }
 
 .inputTeams {
@@ -712,6 +744,45 @@ body {
 
 .popup-overlay {
   background: rgba(0, 0, 0, 0.76);
+}
+
+.NotFoundTeams {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 120px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  -webkit-animation: typing 2s steps(55);
+          animation: typing 2s steps(55);
+  z-index: 999;
+}
+
+.check {
+  vertical-align: middle;
+  font-size: 40px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
 }
 
 @keyframes anvil {

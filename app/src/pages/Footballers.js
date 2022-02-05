@@ -12,8 +12,20 @@ import { GiSoccerKick } from "react-icons/gi";
 import Zoom from "react-reveal/Zoom";
 import { BiSearchAlt2 } from "react-icons/bi";
 
+import { CgSearchFound } from "react-icons/cg";
+
+import CircleLoader from "react-spinners/CircleLoader";
+import { css } from "@emotion/react";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/player/search?api_key=${API_KEY}`;
+
+const override = css`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 const FootballersElement = ({
   photo,
@@ -87,6 +99,7 @@ const FootballersElement = ({
 const Footballers = () => {
   const [footballers, SetFootballers] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -101,14 +114,36 @@ const Footballers = () => {
       .then((res) => res.json())
       .then((res) =>
         SetFootballers(
-          Array.from(
-            res.data
-              .reduce((map, obj) => map.set(obj.playerId, obj), new Map())
-              .values()
-          )
+          // Array.from(
+          //   res.data
+          //     .reduce((map, obj) => map.set(obj.playerId, obj), new Map())
+          //     .values()
+          // )
+          res.data
+            .map((item) => {
+              if (
+                item.photo &&
+                item.name &&
+                item.birthday &&
+                item.height &&
+                item.weight &&
+                item.country &&
+                item.feet &&
+                item.position &&
+                item.number
+              )
+                return item;
+
+              return null;
+            })
+            .filter((i) => i)
         )
       )
-
+      .then(() => {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1200);
+      })
       .catch((err) => console.log(err));
   };
   console.log(footballers);
@@ -146,20 +181,38 @@ const Footballers = () => {
       </div>
 
       <div className="containerFootballersBig">
-        {footballers.length > 0 &&
-          footballers.map((item, index) => (
-            <FootballersElement
-              photo={item.photo}
-              name={item.name}
-              birthday={item.birthday}
-              height={item.height}
-              weight={item.weight}
-              country={item.country}
-              feet={item.feet}
-              position={item.position}
-              number={item.number}
-            />
-          ))}
+        {isLoading ? (
+          <CircleLoader
+            color={"#FFFFFF"}
+            css={override}
+            size={150}
+            speedMultiplier={1}
+          />
+        ) : (
+          footballers &&
+          (footballers?.length > 0 ? (
+            footballers?.map((item, index) => (
+              <Zoom duration={1000} delay={100}>
+                <FootballersElement
+                  photo={item.photo}
+                  name={item.name}
+                  birthday={item.birthday}
+                  height={item.height}
+                  weight={item.weight}
+                  country={item.country}
+                  feet={item.feet}
+                  position={item.position}
+                  number={item.number}
+                />
+              </Zoom>
+            ))
+          ) : (
+            <div className="NotFoundTeams">
+              No data available, check the name of the entered team
+              <CgSearchFound className="check" />
+            </div>
+          ))
+        )}
       </div>
     </AnimationPages>
   );

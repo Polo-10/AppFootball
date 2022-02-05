@@ -22,7 +22,6 @@ const App = () => {
   return (
     <div>
       <Cursor />
-      <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<MainPage />} />
@@ -32,6 +31,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
+      <Navbar />
     </div>
   );
 };

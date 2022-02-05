@@ -8,8 +8,12 @@ import { Helmet } from "react-helmet";
 import { GiTrophy } from "react-icons/gi";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
+import { CgSearchFound } from "react-icons/cg";
 
 import Zoom from "react-reveal/Zoom";
+
+import CircleLoader from "react-spinners/CircleLoader";
+import { css } from "@emotion/react";
 
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -17,10 +21,16 @@ import "reactjs-popup/dist/index.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/team/search?api_key=${API_KEY}`;
 
+const override = css`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 const TeamsElements = ({
   logo,
   name,
-  foundingDate,
   address,
   area,
   venue,
@@ -37,7 +47,7 @@ const TeamsElements = ({
     //   Array.from(
     //     teams.reduce((map, obj) => map.set(obj.logo, obj), new Map()).values()
     //   )
-    // );
+    // )
   };
   // console.log(addDefaultImg);
 
@@ -89,30 +99,50 @@ const TeamsElements = ({
 };
 
 const Teams = () => {
-  const [teams, setTeams] = useState([]);
+  const [teams, setTeams] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  // const [error, setError] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
 
+    setError(false);
+
     if (searchValue >= 0) {
-      alert("WPISZ NAZWĘ DRUŻYNY");
+      setError("WPISZ NAZWĘ DRUŻYNY");
       return false;
     }
+
+    setIsLoading(true);
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
       .then((res) =>
         setTeams(
-          Array.from(
-            res.data
-              .reduce((map, obj) => map.set(obj.logo, obj), new Map())
-              .values()
-          )
+          res.data
+            .map((item) => {
+              if (
+                item.logo &&
+                item.address &&
+                item.area &&
+                item.venue &&
+                item.capacity &&
+                item.coach &&
+                item.website
+              )
+                return item;
+              return null;
+            })
+            .filter((i) => i)
         )
       )
+      .then(() => {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1200);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -152,20 +182,38 @@ const Teams = () => {
       </div>
 
       <div className="ContainerTeamsBig">
-        {teams.length > 0 &&
-          teams.map((item, index) => (
-            <TeamsElements
-              logo={item.logo}
-              name={item.name}
-              arefoundingDatea={item.foundingDate}
-              address={item.address}
-              area={item.area}
-              venue={item.venue}
-              capacity={item.capacity}
-              coach={item.coach}
-              website={item.website}
-            />
-          ))}
+        {isLoading ? (
+          <CircleLoader
+            color={"#FFFFFF"}
+            css={override}
+            size={150}
+            speedMultiplier={1}
+          />
+        ) : (
+          teams &&
+          (teams?.length > 0 ? (
+            teams?.map((item, index) => (
+              <Zoom duration={1000} delay={100}>
+                <TeamsElements
+                  logo={item.logo}
+                  name={item.name}
+                  arefoundingDatea={item.foundingDate}
+                  address={item.address}
+                  area={item.area}
+                  venue={item.venue}
+                  capacity={item.capacity}
+                  coach={item.coach}
+                  website={item.website}
+                />
+              </Zoom>
+            ))
+          ) : (
+            <div className="NotFoundTeams">
+              No data available, check the name of the entered team
+              <CgSearchFound className="check" />
+            </div>
+          ))
+        )}
       </div>
     </AnimationPages>
   );

@@ -54,14 +54,14 @@
 }
 
 .container2 {
-  margin: 0 0;
+  margin-top: 40px;
   padding: 10px;
   position: absolute;
-  left: 65%;
+  left: 68%;
   transform: translateX(-65%);
   height: 900px;
-  width: 50%;
-  background-color: #fafafa;
+  width: 55%;
+  // background-color: #fafafa;
   border-radius: 10px;
   text-transform: uppercase;
   overflow-y: scroll;
@@ -114,4 +114,8 @@
 
 .match-tile .team {
   width: 100px;
+}
+
+.haha22 {
+  z-index: 999;
 }

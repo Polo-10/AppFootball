@@ -9,8 +9,22 @@ import { Helmet } from "react-helmet";
 
 import AsideLiveScore from "../components/AsideLiveScore";
 
+import CircleLoader from "react-spinners/CircleLoader";
+import { css } from "@emotion/react";
+
+import { CgSearchFound } from "react-icons/cg";
+
+import Zoom from "react-reveal/Zoom";
+
 const url =
   "https://apiv3.apifootball.com/?action=get_events&APIkey=182f7c692008efceceaeb1ec9c226126d008aa81e38f0a4419d581d2de39360b&match_live=1";
+
+const override = css`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 const ScoreA = ({ home_scorer, time }) => {
   return (
@@ -70,6 +84,7 @@ const ScoreElement = ({
 
 const LiveScore = () => {
   const [liveScoreState, setLiveScoreState] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getData = async () =>
@@ -81,6 +96,25 @@ const LiveScore = () => {
         //     setLiveScoreState(res.data);
         //   }, 500);
         // })
+        // .catch((err) => console.log(err));
+
+        // .then((res) => res.json())
+        // .then((res) =>
+        //   setLiveScoreState(
+        //     res.data
+        //       .map((item) => {
+        //         if (item.team_home_badge && item.team_away_badge) return item;
+
+        //         return null;
+        //       })
+        //       .filter((i) => i)
+        //   )
+        // )
+        .then(() => {
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 1200);
+        })
         .catch((err) => console.log(err));
 
     getData();
@@ -112,63 +146,41 @@ const LiveScore = () => {
 
         <div className="container2">
           <h1 className="scoreBoard">Score Board</h1>
-          {liveScoreState.length > 0 &&
-            liveScoreState.map((item, index) => (
-              <ScoreElement
-                key={item}
-                className="matches-table"
-                match_awayteam_name={item.match_awayteam_name}
-                match_hometeam_name={item.match_hometeam_name}
-                match_awayteam_score={item.match_awayteam_score}
-                match_hometeam_score={item.match_hometeam_score}
-                team_away_badge={item.team_away_badge}
-                team_home_badge={item.team_home_badge}
+          {isLoading ? (
+            <div className="haha22">
+              <CircleLoader
+                color={"#FFFFFF"}
+                css={override}
+                size={150}
+                speedMultiplier={1}
               />
-              //   DetailsELement={liveScoreState.map((item) => {
-              //     return (
-              //       <div key={item}>
-              //         {item.goalscorer.map((item2, index2) => (
-              //           <ScoreA
-              //             home_scorer={item2.home_scorer}
-              //             // time={`${item2.time} min`}
-              //           />
-              //         ))}
-              //       </div>
-              //     );
-              //   })}
-              // />
-            ))}
-
-          {/* {liveScoreState.map((item) => {
-          return (
-            <div key={item.id}>
-              {item.goalscorer.map((item2) => (
-                <ScoreA
-                  home_scorer={item2.home_scorer}
-                  time={`${item2.time} min`}
-                />
-              ))}
             </div>
-          );
-        })}
-
-        {liveScoreState.map((item) => {
-          return (
-            <div>
-              {item.goalscorer.map((item2) => (
-                <ScoreElement
-                  match_awayteam_name={item.match_awayteam_name}
-                  match_hometeam_name={item.match_hometeam_name}
-                  match_awayteam_score={item.match_awayteam_score}
-                  match_hometeam_score={item.match_hometeam_score}
-                  team_away_badge={item.team_away_badge}
-                  team_home_badge={item.team_home_badge}
-                  home_scorer={console.log(item2.home_scorer)}
-                />
-              ))}
-            </div>
-          );
-        })} */}
+          ) : (
+            liveScoreState &&
+            (liveScoreState?.length > 0 ? (
+              liveScoreState?.map((item, index) => (
+                <Zoom duration={700} delay={100}>
+                  <ScoreElement
+                    key={item}
+                    className="matches-table"
+                    match_awayteam_name={item.match_awayteam_name}
+                    match_hometeam_name={item.match_hometeam_name}
+                    match_awayteam_score={item.match_awayteam_score}
+                    match_hometeam_score={item.match_hometeam_score}
+                    team_away_badge={item.team_away_badge}
+                    team_home_badge={item.team_home_badge}
+                  />
+                </Zoom>
+              ))
+            ) : (
+              <CircleLoader
+                color={"#FFFFFF"}
+                css={override}
+                size={150}
+                speedMultiplier={1}
+              />
+            ))
+          )}
         </div>
       </AnimationPages>
     </>
