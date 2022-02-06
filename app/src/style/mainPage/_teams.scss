@@ -34,8 +34,8 @@
 }
 
 .flip-box-teams {
-  background-color: #b1bfd8;
-  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  background-image: url(../../img/TeamsCardBackground.webp);
+  filter: brightness(90%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,16 +118,22 @@
 }
 
 .TeamsName {
-  // color: #fff;
-  padding: 10px;
+  padding: 15px;
+  text-align: center;
 }
 
 .teamsInfo {
   color: white;
   font-family: "Roboto Slab", serif;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 8px;
+  font-weight: 600;
+  font-size: 19px;
+  padding: 0 0 8px 12px;
+  word-wrap: break-word;
+}
+.TeamsBoldTextInfo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .modalPhoto-teams {
@@ -250,7 +256,7 @@
   text-align: center;
   letter-spacing: 0.2em;
   animation: typing 2s steps(55);
-  z-index: 999;
+  // z-index: 999;
 }
 
 .check {

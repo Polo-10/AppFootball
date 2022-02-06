@@ -37,7 +37,7 @@
 }
 
 .flip-box {
-  background-image: url(../../img/CardBackground.png);
+  background-image: url(../../img/FootballersCardBackground.webp);
   filter: brightness(95%);
   position: absolute;
   top: 50%;
@@ -129,6 +129,7 @@
 
 .FootballersName {
   padding: 15px;
+  text-align: center;
 }
 
 .footballersInfo {
@@ -139,13 +140,10 @@
   padding: 8px;
 }
 
-.footballersInfoDetail {
-  display: inline;
-  margin: 5px;
-}
 .boldTextInfo {
   font-size: 21px;
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .modalPhoto {
@@ -246,6 +244,26 @@
   font-size: 50px;
   vertical-align: middle;
   padding-left: 20px;
+}
+
+.NotFoundFootballers {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 120px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  animation: typing 2s steps(62);
+  // z-index: 999;
+}
+
+.checkFootballers {
+  vertical-align: middle;
+  font-size: 40px;
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
 
 @keyframes anvil {

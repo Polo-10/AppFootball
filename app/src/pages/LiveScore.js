@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 
 import AsideLiveScore from "../components/AsideLiveScore";
 
-import CircleLoader from "react-spinners/CircleLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 import { css } from "@emotion/react";
 
 import Zoom from "react-reveal/Zoom";
@@ -43,13 +43,13 @@ const ScoreElement = ({
   DetailsELement,
 }) => {
   const addDefaultImg = (e) => {
-    e.target.src = "https://via.placeholder.com/150/771796";
+    e.target.src = "https://apiv3.apifootball.com/badges/1864_clipper.jpg";
+    // e.target.src = "https://via.placeholder.com/150";
   };
 
   return (
     <>
       <div className="title-box"></div>
-
       <div className="title-box">
         <div className="team">
           <img
@@ -81,38 +81,14 @@ const ScoreElement = ({
 };
 
 const LiveScore = () => {
-  const [liveScoreState, setLiveScoreState] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [liveScoreState, setLiveScoreState] = useState(null);
+  // const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getData = async () =>
       fetch(url)
         .then((res) => res.json())
         .then((res) => setLiveScoreState(res))
-        // .then((res) => {
-        //   setTimeout(() => {
-        //     setLiveScoreState(res.data);
-        //   }, 500);
-        // })
-        // .catch((err) => console.log(err));
-
-        .then((res) => res.json())
-        .then((res) =>
-          setLiveScoreState(
-            res.data
-              .map((item) => {
-                if (item.team_home_badge) return item;
-
-                return null;
-              })
-              .filter((i) => i)
-          )
-        )
-        .then(() => {
-          setTimeout(() => {
-            setIsLoading(false);
-          }, 1200);
-        })
         .catch((err) => console.log(err));
 
     getData();
@@ -123,7 +99,6 @@ const LiveScore = () => {
   return (
     <>
       <AsideLiveScore />
-
       <AnimationPages>
         <Helmet>
           <style>{`body {background-color: #1d1e2c;}`}</style>
@@ -136,48 +111,33 @@ const LiveScore = () => {
           </div>
         </Bounce>
 
-        <div>
-          {/* <div className="bgc">
-          <aside className="aside"></aside>
-        </div> */}
-        </div>
+        <div></div>
+
+        <h1 className="scoreBoard">Score Board</h1>
 
         <div className="container2">
-          <h1 className="scoreBoard">Score Board</h1>
-          {isLoading ? (
-            <div className="haha22">
-              <CircleLoader
-                color={"#FFFFFF"}
-                css={override}
-                size={150}
-                speedMultiplier={1}
-              />
-            </div>
-          ) : (
-            liveScoreState &&
-            (liveScoreState?.length > 0 ? (
-              liveScoreState?.map((item, index) => (
-                <Zoom duration={700} delay={100}>
-                  <ScoreElement
-                    key={item}
-                    className="matches-table"
-                    match_awayteam_name={item.match_awayteam_name}
-                    match_hometeam_name={item.match_hometeam_name}
-                    match_awayteam_score={item.match_awayteam_score}
-                    match_hometeam_score={item.match_hometeam_score}
-                    team_away_badge={item.team_away_badge}
-                    team_home_badge={item.team_home_badge}
-                  />
-                </Zoom>
-              ))
-            ) : (
-              <CircleLoader
-                color={"#FFFFFF"}
-                css={override}
-                size={150}
-                speedMultiplier={1}
-              />
+          {liveScoreState?.length > 0 ? (
+            liveScoreState?.map((item, index) => (
+              <Zoom duration={700} delay={100}>
+                <ScoreElement
+                  key={item}
+                  className="matches-table"
+                  match_awayteam_name={item.match_awayteam_name}
+                  match_hometeam_name={item.match_hometeam_name}
+                  match_awayteam_score={item.match_awayteam_score}
+                  match_hometeam_score={item.match_hometeam_score}
+                  team_away_badge={item.team_away_badge}
+                  team_home_badge={item.team_home_badge}
+                />
+              </Zoom>
             ))
+          ) : (
+            <PulseLoader
+              color={"#000000"}
+              css={override}
+              size={20}
+              speedMultiplier={1}
+            />
           )}
         </div>
       </AnimationPages>

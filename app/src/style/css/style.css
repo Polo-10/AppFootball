@@ -110,14 +110,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container2 {
-  margin-top: 40px;
+  margin-top: 111px;
   padding: 10px;
   position: absolute;
   left: 68%;
-  -webkit-transform: translateX(-65%);
-          transform: translateX(-65%);
-  height: 900px;
+  -webkit-transform: translateX(-68%);
+          transform: translateX(-68%);
+  height: 820px;
   width: 55%;
+  background-color: #fafafa;
   border-radius: 10px;
   text-transform: uppercase;
   overflow-y: scroll;
@@ -130,9 +131,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .scoreBoard {
+  padding: 20px 0 0 0;
+  position: absolute;
+  left: 68%;
+  -webkit-transform: translateX(-68%);
+          transform: translateX(-68%);
+  height: 80px;
+  width: 55%;
+  background-color: #fafafa;
+  border-radius: 10px;
+  margin-top: 45px;
   text-align: center;
   text-shadow: -2px 0px 0px rgba(0, 0, 0, 0.77);
-  padding: 20px 0 0 0;
 }
 
 .title-box {
@@ -188,10 +198,6 @@ body::-webkit-scrollbar-thumb {
 
 .match-tile .team {
   width: 100px;
-}
-
-.haha22 {
-  z-index: 999;
 }
 
 .icon {
@@ -278,7 +284,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .flip-box {
-  background-image: url(../../img/CardBackground.png);
+  background-image: url(../../img/FootballersCardBackground.webp);
   -webkit-filter: brightness(95%);
           filter: brightness(95%);
   position: absolute;
@@ -378,6 +384,7 @@ body::-webkit-scrollbar-thumb {
 
 .FootballersName {
   padding: 15px;
+  text-align: center;
 }
 
 .footballersInfo {
@@ -388,14 +395,10 @@ body::-webkit-scrollbar-thumb {
   padding: 8px;
 }
 
-.footballersInfoDetail {
-  display: inline;
-  margin: 5px;
-}
-
 .boldTextInfo {
   font-size: 21px;
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .modalPhoto {
@@ -501,6 +504,26 @@ body::-webkit-scrollbar-thumb {
   padding-left: 20px;
 }
 
+.NotFoundFootballers {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 120px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  -webkit-animation: typing 2s steps(62);
+          animation: typing 2s steps(62);
+}
+
+.checkFootballers {
+  vertical-align: middle;
+  font-size: 40px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
 @-webkit-keyframes anvil {
   0% {
     -webkit-transform: scale(1) translateY(0px);
@@ -601,8 +624,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .flip-box-teams {
-  background-color: #b1bfd8;
-  background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  background-image: url(../../img/TeamsCardBackground.webp);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -695,15 +719,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 .TeamsName {
-  padding: 10px;
+  padding: 15px;
+  text-align: center;
 }
 
 .teamsInfo {
   color: white;
   font-family: "Roboto Slab", serif;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 8px;
+  font-weight: 600;
+  font-size: 19px;
+  padding: 0 0 8px 12px;
+  word-wrap: break-word;
+}
+
+.TeamsBoldTextInfo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .modalPhoto-teams {
@@ -831,7 +863,6 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.2em;
   -webkit-animation: typing 2s steps(55);
           animation: typing 2s steps(55);
-  z-index: 999;
 }
 
 .check {

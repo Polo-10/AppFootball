@@ -73,12 +73,30 @@ const TeamsElements = ({
 
                 <div className="flip-box-back-teams">
                   <h1 className="TeamsName">{name}</h1>
-                  <p className="teamsInfo">Address: {address}</p>
-                  <p className="teamsInfo">Area: {area}</p>
-                  <p className="teamsInfo">Venue: {venue}</p>
-                  <p className="teamsInfo">Capacity: {capacity}</p>
-                  <p className="teamsInfo">Coach: {coach}</p>
-                  <p className="teamsInfo">Website: {website}</p>
+                  <p className="teamsInfo">
+                    <strong className="TeamsBoldTextInfo"> Address :</strong>
+                    {address}
+                  </p>
+                  <p className="teamsInfo">
+                    <strong className="TeamsBoldTextInfo"> Area :</strong>
+                    {area}
+                  </p>
+                  <p className="teamsInfo">
+                    <strong className="TeamsBoldTextInfo"> Venue :</strong>
+                    {venue}
+                  </p>
+                  <p className="teamsInfo">
+                    <strong className="TeamsBoldTextInfo"> Capacity :</strong>
+                    {`${capacity} tys`}
+                  </p>
+                  <p className="teamsInfo">
+                    <strong className="TeamsBoldTextInfo"> Coach : </strong>
+                    {coach}
+                  </p>
+                  <p className="teamsInfo">
+                    <strong className="TeamsBoldTextInfo"> Website :</strong>
+                    {website}
+                  </p>
                 </div>
               </div>
             </div>
@@ -99,10 +117,10 @@ const Teams = () => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
 
-    setError(false);
+    // setError(false);
 
     if (searchValue >= 0) {
-      setError("WPISZ NAZWĘ DRUŻYNY");
+      alert(" ENTER A TEAM NAME");
       return false;
     }
 
@@ -156,6 +174,7 @@ const Teams = () => {
         <form
           className="teamsFootballers"
           onSubmit={handleFormSubmit}
+          spellcheck="false"
           action=""
         >
           <input
