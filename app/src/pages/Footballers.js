@@ -13,6 +13,7 @@ import Zoom from "react-reveal/Zoom";
 import { BiSearchAlt2 } from "react-icons/bi";
 
 import { CgSearchFound } from "react-icons/cg";
+import { RiCloseCircleLine } from "react-icons/ri";
 
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
@@ -43,85 +44,102 @@ const FootballersElement = ({
   return (
     <>
       <div className="containerFootballers">
-        <div className="haha2">
-          {/* <p>{name}</p> */}
-          <img
-            className="footballers"
-            onClick={() => setOpen((o) => !o)}
-            src={photo}
-            alt=""
-            loading="lazy"
-          />
-        </div>
+        <p className="footballersName">{name}</p>
+        <img
+          className="footballers"
+          onClick={() => setOpen((o) => !o)}
+          src={photo}
+          alt=""
+          loading="lazy"
+        />
       </div>
 
       <Popup open={open} onClose={closeModal}>
-        <div className="flip-box">
-          <div className="flip-box-inner">
-            <div className="flip-box-front">
-              <img className="modalPhoto" src={photo} alt="" loading="lazy" />
-            </div>
+        {(close) => (
+          <div className="closeDivModalFootballers">
+            <button className="closeModalFootballers" onClick={close}>
+              <RiCloseCircleLine />
+            </button>
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
+                  <img
+                    className="modalPhoto"
+                    src={photo}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
 
-            <div className="flip-box-back">
-              <h1 className="FootballersName">{name}</h1>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Birthday : </strong>
-                {birthday}
-              </p>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Height : </strong>
-                {`${height} cm`}
-              </p>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Weight : </strong>
-                {`${weight} kg`}
-              </p>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Country : </strong> {country}
-              </p>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Feet : </strong>
-                {feet}
-              </p>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Position : </strong> {position}
-              </p>
-              <p className="footballersInfo">
-                <strong className="boldTextInfo">Number : </strong> {number}
-              </p>
+                <div className="flip-box-back">
+                  <h1 className="FootballersName">{name}</h1>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Birthday : </strong>
+                    {birthday}
+                  </p>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Height : </strong>
+                    {`${height} cm`}
+                  </p>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Weight : </strong>
+                    {`${weight} kg`}
+                  </p>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Country : </strong>{" "}
+                    {country}
+                  </p>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Feet : </strong>
+                    {feet}
+                  </p>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Position : </strong>{" "}
+                    {position}
+                  </p>
+                  <p className="footballersInfo">
+                    <strong className="boldTextInfo">Number : </strong> {number}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </Popup>
     </>
   );
 };
 const Footballers = () => {
-  const [footballers, SetFootballers] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [footballers, SetFootballers] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [error, setError] = useState(false);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
 
+    setError(false);
+
     if (searchValue >= 0) {
-      alert("WPISZ NAZWĘ PIŁKARZA");
+      setError("WPISZ NAZWĘ DRUŻYNY");
       return false;
     }
+
+    setIsLoading(true);
 
     fetch(API + `&name=${searchValue}`)
       .then((res) => res.json())
       .then((res) =>
         SetFootballers(
-          // Array.from(
-          //   res.data
-          //     .reduce((map, obj) => map.set(obj.playerId, obj), new Map())
-          //     .values()
-          // )
-          res.data
+          Array.from(
+            res.data
+              .reduce((map, obj) => map.set(obj.playerId, obj), new Map())
+              .values()
+          )
             .map((item) => {
               if (
+                item.playerId &&
                 item.photo &&
                 item.name &&
                 item.birthday &&

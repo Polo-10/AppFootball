@@ -1,4 +1,4 @@
-import Messi from "../../src/img//LionelMessi.png";
+import Messi from "../../src/img/LionelMessi.webp";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/mainPage/card.module.scss";
 

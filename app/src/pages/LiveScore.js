@@ -1,4 +1,4 @@
-import Ronaldo from "../img/Ronaldo.png";
+import Ronaldo from "../img/Ronaldo.webp";
 
 import { useState, useEffect } from "react";
 
@@ -11,8 +11,6 @@ import AsideLiveScore from "../components/AsideLiveScore";
 
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
-
-import { CgSearchFound } from "react-icons/cg";
 
 import Zoom from "react-reveal/Zoom";
 
@@ -98,18 +96,18 @@ const LiveScore = () => {
         // })
         // .catch((err) => console.log(err));
 
-        // .then((res) => res.json())
-        // .then((res) =>
-        //   setLiveScoreState(
-        //     res.data
-        //       .map((item) => {
-        //         if (item.team_home_badge && item.team_away_badge) return item;
+        .then((res) => res.json())
+        .then((res) =>
+          setLiveScoreState(
+            res.data
+              .map((item) => {
+                if (item.team_home_badge) return item;
 
-        //         return null;
-        //       })
-        //       .filter((i) => i)
-        //   )
-        // )
+                return null;
+              })
+              .filter((i) => i)
+          )
+        )
         .then(() => {
           setTimeout(() => {
             setIsLoading(false);
