@@ -17,6 +17,7 @@ import { RiCloseCircleLine } from "react-icons/ri";
 
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
+import { useAudio } from "react-use";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API = `/sport/football/player/search?api_key=${API_KEY}`;
@@ -86,7 +87,7 @@ const FootballersElement = ({
                     {`${weight} kg`}
                   </p>
                   <p className="footballersInfo">
-                    <strong className="boldTextInfo">Country : </strong>{" "}
+                    <strong className="boldTextInfo">Country : </strong>
                     {country}
                   </p>
                   <p className="footballersInfo">
@@ -94,7 +95,7 @@ const FootballersElement = ({
                     {feet}
                   </p>
                   <p className="footballersInfo">
-                    <strong className="boldTextInfo">Position : </strong>{" "}
+                    <strong className="boldTextInfo">Position : </strong>
                     {position}
                   </p>
                   <p className="footballersInfo">
@@ -115,14 +116,19 @@ const Footballers = () => {
   const [searchValue, setSearchValue] = useState("");
   const [error, setError] = useState(false);
 
+  // const [audio, state, controls, ref] = useAudio({
+  //   src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+  //   autoPlay: false,
+  // });
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
 
-    setError(false);
+    // setError(false);
 
     if (searchValue >= 0) {
-      setError("WPISZ NAZWĘ DRUŻYNY");
+      alert("ENTER THE NAME OF THE PLAYER");
       return false;
     }
 
@@ -182,15 +188,24 @@ const Footballers = () => {
           </Zoom>
         </h2>
 
-        <form className="formFootballers" onSubmit={handleFormSubmit} action="">
+        <form
+          className="formFootballers"
+          onSubmit={handleFormSubmit}
+          spellcheck="false"
+          action=""
+        >
           <input
             className="inputFootballers"
             onChange={(e) => setSearchValue(e.target.value)}
             value={searchValue}
             type="text"
           />
-
-          <button className="buttonFootballers" type="submit">
+          {/* {audio} */}
+          <button
+            // onClick={controls.play}
+            className="buttonFootballers"
+            type="submit"
+          >
             <span className="TeamsSearch">
               <BiSearchAlt2 />
             </span>
@@ -225,9 +240,9 @@ const Footballers = () => {
               </Zoom>
             ))
           ) : (
-            <div className="NotFoundTeams">
-              No data available, check the name of the entered team
-              <CgSearchFound className="check" />
+            <div className="NotFoundFootballers">
+              No data available, check the name of the entered footballers
+              <CgSearchFound className="checkFootballers" />
             </div>
           ))
         )}
