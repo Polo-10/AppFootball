@@ -27,7 +27,7 @@ const AnimationPages = ({ children }) => {
   };
 
   const pageStyle = {
-    position: "relative",
+    // position: "relative",
   };
 
   return (

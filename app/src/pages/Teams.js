@@ -175,7 +175,6 @@ const Teams = () => {
           className="teamsFootballers"
           onSubmit={handleFormSubmit}
           spellcheck="false"
-          action=""
         >
           <input
             className="inputTeams"

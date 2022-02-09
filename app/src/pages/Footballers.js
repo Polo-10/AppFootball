@@ -192,7 +192,6 @@ const Footballers = () => {
           className="formFootballers"
           onSubmit={handleFormSubmit}
           spellcheck="false"
-          action=""
         >
           <input
             className="inputFootballers"

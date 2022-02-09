@@ -2,7 +2,7 @@ import Ronaldo from "../img/Ronaldo.webp";
 
 import { useState, useEffect } from "react";
 
-import Bounce from "react-reveal/Bounce";
+import Zoom from "react-reveal/Zoom";
 import AnimationPages from "../components/AnimatePages";
 
 import { Helmet } from "react-helmet";
@@ -12,7 +12,7 @@ import AsideLiveScore from "../components/AsideLiveScore";
 import PulseLoader from "react-spinners/PulseLoader";
 import { css } from "@emotion/react";
 
-import Zoom from "react-reveal/Zoom";
+import CardLiveScore from "../components/CardLiveSCore";
 
 const url =
   "https://apiv3.apifootball.com/?action=get_events&APIkey=182f7c692008efceceaeb1ec9c226126d008aa81e38f0a4419d581d2de39360b&match_live=1";
@@ -81,14 +81,19 @@ const ScoreElement = ({
 };
 
 const LiveScore = () => {
-  const [liveScoreState, setLiveScoreState] = useState(null);
-  // const [isLoading, setIsLoading] = useState(false);
+  const [liveScoreState, setLiveScoreState] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getData = async () =>
       fetch(url)
         .then((res) => res.json())
         .then((res) => setLiveScoreState(res))
+        .then(() => {
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 1200);
+        })
         .catch((err) => console.log(err));
 
     getData();
@@ -98,23 +103,14 @@ const LiveScore = () => {
 
   return (
     <>
-      <AsideLiveScore />
       <AnimationPages>
+        <AsideLiveScore />
         <Helmet>
           <style>{`body {background-color: #1d1e2c;}`}</style>
         </Helmet>
-        <Bounce top duration={1000} delay={200}>
-          <div className="containerRonaldo">
-            <div className="ronaldo">
-              <img src={Ronaldo} alt="" loading="lazy" />
-            </div>
-          </div>
-        </Bounce>
-
-        <div></div>
+        <CardLiveScore />
 
         <h1 className="scoreBoard">Score Board</h1>
-
         <div className="container2">
           {liveScoreState?.length > 0 ? (
             liveScoreState?.map((item, index) => (

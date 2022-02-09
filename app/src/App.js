@@ -10,7 +10,6 @@ import LiveScore from "./pages/LiveScore";
 import MainPage from "./pages/MainPage";
 import NotFound from "./pages/NotFound";
 
-
 import "./style/mainPage/style.scss";
 import Cursor from "./components/Cursor";
 

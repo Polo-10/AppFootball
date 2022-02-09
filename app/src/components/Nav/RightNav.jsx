@@ -34,7 +34,8 @@ const Ul = styled.ul`
   }
   @media (max-width: 3000px) {
     /* flex-flow: column nowrap; */
-    background-color: #1d7874;
+    /* background-color: #1d7874; */
+    background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     /* top: 0; */
