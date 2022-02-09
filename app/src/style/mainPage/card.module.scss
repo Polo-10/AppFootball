@@ -77,3 +77,40 @@
 .liveScore:hover {
   margin-left: 25px;
 }
+
+// MOBILE DEVICE
+
+@media screen and (min-device-width: 1224px) and (max-device-width: 1824px) and (orientation: landscape) {
+  .card img {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .card {
+    width: 370px;
+  }
+  .card img {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .container {
+    // display: none;
+    width: 80%;
+  }
+
+  .card {
+    width: 350px;
+    height: 350px;
+  }
+  .card img {
+    // padding-left: 0px;
+  }
+  .containerDetails {
+    width: 750px;
+    // padding: 55px 10px;
+    // align-self: flex-end;
+  }
+}
