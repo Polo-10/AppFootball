@@ -101,31 +101,57 @@
   margin-left: 25px;
 }
 
-@media screen and (min-device-width: 1224px) and (max-device-width: 1824px) and (orientation: landscape) {
+@media screen and (min-device-width: 1024px) and (max-device-width: 1280px) and (orientation: landscape) {
   .card img {
-    padding-left: 25px;
+    padding-left: 0px;
   }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .card {
-    width: 370px;
+    width: 320px;
+    height: 320px;
   }
   .card img {
-    padding-left: 25px;
+    padding-left: 15px;
+  }
+  .containerDetails {
+    width: 460px;
+    padding: 0px 10px;
+  }
+  .text {
+    font-size: 25px;
   }
 }
 
 @media screen and (min-device-width: 480px) and (max-device-width: 768px) {
-  .container {
-    width: 80%;
-  }
   .card {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
+  }
+  .card img {
+    padding-left: 18px;
   }
   .containerDetails {
-    width: 750px;
+    width: 420px;
+    padding: 0px 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .text {
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+  .lorem {
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  .liveScore {
+    margin-left: 8px;
+  }
+  .liveScore:hover {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=card.module.css.map */
