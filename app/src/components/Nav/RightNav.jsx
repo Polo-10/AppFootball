@@ -7,6 +7,7 @@ import { IoFootball } from "react-icons/io5";
 
 import { IoPeopleSharp } from "react-icons/io5";
 import { AiOutlineDoubleRight } from "react-icons/ai";
+import { useState } from "react";
 
 const Ul = styled.ul`
   list-style: none;
@@ -59,13 +60,13 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open, setOpen }) => {
   return (
     <Ul open={open}>
       <div>
         <nav>
           <ul>
-            <li id="1" className="liHover">
+            <li onClick={() => setOpen(!open)} id="1" className="liHover">
               <Link to="/">
                 <BiHomeAlt className="icon" /> MainPage
                 <span id="2" className="spanHover">
@@ -75,7 +76,7 @@ const RightNav = ({ open }) => {
             </li>
 
             <li className="liHover">
-              <Link to="/LiveScore">
+              <Link onClick={() => setOpen(!open)} to="/LiveScore">
                 <MdLiveTv className="icon" /> Live Score
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
@@ -83,7 +84,7 @@ const RightNav = ({ open }) => {
               </Link>
             </li>
             <li className="liHover">
-              <Link to="/teams">
+              <Link onClick={() => setOpen(!open)} to="/teams">
                 <IoPeopleSharp className="icon" /> Teams
                 <span className="spanHover">
                   <AiOutlineDoubleRight />
@@ -92,7 +93,7 @@ const RightNav = ({ open }) => {
             </li>
 
             <li className="liHover">
-              <Link to="/footballers">
+              <Link onClick={() => setOpen(!open)} to="/footballers">
                 <IoFootball className="icon" /> Footballers
                 <span className="spanHover">
                   <AiOutlineDoubleRight />

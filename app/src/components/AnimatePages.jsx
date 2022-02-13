@@ -4,7 +4,7 @@ const AnimationPages = ({ children }) => {
   const pageVariants = {
     initial: {
       opacity: 0,
-      yield: "-100vw",
+      // yield: "-100vw",
       // scale: 0.8,
     },
     in: {
