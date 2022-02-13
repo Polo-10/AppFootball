@@ -6,12 +6,12 @@ import Zoom from "react-reveal/Zoom";
 import AnimationPages from "../components/AnimatePages";
 
 import { Helmet } from "react-helmet";
-
+import styled from "styled-components";
 import AsideLiveScore from "../components/AsideLiveScore";
 
 import PulseLoader from "react-spinners/PulseLoader";
 import { css } from "@emotion/react";
-
+import filterGoalScorers from "../components/filterGoalScorer";
 import CardLiveScore from "../components/CardLiveSCore";
 
 const url =
@@ -41,11 +41,17 @@ const ScoreElement = ({
   team_away_badge,
   team_home_badge,
   DetailsELement,
+  goalScorer,
+  cards,
 }) => {
   const addDefaultImg = (e) => {
     e.target.src = "https://apiv3.apifootball.com/badges/1864_clipper.jpg";
     // e.target.src = "https://via.placeholder.com/150";
   };
+
+  const [goals] = useState(filterGoalScorers(goalScorer));
+  // console.log(goals)
+  // console.log(goalScorer)
 
   return (
     <>
@@ -59,7 +65,24 @@ const ScoreElement = ({
             loading="lazy"
           />
           <p className="nameTeam">{match_hometeam_name}</p>
-          <p>{DetailsELement}</p>
+          {/* <p>{DetailsELement}</p> */}
+          <div>
+            {goals
+              .filter((i) => i.type === "home")
+              .map((i) => (
+                <>
+                  <p>{i.time}</p>
+                  <p>{i.name ? i.name : "Unknown"}</p>
+                </>
+              ))}
+            {cards
+              .filter((i) => i.home_fault)
+              .map((i) => (
+                <p>
+                  {i.card} - {i.home_fault} {i.time}
+                </p>
+              ))}
+          </div>
         </div>
 
         <p className="score">
@@ -74,6 +97,23 @@ const ScoreElement = ({
             loading="lazy"
           />
           <p className="nameTeam">{match_awayteam_name}</p>
+          <div>
+            {goals
+              .filter((i) => i.type === "away")
+              .map((i) => (
+                <>
+                  <p>{i.time}</p>
+                  <p>{i.name ? i.name : "Unknown"}</p>
+                  {cards
+                    .filter((i) => i.away_fault)
+                    .map((i) => (
+                      <p>
+                        {i.card} {i.away_fault} {i.time}
+                      </p>
+                    ))}
+                </>
+              ))}
+          </div>
         </div>
       </div>
     </>
@@ -103,15 +143,17 @@ const LiveScore = () => {
 
   return (
     <>
+      <Helmet>
+        <style>{`body {background-color: #1d1e2c;}`}</style>
+      </Helmet>
+
       <AnimationPages>
+        {/* <Wrapper> */}
         <AsideLiveScore />
-        <Helmet>
-          <style>{`body {background-color: #1d1e2c;}`}</style>
-        </Helmet>
-        <CardLiveScore />
 
         <h1 className="scoreBoard">Score Board</h1>
         <div className="container2">
+          {/* <h1 className="scoreBoard">Score Board</h1> */}
           {liveScoreState?.length > 0 ? (
             liveScoreState?.map((item, index) => (
               <Zoom duration={700} delay={100}>
@@ -124,6 +166,8 @@ const LiveScore = () => {
                   match_hometeam_score={item.match_hometeam_score}
                   team_away_badge={item.team_away_badge}
                   team_home_badge={item.team_home_badge}
+                  goalScorer={item.goalscorer}
+                  cards={item.cards}
                 />
               </Zoom>
             ))
@@ -136,9 +180,20 @@ const LiveScore = () => {
             />
           )}
         </div>
+        <CardLiveScore />
+        {/* </Wrapper> */}
       </AnimationPages>
     </>
   );
 };
+
+const Wrapper = styled.div`
+  /* position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+`;
 
 export default LiveScore;

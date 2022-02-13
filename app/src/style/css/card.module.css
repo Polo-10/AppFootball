@@ -4,9 +4,9 @@
   display: flex;
   position: absolute;
   top: 50%;
-  left: 15%;
-  -webkit-transform: translate(-15%, -50%);
-          transform: translate(-15%, -50%);
+  left: 16%;
+  -webkit-transform: translate(-16%, -50%);
+          transform: translate(-16%, -50%);
   font-size: Quantico;
 }
 
@@ -22,15 +22,15 @@
           justify-content: center;
   position: relative;
   border-radius: 10px;
-  height: 450px;
-  width: 450px;
+  height: 28em;
+  width: 28em;
   background: linear-gradient(132.02deg, rgba(178, 76, 99, 0.989229) 15%, #1d1e2c 86.7%);
 }
 
 .card img {
   max-width: 100%;
   max-height: 113%;
-  padding-left: 45px;
+  padding-left: 3em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -45,8 +45,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 450px;
-  padding: 55px 10px;
+  width: 28em;
+  padding: 2.9em 0.75em;
   -ms-flex-item-align: end;
       align-self: flex-end;
   -webkit-user-select: none;
@@ -67,14 +67,16 @@
 }
 
 .lorem {
-  font-size: 22px;
+  font-size: 25px;
   padding: 10px;
   color: white;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
 }
 
 .liveScore {
@@ -101,54 +103,94 @@
   margin-left: 25px;
 }
 
-@media screen and (min-device-width: 1024px) and (max-device-width: 1280px) and (orientation: landscape) {
+@media screen and (min-device-width: 1280px) and (max-device-width: 1440px) and (orientation: landscape) {
   .card img {
-    padding-left: 0px;
+    padding-left: 25px;
   }
 }
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media screen and (min-device-width: 1024px) and (max-device-width: 1279px) and (orientation: landscape) {
   .card {
-    width: 320px;
-    height: 320px;
-  }
-  .card img {
-    padding-left: 15px;
+    height: 21em;
+    width: 21em;
   }
   .containerDetails {
-    width: 460px;
-    padding: 0px 10px;
+    margin-bottom: 1em;
   }
   .text {
-    font-size: 25px;
-  }
-}
-
-@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
-  .card {
-    width: 320px;
-    height: 320px;
-  }
-  .card img {
-    padding-left: 18px;
-  }
-  .containerDetails {
-    width: 420px;
-    padding: 0px 10px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .text {
-    padding: 5px;
-    padding-bottom: 10px;
+    font-size: 31px;
+    padding-bottom: 1em;
   }
   .lorem {
-    padding: 8px;
-    margin-bottom: 20px;
+    font-size: 21px;
+    padding: 10px;
+    margin-bottom: 1.5em;
   }
   .liveScore {
-    margin-left: 8px;
+    width: 40%;
+    font-size: 18px;
+  }
+  .liveScore:hover {
+    margin-left: inherit;
+  }
+}
+
+@media screen and (min-device-width: 767px) and (max-device-width: 1023px) and (orientation: landscape) {
+  .containerDetails {
+    padding: 0px 10px;
+    margin-bottom: 2em;
+  }
+  .text {
+    font-size: 18px;
+  }
+  .lorem {
+    font-size: 19px;
+    padding: 10px;
+  }
+  .liveScore {
+    font-size: 18px;
+  }
+  .liveScore:hover {
+    margin-left: inherit;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 34.5%;
+  }
+  .card {
+    width: 14em;
+    height: 14em;
+    border-radius: 0 10px 10px 0;
+  }
+  .card img {
+    padding-left: 0em;
+  }
+  .containerDetails {
+    width: 14em;
+    padding: 1em 0 0 0;
+    margin-bottom: 0em;
+  }
+  .text {
+    font-size: 18px;
+    padding: 0px;
+    padding-bottom: 1.2em;
+  }
+  .lorem {
+    font-size: 14px;
+    padding: 1px;
+    margin-bottom: 1.2em;
+  }
+  .liveScore {
+    width: 100%;
+    padding: 4px 0;
+    font-size: 16px;
+    margin-left: 0px;
   }
   .liveScore:hover {
     margin-left: 0;

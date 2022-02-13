@@ -2,7 +2,7 @@ import Messi from "../../src/img/LionelMessi.webp";
 import { useNavigate } from "react-router-dom";
 import styles from "../style/mainPage/card.module.scss";
 
-import Slide from "react-reveal/Slide";
+import Zoom from "react-reveal/Zoom";
 import Bounce from "react-reveal/Bounce";
 import HeadShake from "react-reveal/Bounce";
 import AnimationPages from "../components/AnimatePages";
@@ -22,21 +22,19 @@ const Card = () => {
       </Bounce>
 
       <div className={styles.containerDetails}>
-        <Bounce right delay={550} duration={1000}>
+        <Zoom delay={500} duration={900}>
           <p className={styles.text}>Enter The World of Football</p>
+
           <p className={styles.lorem}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
-            blanditiis ducimus odit magni dolores.
+            Thirsty for sensations? Come in and discover our world! A world of
+            emotions
           </p>
-        </Bounce>
-        <HeadShake bottom delay={750} duration={1000}>
+        </Zoom>
+        <Zoom delay={850} duration={900}>
           <button onClick={handleRoute} className={styles.liveScore}>
             LIVE SCORE
-            {/* <span className="spanHover2">
-            <AiOutlineDoubleRight />
-          </span> */}
           </button>
-        </HeadShake>
+        </Zoom>
       </div>
     </div>
   );

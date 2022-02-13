@@ -2,8 +2,8 @@
   display: flex;
   position: absolute;
   top: 50%;
-  left: 15%;
-  transform: translate(-15%, -50%);
+  left: 16%;
+  transform: translate(-16%, -50%);
   font-size: Quantico;
 }
 
@@ -13,8 +13,12 @@
   justify-content: center;
   position: relative;
   border-radius: 10px;
-  height: 450px;
-  width: 450px;
+  // height: 450px;
+  // width: 450px;
+  height: 28em;
+  width: 28em;
+  // height: 55%;
+  // width: 55%;
 
   background: linear-gradient(
     132.02deg,
@@ -26,15 +30,18 @@
   // margin: 0 auto;
   max-width: 100%;
   max-height: 113%;
-  padding-left: 45px;
+  // padding-left: 45px;
+  padding-left: 3em;
   user-select: none;
 }
 
 .containerDetails {
   display: flex;
   flex-direction: column;
-  width: 450px;
-  padding: 55px 10px;
+  // width: 450px;
+  width: 28em;
+  // padding: 55px 10px;
+  padding: 2.9em 0.75em;
   align-self: flex-end;
   user-select: none;
 }
@@ -48,11 +55,13 @@
 }
 
 .lorem {
-  font-size: 22px;
+  font-size: 25px;
   padding: 10px;
   color: white;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   user-select: none;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
 }
 
 .liveScore {
@@ -80,66 +89,172 @@
 
 // MOBILE DEVICE
 
-// @media screen and (min-device-width: 1224px) and (max-device-width: 1824px) and (orientation: landscape) {
+@media screen and (min-device-width: 1280px) and (max-device-width: 1440px) and (orientation: landscape) {
+  .card img {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1279px) and (orientation: landscape) {
+  .card {
+    height: 21em;
+    width: 21em;
+  }
+
+  .card img {
+  }
+  .containerDetails {
+    // margin-top: 3.5em;
+    // padding-top: 3.5em;
+    // padding: 4.9em 0.75em;
+    // align-self: flex-start;
+    margin-bottom: 1em;
+  }
+  .text {
+    // margin-top: 1em;
+    font-size: 31px;
+    // padding: 10px;
+    padding-bottom: 1em;
+  }
+  .lorem {
+    font-size: 21px;
+    padding: 10px;
+    margin-bottom: 1.5em;
+  }
+  .liveScore {
+    width: 40%;
+    font-size: 18px;
+    // margin-left: 0px;
+    // margin-bottom: 1em;
+  }
+  .liveScore:hover {
+    margin-left: inherit;
+  }
+}
+
+@media screen and (min-device-width: 767px) and (max-device-width: 1023px) and (orientation: landscape) {
+  .card {
+    // height: 21em;
+    // width: 21em;
+  }
+  .card img {
+    // padding-left: 15px;
+    // height: 8em;
+    // width: 8em;
+  }
+  .containerDetails {
+    // width: 20em;
+    padding: 0px 10px;
+    margin-bottom: 2em;
+  }
+  .text {
+    // margin-top: 1em;
+    font-size: 18px;
+    // padding: 10px;
+    // padding-bottom: 1em;
+  }
+  .lorem {
+    font-size: 19px;
+    padding: 10px;
+    // margin-bottom: 3em;
+  }
+  .liveScore {
+    // width: 40%;
+    font-size: 18px;
+    // margin-left: 0px;
+    // margin-bottom: 1em;
+  }
+  .liveScore:hover {
+    margin-left: inherit;
+  }
+}
+
+// @media screen and (min-device-width: 480px) and (max-device-width: 767px) {
+//   .container {
+//     display: none;
+//     // width: 80%;
+//   }
+
+//   .card {
+//     // width: 26em;
+//     // height: 26em;
+//   }
 //   .card img {
-//     padding-left: 25px;
+//     padding-left: 18px;
+//   }
+//   .containerDetails {
+//     width: 420px;
+//     padding: 0px 10px;
+//     align-self: center;
+//   }
+
+//   .text {
+//     padding: 5px;
+//     padding-bottom: 10px;
+//   }
+//   .lorem {
+//     padding: 8px;
+//     margin-bottom: 20px;
+//   }
+
+//   .liveScore {
+//     margin-left: 8px;
+//   }
+//   .liveScore:hover {
+//     margin-left: 0;
 //   }
 // }
 
-@media screen and (min-device-width: 1024px) and (max-device-width: 1280px) and (orientation: landscape) {
-  .card img {
-    padding-left: 0px;
-    // display: none;
-  }
-}
-
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .card {
-    width: 320px;
-    height: 320px;
-  }
-  .card img {
-    padding-left: 15px;
-  }
-  .containerDetails {
-    width: 460px;
-    padding: 0px 10px;
-  }
-  .text {
-    font-size: 25px;
-  }
-}
-
-@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+@media screen and (max-device-width: 480px) {
   .container {
     // display: none;
     // width: 80%;
+    flex-direction: column;
+    // top: 25em;
+    left: 34.5%;
+
+    // top: 70%;
+    // left: 50%;
+    // transform: translate(-50%, -70%);
   }
 
   .card {
-    width: 320px;
-    height: 320px;
+    width: 14em;
+    height: 14em;
+    border-radius: 0 10px 10px 0;
+    // background: none;
   }
   .card img {
-    padding-left: 18px;
+    // padding-left: 18px;
+    padding-left: 0em;
   }
   .containerDetails {
-    width: 420px;
-    padding: 0px 10px;
-    align-self: center;
+    width: 14em;
+    padding: 1em 0 0 0;
+    // padding: 0px 10px;
+    // align-self: center;
+    // flex-direction: column;
+    margin-bottom: 0em;
   }
 
   .text {
-    padding: 5px;
-    padding-bottom: 10px;
+    // margin-top: 1em;
+    font-size: 18px;
+    padding: 0px;
+    padding-bottom: 1.2em;
   }
   .lorem {
-    padding: 8px;
-    margin-bottom: 20px;
+    // width: 14em;
+    font-size: 14px;
+    padding: 1px;
+    margin-bottom: 1.2em;
   }
-
   .liveScore {
-    margin-left: 8px;
+    // margin-left: 8px;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 16px;
+    margin-left: 0px;
   }
   .liveScore:hover {
     margin-left: 0;

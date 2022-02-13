@@ -85,16 +85,13 @@ body::-webkit-scrollbar-thumb {
 
 .scoreBoard {
   position: absolute;
-  top: 5%;
-  left: 68%;
-  -webkit-transform: translate(-68%, -5%);
-          transform: translate(-68%, -5%);
-  height: 80px;
-  width: 55%;
-  background-color: #fafafa;
+  top: 6%;
+  left: 58.6%;
+  -webkit-transform: translate(-58.6%, -6%);
+          transform: translate(-58.6%, -6%);
   border-radius: 10px;
-  padding: 20px 0 0 0;
   text-align: center;
+  color: white;
   text-shadow: -2px 0px 0px rgba(0, 0, 0, 0.77);
 }
 
@@ -125,7 +122,6 @@ body::-webkit-scrollbar-thumb {
 
 .team {
   width: 250px;
-  margin-top: 30px;
   margin-left: 100px;
 }
 

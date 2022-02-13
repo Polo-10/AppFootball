@@ -18,6 +18,16 @@ const Ul = styled.ul`
   user-select: none;
   padding-top: 200px;
   position: fixed;
+  background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
+  position: fixed;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 222px;
+  padding-top: 3.5rem;
+  transition: transform 0.3s ease-in-out;
+  cursor: none;
   /* z-index: 999; */
   cursor: none;
   li {
@@ -26,27 +36,31 @@ const Ul = styled.ul`
 
     list-style: none;
     text-decoration: none;
+    color: #fff;
+    cursor: none;
     color: white;
     font-size: 25px;
     /* padding-top: 55px; */
     cursor: none;
     z-index: 999;
     /* padding-left: 10px; */
+    a {
+      text-decoration: none;
+      color: white;
+      cursor: none;
+    }
   }
-  @media (max-width: 3000px) {
-    /* flex-flow: column nowrap; */
-    /* background-color: #1d7874; */
+  /* @media (max-width: 3000px) {
     background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    /* top: 0; */
+    top: 0;
     right: 0;
     height: 100vh;
     width: 222px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     cursor: none;
-    /* z-index: 999; */
 
     li {
       color: #fff;
@@ -57,7 +71,7 @@ const Ul = styled.ul`
       color: white;
       cursor: none;
     }
-  }
+  } */
 `;
 
 const RightNav = ({ open, setOpen }) => {
