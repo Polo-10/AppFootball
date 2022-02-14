@@ -7,7 +7,7 @@
   left: 16%;
   -webkit-transform: translate(-16%, -50%);
           transform: translate(-16%, -50%);
-  font-size: Quantico;
+  font-family: "Roboto Slab", serif;
 }
 
 .card {
@@ -75,7 +75,6 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  text-transform: uppercase;
   font-family: "Roboto Slab", serif;
 }
 
@@ -135,17 +134,25 @@
   }
 }
 
-@media screen and (min-device-width: 767px) and (max-device-width: 1023px) and (orientation: landscape) {
+@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+  .card {
+    height: 21em;
+    width: 21em;
+  }
+  .card img {
+    padding-left: 0px;
+  }
   .containerDetails {
-    padding: 0px 10px;
-    margin-bottom: 2em;
+    width: 24em;
+    margin-bottom: 0em;
   }
   .text {
-    font-size: 18px;
+    font-size: 25px;
   }
   .lorem {
-    font-size: 19px;
+    font-size: 22px;
     padding: 10px;
+    margin-bottom: 1em;
   }
   .liveScore {
     font-size: 18px;
@@ -155,12 +162,89 @@
   }
 }
 
+@media screen and (min-device-width: 769px) and (max-device-width: 815px) {
+  .card {
+    width: 16em;
+    height: 16em;
+  }
+  .card img {
+    padding-left: 0em;
+  }
+  .containerDetails {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 16em;
+    padding: 1em 0 0 0;
+    margin-bottom: 2em;
+  }
+  .text {
+    font-size: 22px;
+    padding-bottom: 1em;
+  }
+  .lorem {
+    width: 16em;
+    padding: 10px;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+  }
+  .liveScore {
+    margin-left: 9px;
+    width: 50%;
+    padding: 4px 0;
+    font-size: 16px;
+  }
+  .liveScore:hover {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .card {
+    width: 16em;
+    height: 16em;
+  }
+  .card img {
+    padding-left: 0em;
+  }
+  .containerDetails {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 16em;
+    padding: 1em 0 0 0;
+    margin-bottom: 2em;
+  }
+  .text {
+    font-size: 22px;
+    padding-bottom: 1em;
+  }
+  .lorem {
+    width: 16em;
+    padding: 10px;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+  }
+  .liveScore {
+    margin-left: 9px;
+    width: 50%;
+    padding: 4px 0;
+    font-size: 16px;
+  }
+  .liveScore:hover {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-device-width: 480px) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    top: 24em;
     left: 34.5%;
   }
   .card {

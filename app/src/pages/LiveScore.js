@@ -71,15 +71,17 @@ const ScoreElement = ({
               .filter((i) => i.type === "home")
               .map((i) => (
                 <>
-                  <p>{i.time}</p>
-                  <p>{i.name ? i.name : "Unknown"}</p>
+                  <p>
+                    {i.time + " '"} {i.name ? i.name : "Unknown"}
+                  </p>
+                  {/* <p>{i.name ? i.name : "Unknown"}</p> */}
                 </>
               ))}
             {cards
               .filter((i) => i.home_fault)
               .map((i) => (
                 <p>
-                  {i.card} - {i.home_fault} {i.time}
+                  {i.card} - {i.home_fault} {i.time + " '"}
                 </p>
               ))}
           </div>
@@ -102,13 +104,15 @@ const ScoreElement = ({
               .filter((i) => i.type === "away")
               .map((i) => (
                 <>
-                  <p>{i.time}</p>
-                  <p>{i.name ? i.name : "Unknown"}</p>
+                  <p>
+                    {i.time + " '"} {i.name ? i.name : "Unknown"}
+                  </p>
+                  {/* <p>{i.name ? i.name : "Unknown"}</p> */}
                   {cards
                     .filter((i) => i.away_fault)
                     .map((i) => (
                       <p>
-                        {i.card} {i.away_fault} {i.time}
+                        {i.card} {i.away_fault} {i.time + " '"}
                       </p>
                     ))}
                 </>

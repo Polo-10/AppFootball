@@ -50,6 +50,17 @@ const Ul = styled.ul`
       cursor: none;
     }
   }
+
+  @media screen and (max-device-width: 480px) {
+    width: 160px;
+    li {
+      margin-top: 100px;
+      padding: 1px 0px;
+    }
+    a {
+      font-size: 19px;
+    }
+  }
   /* @media (max-width: 3000px) {
     background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
     position: fixed;

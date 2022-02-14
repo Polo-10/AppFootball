@@ -26,3 +26,12 @@
   margin-left: 6px;
   transition-property: none;
 }
+
+@media screen and (max-device-width: 480px) {
+  .icon {
+    font-size: 20px;
+  }
+  .liHover:hover .spanHover {
+    visibility: hidden;
+  }
+}
