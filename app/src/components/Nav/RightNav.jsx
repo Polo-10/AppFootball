@@ -52,8 +52,7 @@ const Ul = styled.ul`
   @media screen and (max-device-width: 480px) {
     width: 140px;
     li {
-      margin-top: 95px;
-      padding: 1px 0px;
+      margin-top: 90px;
     }
     a {
       font-size: 16px;

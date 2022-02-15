@@ -254,6 +254,14 @@ body::-webkit-scrollbar-thumb {
   }
   .liHover:hover .spanHover {
     visibility: hidden;
+    font-size: 0px;
+    margin-left: 0px;
+  }
+  .liHover:hover .spanHover {
+    visibility: hidden;
+    margin-left: 0px;
+    -webkit-transition-property: none;
+    transition-property: none;
   }
 }
 
@@ -263,12 +271,19 @@ body::-webkit-scrollbar-thumb {
   }
   .liHover:hover .spanHover {
     visibility: hidden;
+    font-size: 0px;
+    margin-left: 0px;
   }
 }
 
 @media (min-device-width: 480px) and (max-device-width: 768px) {
   .icon {
     font-size: 22px;
+  }
+  .liHover:hover .spanHover {
+    visibility: hidden;
+    font-size: 0px;
+    margin-left: 0px;
   }
 }
 
