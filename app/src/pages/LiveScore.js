@@ -1,12 +1,9 @@
-import Ronaldo from "../img/Ronaldo.webp";
-
 import { useState, useEffect } from "react";
 
 import Zoom from "react-reveal/Zoom";
 import AnimationPages from "../components/AnimatePages";
 
 import { Helmet } from "react-helmet";
-import styled from "styled-components";
 import AsideLiveScore from "../components/AsideLiveScore";
 
 import PulseLoader from "react-spinners/PulseLoader";
@@ -24,15 +21,6 @@ const override = css`
   transform: translate(-50%, -50%);
 `;
 
-const ScoreA = ({ home_scorer, time }) => {
-  return (
-    <>
-      {/* <p>{home_scorer}</p>
-      <p>{time}</p> */}
-    </>
-  );
-};
-
 const ScoreElement = ({
   match_awayteam_name,
   match_hometeam_name,
@@ -40,7 +28,6 @@ const ScoreElement = ({
   match_hometeam_score,
   team_away_badge,
   team_home_badge,
-  DetailsELement,
   goalScorer,
   cards,
 }) => {
@@ -55,7 +42,7 @@ const ScoreElement = ({
 
   return (
     <>
-      <div className="title-box"></div>
+      {/* <div className="title-box"></div> */}
       <div className="title-box">
         <div className="team">
           <img
@@ -65,24 +52,22 @@ const ScoreElement = ({
             loading="lazy"
           />
           <p className="nameTeam">{match_hometeam_name}</p>
-          {/* <p>{DetailsELement}</p> */}
-          <div>
+
+          <div className="goalScorerContainer">
             {goals
               .filter((i) => i.type === "home")
               .map((i) => (
-                <>
-                  <p>
-                    {i.time + " '"} {i.name ? i.name : "Unknown"}
+                <div className="goalScorer">
+                  <p className="haha">
+                    {i.time + " '"}
+                    {i.name ? i.name : "Unknown"}
                   </p>
-                  {/* <p>{i.name ? i.name : "Unknown"}</p> */}
-                </>
+                </div>
               ))}
             {cards
               .filter((i) => i.home_fault)
               .map((i) => (
-                <p>
-                  {i.card} - {i.home_fault} {i.time + " '"}
-                </p>
+                <p>{/* {i.card} - {i.home_fault} {i.time + " '"} */}</p>
               ))}
           </div>
         </div>
@@ -99,23 +84,22 @@ const ScoreElement = ({
             loading="lazy"
           />
           <p className="nameTeam">{match_awayteam_name}</p>
-          <div>
+
+          <div className="goalScorerContainer">
             {goals
               .filter((i) => i.type === "away")
               .map((i) => (
-                <>
-                  <p>
-                    {i.time + " '"} {i.name ? i.name : "Unknown"}
+                <div className="goalScorer">
+                  <p className="haha">
+                    {i.time + " '"}
+                    {i.name ? i.name : "Unknown"}
                   </p>
-                  {/* <p>{i.name ? i.name : "Unknown"}</p> */}
                   {cards
                     .filter((i) => i.away_fault)
                     .map((i) => (
-                      <p>
-                        {i.card} {i.away_fault} {i.time + " '"}
-                      </p>
+                      <p>{/* {i.card} - {i.away_fault} {i.time + " '"} */}</p>
                     ))}
-                </>
+                </div>
               ))}
           </div>
         </div>
@@ -162,7 +146,7 @@ const LiveScore = () => {
             liveScoreState?.map((item, index) => (
               <Zoom duration={700} delay={100}>
                 <ScoreElement
-                  key={item}
+                  key={index}
                   className="matches-table"
                   match_awayteam_name={item.match_awayteam_name}
                   match_hometeam_name={item.match_hometeam_name}
@@ -190,14 +174,5 @@ const LiveScore = () => {
     </>
   );
 };
-
-const Wrapper = styled.div`
-  /* position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
-`;
 
 export default LiveScore;

@@ -7,7 +7,6 @@ import { IoFootball } from "react-icons/io5";
 
 import { IoPeopleSharp } from "react-icons/io5";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import { useState } from "react";
 
 const Ul = styled.ul`
   list-style: none;

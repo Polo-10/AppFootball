@@ -4,8 +4,6 @@ import styles from "../style/mainPage/card.module.scss";
 
 import Zoom from "react-reveal/Zoom";
 import Bounce from "react-reveal/Bounce";
-import HeadShake from "react-reveal/Bounce";
-import AnimationPages from "../components/AnimatePages";
 
 const Card = () => {
   const navigate = useNavigate();

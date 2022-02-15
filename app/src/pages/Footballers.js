@@ -17,7 +17,6 @@ import { RiCloseCircleLine } from "react-icons/ri";
 
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
-import { useAudio } from "react-use";
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
 // const API = `/sport/football/player/search?api_key=${API_KEY}`;
@@ -115,12 +114,6 @@ const Footballers = () => {
   const [footballers, SetFootballers] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [error, setError] = useState(false);
-
-  // const [audio, state, controls, ref] = useAudio({
-  //   src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-  //   autoPlay: false,
-  // });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();

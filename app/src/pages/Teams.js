@@ -112,7 +112,6 @@ const Teams = () => {
   const [teams, setTeams] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [error, setError] = useState(false);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();

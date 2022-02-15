@@ -1,5 +1,4 @@
 import React from "react";
-import HamburgerMenu from "./components/Nav/NavBar";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./components/Nav/NavBar";

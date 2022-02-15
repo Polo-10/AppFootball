@@ -25,3 +25,9 @@
   padding: 0 60px 10px 0;
   user-select: none;
 }
+
+@media (max-device-width: 480px) {
+  .stylesContainer2 {
+    display: none;
+  }
+}
