@@ -90,13 +90,266 @@
 
 // MOBILE DEVICE
 
-@media screen and (min-device-width: 1280px) and (max-device-width: 1440px) and (orientation: landscape) {
+// @media screen and (min-device-width: 1280px) and (max-device-width: 1440px) and (orientation: landscape) {
+//   .card img {
+//     padding-left: 25px;
+//   }
+// }
+
+// @media screen and (min-device-width: 1024px) and (max-device-width: 1279px) and (orientation: landscape) {
+//   .card {
+//     height: 21em;
+//     width: 21em;
+//   }
+
+//   .card img {
+//   }
+//   .containerDetails {
+//     // margin-top: 3.5em;
+//     // padding-top: 3.5em;
+//     // padding: 4.9em 0.75em;
+//     // align-self: flex-start;
+//     margin-bottom: 1em;
+//   }
+//   .text {
+//     // margin-top: 1em;
+//     font-size: 31px;
+//     // padding: 10px;
+//     padding-bottom: 1em;
+//   }
+//   .lorem {
+//     font-size: 21px;
+//     padding: 10px;
+//     margin-bottom: 1.5em;
+//   }
+//   .liveScore {
+//     width: 40%;
+//     font-size: 18px;
+//     // margin-left: 0px;
+//     // margin-bottom: 1em;
+//   }
+//   .liveScore:hover {
+//     margin-left: inherit;
+//   }
+// }
+
+// @media screen and (max-device-width: 1023px) and (orientation: landscape) {
+//   .card {
+//     height: 21em;
+//     width: 21em;
+//     // width: 80%;
+//     // display: none;
+//   }
+//   .card img {
+//     padding-left: 0px;
+//     // height: 8em;
+//     // width: 8em;
+//   }
+//   .containerDetails {
+//     width: 24em;
+//     // padding: 0px 10px;
+//     margin-bottom: 0em;
+//   }
+//   .text {
+//     // margin-top: 1em;
+//     font-size: 25px;
+//     // padding: 10px;
+//     // padding-bottom: 1em;
+//   }
+//   .lorem {
+//     font-size: 22px;
+//     padding: 10px;
+//     margin-bottom: 1em;
+//   }
+//   .liveScore {
+//     // width: 40%;
+//     font-size: 18px;
+//     // margin-left: 0px;
+//     // margin-bottom: 1em;
+//   }
+//   .liveScore:hover {
+//     margin-left: inherit;
+//   }
+// }
+
+// @media screen and (min-device-width: 769px) and (max-device-width: 815px) {
+//   .container {
+//     // display: none;
+//     // width: 80%;
+//     // top: 30em;
+//     // left: 8.3em;
+//   }
+
+//   .card {
+//     width: 16em;
+//     height: 16em;
+//   }
+//   .card img {
+//     padding-left: 0em;
+//   }
+//   .containerDetails {
+//     // width: 25em;
+//     flex-direction: column;
+//     // width: 230px;
+//     width: 16em;
+//     // height: 20em;
+//     padding: 1em 0 0 0;
+//     // align-self: center;
+//     margin-bottom: 2em;
+//   }
+
+//   .text {
+//     // padding: 5px;
+//     // padding-bottom: 10px;
+//     font-size: 22px;
+//     // padding: 10px;
+//     padding-bottom: 1em;
+//   }
+//   .lorem {
+//     // width: 250px;
+//     width: 16em;
+//     padding: 10px;
+//     // margin-bottom: 20px;
+//     margin-bottom: 0.5em;
+//     font-size: 14px;
+//   }
+
+//   .liveScore {
+//     margin-left: 9px;
+//     width: 50%;
+//     padding: 4px 0;
+//     font-size: 16px;
+//   }
+//   .liveScore:hover {
+//     margin-left: 0;
+//   }
+// }
+
+// @media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+//   .container {
+//     // display: none;
+//     // width: 80%;
+//     // top: 30em;
+//     // left: 8.3em;
+//   }
+
+//   .card {
+//     width: 16em;
+//     height: 16em;
+//   }
+//   .card img {
+//     padding-left: 0em;
+//   }
+//   .containerDetails {
+//     // width: 25em;
+//     flex-direction: column;
+//     // width: 230px;
+//     width: 16em;
+//     // height: 20em;
+//     padding: 1em 0 0 0;
+//     // align-self: center;
+//     margin-bottom: 2em;
+//   }
+
+//   .text {
+//     // padding: 5px;
+//     // padding-bottom: 10px;
+//     font-size: 22px;
+//     // padding: 10px;
+//     padding-bottom: 1em;
+//   }
+//   .lorem {
+//     // width: 250px;
+//     width: 16em;
+//     padding: 10px;
+//     // margin-bottom: 20px;
+//     margin-bottom: 0.5em;
+//     font-size: 14px;
+//   }
+
+//   .liveScore {
+//     margin-left: 9px;
+//     width: 50%;
+//     padding: 4px 0;
+//     font-size: 16px;
+//   }
+//   .liveScore:hover {
+//     margin-left: 0;
+//   }
+// }
+
+// @media screen and (max-device-width: 480px) {
+//   .container {
+//     // display: none;
+//     // width: 80%;
+//     flex-direction: column;
+//     top: 24em;
+//     left: 34.5%;
+
+//     // top: 70%;
+//     // left: 50%;
+//     // transform: translate(-50%, -70%);
+//   }
+
+//   .card {
+//     width: 14em;
+//     height: 14em;
+//     border-radius: 0 10px 10px 0;
+//     // background: none;
+//   }
+//   .card img {
+//     // padding-left: 18px;
+//     padding-left: 0em;
+//   }
+//   .containerDetails {
+//     width: 14em;
+//     padding: 1em 0 0 0;
+//     // padding: 0px 10px;
+//     // align-self: center;
+//     // flex-direction: column;
+//     margin-bottom: 0em;
+//   }
+
+//   .text {
+//     // margin-top: 1em;
+//     font-size: 18px;
+//     padding: 0px;
+//     padding-bottom: 1.2em;
+//   }
+//   .lorem {
+//     // width: 14em;
+//     font-size: 14px;
+//     padding: 1px;
+//     margin-bottom: 1.2em;
+//   }
+//   .liveScore {
+//     // margin-left: 8px;
+//     width: 100%;
+//     padding: 4px 0;
+//     font-size: 16px;
+//     margin-left: 0px;
+//   }
+//   .liveScore:hover {
+//     margin-left: 0;
+//   }
+// }
+
+//@at-root/
+
+//
+//
+//
+//
+//
+//
+
+@media (min-device-width: 1280px) and (max-device-width: 1440px) {
   .card img {
     padding-left: 25px;
   }
 }
 
-@media screen and (min-device-width: 1024px) and (max-device-width: 1279px) and (orientation: landscape) {
+@media (min-device-width: 1024px) and (max-device-width: 1279px) {
   .card {
     height: 21em;
     width: 21em;
@@ -133,7 +386,7 @@
   }
 }
 
-@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+@media (max-device-width: 1023px) {
   .card {
     height: 21em;
     width: 21em;
@@ -172,7 +425,7 @@
   }
 }
 
-@media screen and (min-device-width: 769px) and (max-device-width: 815px) {
+@media (min-device-width: 769px) and (max-device-width: 815px) {
   .container {
     // display: none;
     // width: 80%;
@@ -225,7 +478,7 @@
   }
 }
 
-@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+@media (min-device-width: 480px) and (max-device-width: 768px) {
   .container {
     // display: none;
     // width: 80%;
@@ -278,12 +531,12 @@
   }
 }
 
-@media screen and (max-device-width: 480px) {
+@media (max-device-width: 480px) {
   .container {
     // display: none;
     // width: 80%;
     flex-direction: column;
-    top: 24em;
+    top: 23em;
     left: 34.5%;
 
     // top: 70%;

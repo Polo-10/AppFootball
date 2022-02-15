@@ -12,14 +12,13 @@ import { useState } from "react";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
-  /* flex-flow: row nowrap; */
+  flex-flow: row nowrap;
   border-radius: 20px 0 0 20px;
   padding-left: 20px;
   user-select: none;
   padding-top: 200px;
   position: fixed;
   background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
-  position: fixed;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   top: 0;
   right: 0;
@@ -52,15 +51,48 @@ const Ul = styled.ul`
   }
 
   @media screen and (max-device-width: 480px) {
-    width: 160px;
+    width: 140px;
     li {
-      margin-top: 100px;
+      margin-top: 95px;
       padding: 1px 0px;
     }
     a {
-      font-size: 19px;
+      font-size: 16px;
     }
   }
+
+  @media (min-device-width: 480px) and (max-device-width: 768px) {
+    width: 160px;
+    li {
+      margin-top: 110px;
+      padding: 1px 0px;
+    }
+    a {
+      font-size: 18px;
+    }
+  }
+  @media (min-device-width: 769px) and (max-device-width: 1024px) {
+    width: 200px;
+    li {
+      margin-top: 110px;
+      padding: 1px 0px;
+    }
+    a {
+      font-size: 22px;
+    }
+  }
+
+  @media (min-device-width: 1280px) and (max-device-width: 1440px) {
+    /* width: 200px; */
+    li {
+      margin-top: 110px;
+      padding: 1px 0px;
+    }
+    a {
+      font-size: 23px;
+    }
+  }
+
   /* @media (max-width: 3000px) {
     background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
     position: fixed;

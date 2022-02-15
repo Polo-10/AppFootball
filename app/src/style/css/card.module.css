@@ -102,13 +102,13 @@
   margin-left: 25px;
 }
 
-@media screen and (min-device-width: 1280px) and (max-device-width: 1440px) and (orientation: landscape) {
+@media (min-device-width: 1280px) and (max-device-width: 1440px) {
   .card img {
     padding-left: 25px;
   }
 }
 
-@media screen and (min-device-width: 1024px) and (max-device-width: 1279px) and (orientation: landscape) {
+@media (min-device-width: 1024px) and (max-device-width: 1279px) {
   .card {
     height: 21em;
     width: 21em;
@@ -134,7 +134,7 @@
   }
 }
 
-@media screen and (max-device-width: 1023px) and (orientation: landscape) {
+@media (max-device-width: 1023px) {
   .card {
     height: 21em;
     width: 21em;
@@ -162,7 +162,7 @@
   }
 }
 
-@media screen and (min-device-width: 769px) and (max-device-width: 815px) {
+@media (min-device-width: 769px) and (max-device-width: 815px) {
   .card {
     width: 16em;
     height: 16em;
@@ -200,7 +200,7 @@
   }
 }
 
-@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+@media (min-device-width: 480px) and (max-device-width: 768px) {
   .card {
     width: 16em;
     height: 16em;
@@ -238,13 +238,13 @@
   }
 }
 
-@media screen and (max-device-width: 480px) {
+@media (max-device-width: 480px) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 24em;
+    top: 23em;
     left: 34.5%;
   }
   .card {

@@ -27,11 +27,32 @@
   transition-property: none;
 }
 
-@media screen and (max-device-width: 480px) {
+@media (max-device-width: 480px) {
   .icon {
-    font-size: 20px;
+    font-size: 16px;
   }
   .liHover:hover .spanHover {
     visibility: hidden;
+  }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 768px) {
+  .icon {
+    font-size: 18px;
+  }
+  .liHover:hover .spanHover {
+    visibility: hidden;
+  }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 768px) {
+  .icon {
+    font-size: 22px;
+  }
+}
+
+@media (min-device-width: 1280px) and (max-device-width: 1440px) {
+  .icon {
+    font-size: 23px;
   }
 }

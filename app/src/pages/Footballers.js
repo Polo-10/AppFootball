@@ -19,8 +19,9 @@ import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
 import { useAudio } from "react-use";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API = `/sport/football/player/search?api_key=${API_KEY}`;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API = `/sport/football/player/search?api_key=${API_KEY}`;
+const API = `/sport/football/player/search?api_key=RDYNFf67jhOzXLHW`;
 
 const override = css`
   position: fixed;
