@@ -38,7 +38,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .stylesContainer2 {
     display: none;
   }
@@ -80,6 +80,26 @@
     max-width: 127%;
     max-height: 113%;
     padding: 0 30px 2px 30px;
+    user-select: none;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1880px) {
+  .stylesContainer2 {
+    top: 50%;
+    left: 11%;
+    transform: translate(-11%, -50%);
+  }
+
+  .ronaldo {
+    height: 370px;
+    width: 270px;
+  }
+
+  .ronaldo img {
+    max-width: 113%;
+    max-height: 143%;
+    padding: 0 27px 2px 30px;
     user-select: none;
   }
 }

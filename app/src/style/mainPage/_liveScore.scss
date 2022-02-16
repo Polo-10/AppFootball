@@ -408,3 +408,17 @@
     padding: 2px 0 2px 0;
   }
 }
+
+@media (min-width: 1441px) and (max-width: 1880px) {
+  .container2 {
+    width: 68%;
+    top: 70%;
+    left: 95%;
+    transform: translate(-95%, -70%);
+  }
+  .scoreBoard {
+    top: 5%;
+    left: 66%;
+    transform: translate(-66%, -5%);
+  }
+}
