@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
 }
 
-@media (max-device-width: 480px) {
+@media (max-width: 480px) {
   .container2 {
     width: 85%;
   }
@@ -187,7 +187,11 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 120px;
   }
   .scoreBoard {
-    display: none;
+    font-size: 20px;
+    top: 6%;
+    left: 52%;
+    -webkit-transform: translate(-52%, -6%);
+            transform: translate(-52%, -6%);
   }
   .team {
     width: 50px;
@@ -200,9 +204,19 @@ body::-webkit-scrollbar-thumb {
     font-size: 6px;
     padding-left: 0px;
     font-weight: 500;
+    width: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .score {
-    font-size: 9px;
+    font-size: 7px;
     margin-top: 53px;
   }
   .goalScorerContainer {
@@ -210,6 +224,142 @@ body::-webkit-scrollbar-thumb {
     margin-top: 20px;
     font-family: "Roboto Slab", serif;
     font-size: 6px;
+  }
+  .goalScorer {
+    padding: 2px 0 2px 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .container2 {
+    width: 92%;
+  }
+  .scoreBoard {
+    font-size: 24px;
+    top: 6%;
+    left: 51%;
+    -webkit-transform: translate(-51%, -6%);
+            transform: translate(-51%, -6%);
+  }
+  .title-box {
+    margin: 20px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    font-size: 10px;
+  }
+  .team {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+  }
+  .team {
+    width: 50px;
+  }
+  .team img {
+    height: 80px;
+    width: 80px;
+  }
+  .nameTeam {
+    font-size: 14px;
+    padding-left: 4px;
+    font-weight: 500;
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+  }
+  .score {
+    font-size: 16px;
+    margin-top: 93px;
+  }
+  .goalScorerContainer {
+    font-size: 10px;
+  }
+  .goalScorer {
+    padding: 2px 0 2px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container2 {
+    width: 92%;
+  }
+  .scoreBoard {
+    font-size: 24px;
+    top: 6%;
+    left: 51%;
+    -webkit-transform: translate(-51%, -6%);
+            transform: translate(-51%, -6%);
+  }
+  .title-box {
+    margin: 20px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    font-size: 10px;
+  }
+  .team {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+  }
+  .team {
+    width: 50px;
+  }
+  .team img {
+    height: 80px;
+    width: 80px;
+  }
+  .nameTeam {
+    font-size: 14px;
+    padding-left: 4px;
+    font-weight: 500;
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+  }
+  .score {
+    font-size: 16px;
+    margin-top: 93px;
+  }
+  .goalScorerContainer {
+    font-size: 10px;
   }
   .goalScorer {
     padding: 2px 0 2px 0;
@@ -1032,7 +1182,19 @@ body::-webkit-scrollbar-thumb {
           user-select: none;
 }
 
-@media (max-device-width: 480px) {
+@media (max-width: 480px) {
+  .stylesContainer2 {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .stylesContainer2 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .stylesContainer2 {
     display: none;
   }

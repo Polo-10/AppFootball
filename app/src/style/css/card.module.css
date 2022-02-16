@@ -102,13 +102,13 @@
   margin-left: 25px;
 }
 
-@media (min-device-width: 1280px) and (max-device-width: 1440px) {
+@media (min-width: 1280px) and (max-width: 1440px) {
   .card img {
     padding-left: 25px;
   }
 }
 
-@media (min-device-width: 1024px) and (max-device-width: 1279px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .card {
     height: 21em;
     width: 21em;
@@ -134,7 +134,7 @@
   }
 }
 
-@media (max-device-width: 1023px) {
+@media (max-width: 1023px) {
   .card {
     height: 21em;
     width: 21em;
@@ -162,7 +162,7 @@
   }
 }
 
-@media (min-device-width: 769px) and (max-device-width: 815px) {
+@media (min-width: 769px) and (max-width: 815px) {
   .card {
     width: 16em;
     height: 16em;
@@ -200,7 +200,7 @@
   }
 }
 
-@media (min-device-width: 480px) and (max-device-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .card {
     width: 16em;
     height: 16em;
@@ -238,7 +238,7 @@
   }
 }
 
-@media (max-device-width: 480px) {
+@media (max-width: 480px) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

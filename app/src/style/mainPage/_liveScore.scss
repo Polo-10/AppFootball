@@ -102,7 +102,7 @@
   // overflow-y: scroll;
 }
 
-@media (max-device-width: 480px) {
+@media (max-width: 480px) {
   .container2 {
     width: 85%;
   }
@@ -120,13 +120,19 @@
 
   .team {
     // width: 50px;
+    // padding: 10px 0 10px 0;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 20px;
     margin-bottom: 120px;
   }
   .scoreBoard {
-    display: none;
+    // display: none;
+    // margin: 3px 0 3px 0;
+    font-size: 20px;
+    top: 6%;
+    left: 52%;
+    transform: translate(-52%, -6%);
   }
   .team {
     width: 50px;
@@ -140,11 +146,13 @@
     font-size: 6px;
     padding-left: 0px;
     font-weight: 500;
-    // display: flex;
-    // justify-content: center;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .score {
-    font-size: 9px;
+    font-size: 7px;
     margin-top: 53px;
   }
 
@@ -160,5 +168,121 @@
   .goalScorer {
     padding: 2px 0 2px 0;
     // overflow-y: scroll;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .container2 {
+    width: 92%;
+  }
+  .scoreBoard {
+    font-size: 24px;
+    top: 6%;
+    left: 51%;
+    transform: translate(-51%, -6%);
+  }
+  .title-box {
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 10px;
+  }
+  .team {
+    // width: 50px;
+    // padding: 10px 0 10px 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+  }
+
+  .team {
+    width: 50px;
+  }
+  .team img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nameTeam {
+    font-size: 14px;
+    padding-left: 4px;
+    font-weight: 500;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .score {
+    font-size: 16px;
+    margin-top: 93px;
+  }
+  .goalScorerContainer {
+    font-size: 10px;
+  }
+  .goalScorer {
+    padding: 2px 0 2px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container2 {
+    width: 92%;
+  }
+  .scoreBoard {
+    font-size: 24px;
+    top: 6%;
+    left: 51%;
+    transform: translate(-51%, -6%);
+  }
+  .title-box {
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 10px;
+  }
+  .team {
+    // width: 50px;
+    // padding: 10px 0 10px 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+  }
+
+  .team {
+    width: 50px;
+  }
+  .team img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nameTeam {
+    font-size: 14px;
+    padding-left: 4px;
+    font-weight: 500;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .score {
+    font-size: 16px;
+    margin-top: 93px;
+  }
+  .goalScorerContainer {
+    font-size: 10px;
+  }
+  .goalScorer {
+    padding: 2px 0 2px 0;
   }
 }

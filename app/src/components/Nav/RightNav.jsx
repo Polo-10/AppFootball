@@ -49,7 +49,7 @@ const Ul = styled.ul`
     }
   }
 
-  @media screen and (max-device-width: 480px) {
+  @media (max-width: 480px) {
     width: 140px;
     li {
       margin-top: 90px;
@@ -59,7 +59,7 @@ const Ul = styled.ul`
     }
   }
 
-  @media (min-device-width: 480px) and (max-device-width: 768px) {
+  @media (min-width: 480px) and (max-width: 768px) {
     width: 160px;
     li {
       margin-top: 110px;
@@ -69,7 +69,7 @@ const Ul = styled.ul`
       font-size: 18px;
     }
   }
-  @media (min-device-width: 769px) and (max-device-width: 1024px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
     width: 200px;
     li {
       margin-top: 110px;
@@ -80,7 +80,7 @@ const Ul = styled.ul`
     }
   }
 
-  @media (min-device-width: 1280px) and (max-device-width: 1440px) {
+  @media (min-width: 1280px) and (max-width: 1440px) {
     /* width: 200px; */
     li {
       margin-top: 110px;
