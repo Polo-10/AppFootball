@@ -275,20 +275,136 @@
   }
 }
 
-@keyframes anvil {
-  0% {
-    transform: scale(1) translateY(0px);
-    opacity: 0;
-    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+// @keyframes anvil {
+//   0% {
+//     transform: scale(1) translateY(0px);
+//     opacity: 0;
+//     box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+//   }
+//   1% {
+//     transform: scale(0.96) translateY(10px);
+//     opacity: 0;
+//     box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+//   }
+//   100% {
+//     transform: scale(1) translateY(0px);
+//     opacity: 1;
+//     box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+//   }
+// }
+
+@media (max-width: 480px) {
+  .containerFormTeams {
+    text-align: center;
+    padding-top: 70px;
   }
-  1% {
-    transform: scale(0.96) translateY(10px);
-    opacity: 0;
-    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+
+  .searchTeamsText {
+    font-size: 25px;
   }
-  100% {
-    transform: scale(1) translateY(0px);
-    opacity: 1;
-    box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+
+  .teamsFootballers {
+    padding-top: 35px;
   }
+
+  .inputTeams {
+    margin: 0px 5px;
+    padding: 1px 0;
+    width: 250px;
+    font-size: 22px;
+  }
+
+  .buttonTeams {
+    width: 50px;
+    padding: 1px 0px;
+    font-size: 25px;
+  }
+
+  .TeamsSearch {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .TeamsIcon {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .flip-box-teams {
+    width: 250px;
+    height: 370px;
+  }
+  .modalPhoto-teams {
+    width: 180px;
+  }
+  .flip-box-back-teams {
+    width: 250px;
+    height: 370px;
+  }
+  .teams {
+    width: 8em;
+  }
+
+  .teamsName {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 25px 20px 0;
+  }
+
+  .TeamsName {
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  .teamsInfo {
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 0 8px 12px;
+    word-wrap: break-word;
+  }
+  .TeamsBoldTextInfo {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .closeModal {
+    top: 10%;
+    right: 12%;
+  }
+  .NotFoundTeams {
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: 120px;
+    text-align: center;
+    letter-spacing: 0em;
+    animation: typing_480 2s steps(55);
+    // z-index: 999;
+    width: 24em;
+    height: auto;
+  }
+  .check {
+    vertical-align: middle;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+  @keyframes typing_480 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  // .ContainerTeamsBig {
+  //   width: 250px;
+  // }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
 }

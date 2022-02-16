@@ -58,19 +58,23 @@ const TeamsElements = ({
       <Popup open={openTeams} onClose={closeModalTeams}>
         {(close) => (
           <div className="closeDivModal">
-            <button className="closeModal" onClick={close}>
-              <RiCloseCircleLine />
-            </button>
+            <Zoom duration={1000} delay={500}>
+              <button className="closeModal" onClick={close}>
+                <RiCloseCircleLine />
+              </button>
+            </Zoom>
             <div className="flip-box-teams">
               <div className="flip-box-inner-teams">
-                <div className="flip-box-front-teams">
-                  <img
-                    className="modalPhoto-teams"
-                    src={logo}
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
+                <Zoom duration={800} delay={200}>
+                  <div className="flip-box-front-teams">
+                    <img
+                      className="modalPhoto-teams"
+                      src={logo}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                </Zoom>
 
                 <div className="flip-box-back-teams">
                   <h1 className="TeamsName">{name}</h1>
