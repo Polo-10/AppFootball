@@ -43,3 +43,43 @@
     display: none;
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .stylesContainer2 {
+    top: 50%;
+    left: 11%;
+    transform: translate(-11%, -50%);
+  }
+
+  .ronaldo {
+    height: 310px;
+    width: 210px;
+  }
+
+  .ronaldo img {
+    max-width: 127%;
+    max-height: 113%;
+    padding: 0 30px 2px 30px;
+    user-select: none;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .stylesContainer2 {
+    top: 50%;
+    left: 11%;
+    transform: translate(-11%, -50%);
+  }
+
+  .ronaldo {
+    height: 310px;
+    width: 210px;
+  }
+
+  .ronaldo img {
+    max-width: 127%;
+    max-height: 113%;
+    padding: 0 30px 2px 30px;
+    user-select: none;
+  }
+}
