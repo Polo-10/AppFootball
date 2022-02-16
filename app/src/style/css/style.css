@@ -197,19 +197,19 @@ body::-webkit-scrollbar-thumb {
     width: 40px;
   }
   .nameTeam {
-    font-size: 9px;
+    font-size: 6px;
     padding-left: 0px;
     font-weight: 500;
   }
   .score {
-    font-size: 10px;
+    font-size: 9px;
     margin-top: 53px;
   }
   .goalScorerContainer {
     position: absolute;
     margin-top: 20px;
     font-family: "Roboto Slab", serif;
-    font-size: 7px;
+    font-size: 6px;
   }
   .goalScorer {
     padding: 2px 0 2px 0;

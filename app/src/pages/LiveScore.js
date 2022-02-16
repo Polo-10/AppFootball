@@ -58,7 +58,7 @@ const ScoreElement = ({
               .filter((i) => i.type === "home")
               .map((i) => (
                 <div className="goalScorer">
-                  <p className="haha">
+                  <p className="result">
                     {i.time + " '"}
                     {i.name ? i.name : "Unknown"}
                   </p>
@@ -90,7 +90,7 @@ const ScoreElement = ({
               .filter((i) => i.type === "away")
               .map((i) => (
                 <div className="goalScorer">
-                  <p className="haha">
+                  <p className="result">
                     {i.time + " '"}
                     {i.name ? i.name : "Unknown"}
                   </p>
