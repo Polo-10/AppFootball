@@ -11,6 +11,7 @@ import { RiCloseCircleLine } from "react-icons/ri";
 import { CgSearchFound } from "react-icons/cg";
 
 import Zoom from "react-reveal/Zoom";
+import Flash from "react-reveal/Flash";
 
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
@@ -58,7 +59,7 @@ const TeamsElements = ({
       <Popup open={openTeams} onClose={closeModalTeams}>
         {(close) => (
           <div className="closeDivModal">
-            <Zoom duration={1000} delay={500}>
+            <Zoom duration={1000} delay={600}>
               <button className="closeModal" onClick={close}>
                 <RiCloseCircleLine />
               </button>
@@ -221,10 +222,12 @@ const Teams = () => {
               </Zoom>
             ))
           ) : (
-            <div className="NotFoundTeams">
-              No data available, check the name of the entered team
-              <CgSearchFound className="check" />
-            </div>
+            <Flash duration={1000} delay={100}>
+              <div className="NotFoundTeams">
+                No data available, check the name of the entered team
+                <CgSearchFound className="check" />
+              </div>
+            </Flash>
           ))
         )}
       </div>
