@@ -95,6 +95,7 @@
           user-select: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-family: "Roboto Slab", serif;
 }
 
 .liveScore:hover {
