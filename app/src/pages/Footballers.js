@@ -18,9 +18,9 @@ import { RiCloseCircleLine } from "react-icons/ri";
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
 
-// const API_KEY = process.env.REACT_APP_API_KEY;
-// const API = `/sport/football/player/search?api_key=${API_KEY}`;
-const API = `/sport/football/player/search?api_key=RDYNFf67jhOzXLHW`;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API = `/sport/football/player/search?api_key=${API_KEY}`;
+// const API = `/sport/football/player/search?api_key=eTqEtWk5BjBqlKOS`;
 
 const override = css`
   position: fixed;
@@ -119,8 +119,6 @@ const Footballers = () => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
 
-    // setError(false);
-
     if (searchValue >= 0) {
       alert("ENTER THE NAME OF THE PLAYER");
       return false;
@@ -193,12 +191,8 @@ const Footballers = () => {
             value={searchValue}
             type="text"
           />
-          {/* {audio} */}
-          <button
-            // onClick={controls.play}
-            className="buttonFootballers"
-            type="submit"
-          >
+
+          <button className="buttonFootballers" type="submit">
             <span className="TeamsSearch">
               <BiSearchAlt2 />
             </span>

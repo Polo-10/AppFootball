@@ -4,8 +4,6 @@ const AnimationPages = ({ children }) => {
   const pageVariants = {
     initial: {
       opacity: 0,
-      // yield: "-100vw",
-      // scale: 0.8,
     },
     in: {
       opacity: 1,
@@ -15,7 +13,6 @@ const AnimationPages = ({ children }) => {
     out: {
       opacity: 0,
       y: "100vw",
-      // scale: 1.2,
     },
   };
 
@@ -26,13 +23,8 @@ const AnimationPages = ({ children }) => {
     delay: 0.2,
   };
 
-  const pageStyle = {
-    // position: "relative",
-  };
-
   return (
     <motion.div
-      style={pageStyle}
       initial="initial"
       animate="in"
       exit={{ opacity: 0 }}

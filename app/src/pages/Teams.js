@@ -19,9 +19,9 @@ import { css } from "@emotion/react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
-// const API_KEY = process.env.REACT_APP_API_KEY;
-// const API = `/sport/football/team/search?api_key=${API_KEY}`;
-const API = `/sport/football/team/search?api_key=RDYNFf67jhOzXLHW`;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API = `/sport/football/team/search?api_key=${API_KEY}`;
+// const API = `/sport/football/team/search?api_key=eTqEtWk5BjBqlKOS`;
 
 const override = css`
   position: fixed;
@@ -121,8 +121,6 @@ const Teams = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue((prevState) => (prevState = ""));
-
-    // setError(false);
 
     if (searchValue >= 0) {
       alert(" ENTER A TEAM NAME");

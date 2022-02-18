@@ -1,5 +1,4 @@
 export default function func(goals) {
-  // console.log(goals);
   const scors = goals.map((item) => item.score.split(" - ").map(Number));
   let result = [];
   for (let i = 0; i < scors.length; i++) {
