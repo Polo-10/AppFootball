@@ -6,7 +6,6 @@ const Cursor = () => {
       <AnimatedCursor
         innerSize={1}
         outerSize={1}
-        // color="99, 137, 247"
         outerAlpha={1}
         innerScale={1}
         outerScale={1}

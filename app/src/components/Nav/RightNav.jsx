@@ -26,7 +26,6 @@ const Ul = styled.ul`
   padding-top: 3.5rem;
   transition: transform 0.3s ease-in-out;
   cursor: none;
-  /* z-index: 999; */
   cursor: none;
   li {
     margin-top: 140px;
@@ -38,10 +37,8 @@ const Ul = styled.ul`
     cursor: none;
     color: white;
     font-size: 25px;
-    /* padding-top: 55px; */
     cursor: none;
     z-index: 999;
-    /* padding-left: 10px; */
     a {
       text-decoration: none;
       color: white;
@@ -81,7 +78,6 @@ const Ul = styled.ul`
   }
 
   @media (min-width: 1280px) and (max-width: 1440px) {
-    /* width: 200px; */
     li {
       margin-top: 110px;
       padding: 1px 0px;
@@ -90,29 +86,6 @@ const Ul = styled.ul`
       font-size: 23px;
     }
   }
-
-  /* @media (max-width: 3000px) {
-    background: linear-gradient(132.02deg, #1d7859 15%, #1d1e2c 86.7%);
-    position: fixed;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 222px;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
-    cursor: none;
-
-    li {
-      color: #fff;
-      cursor: none;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-      cursor: none;
-    }
-  } */
 `;
 
 const RightNav = ({ open, setOpen }) => {

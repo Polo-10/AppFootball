@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow-x: hidden;
-  // overflow-y: hidden;
 }
 
 body {
@@ -11,7 +9,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
-  // overflow-y: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -20,17 +17,10 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  // border-radius: 10px;
   background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-  // border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #1d4c43;
 }
-
-// .Wrapper {
-//   width: 100%;
-//   min-height: 100%;
-// }

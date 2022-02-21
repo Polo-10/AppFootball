@@ -13,13 +13,8 @@
   justify-content: center;
   position: relative;
   border-radius: 10px;
-  // height: 450px;
-  // width: 450px;
   height: 28em;
   width: 28em;
-  // height: 55%;
-  // width: 55%;
-
   background: linear-gradient(
     132.02deg,
     rgba(178, 76, 99, 0.989229) 15%,
@@ -27,10 +22,8 @@
   );
 }
 .card img {
-  // margin: 0 auto;
   max-width: 100%;
   max-height: 113%;
-  // padding-left: 45px;
   padding-left: 3em;
   user-select: none;
 }
@@ -38,9 +31,7 @@
 .containerDetails {
   display: flex;
   flex-direction: column;
-  // width: 450px;
   width: 28em;
-  // padding: 55px 10px;
   padding: 2.9em 0.75em;
   align-self: flex-end;
   user-select: none;
@@ -60,7 +51,6 @@
   color: white;
   margin-bottom: 50px;
   user-select: none;
-  // text-transform: uppercase;
   font-family: "Roboto Slab", serif;
 }
 
@@ -68,15 +58,12 @@
   width: 42%;
   font-size: 22px;
   line-height: 140.62%;
-  // padding: 13px 41px;
   background: #1d7874;
   outline: 0;
   border: 0;
   border-radius: 10px;
-  // white-space: nowrap;
   padding: 12px 0;
   margin-left: 10px;
-  // height: 55px;
   cursor: none;
   user-select: none;
   transition: 0.4s;
@@ -85,261 +72,6 @@
 .liveScore:hover {
   margin-left: 25px;
 }
-
-// MOBILE DEVICE
-
-// @media screen and (min-device-width: 1280px) and (max-device-width: 1440px) and (orientation: landscape) {
-//   .card img {
-//     padding-left: 25px;
-//   }
-// }
-
-// @media screen and (min-device-width: 1024px) and (max-device-width: 1279px) and (orientation: landscape) {
-//   .card {
-//     height: 21em;
-//     width: 21em;
-//   }
-
-//   .card img {
-//   }
-//   .containerDetails {
-//     // margin-top: 3.5em;
-//     // padding-top: 3.5em;
-//     // padding: 4.9em 0.75em;
-//     // align-self: flex-start;
-//     margin-bottom: 1em;
-//   }
-//   .text {
-//     // margin-top: 1em;
-//     font-size: 31px;
-//     // padding: 10px;
-//     padding-bottom: 1em;
-//   }
-//   .lorem {
-//     font-size: 21px;
-//     padding: 10px;
-//     margin-bottom: 1.5em;
-//   }
-//   .liveScore {
-//     width: 40%;
-//     font-size: 18px;
-//     // margin-left: 0px;
-//     // margin-bottom: 1em;
-//   }
-//   .liveScore:hover {
-//     margin-left: inherit;
-//   }
-// }
-
-// @media screen and (max-device-width: 1023px) and (orientation: landscape) {
-//   .card {
-//     height: 21em;
-//     width: 21em;
-//     // width: 80%;
-//     // display: none;
-//   }
-//   .card img {
-//     padding-left: 0px;
-//     // height: 8em;
-//     // width: 8em;
-//   }
-//   .containerDetails {
-//     width: 24em;
-//     // padding: 0px 10px;
-//     margin-bottom: 0em;
-//   }
-//   .text {
-//     // margin-top: 1em;
-//     font-size: 25px;
-//     // padding: 10px;
-//     // padding-bottom: 1em;
-//   }
-//   .lorem {
-//     font-size: 22px;
-//     padding: 10px;
-//     margin-bottom: 1em;
-//   }
-//   .liveScore {
-//     // width: 40%;
-//     font-size: 18px;
-//     // margin-left: 0px;
-//     // margin-bottom: 1em;
-//   }
-//   .liveScore:hover {
-//     margin-left: inherit;
-//   }
-// }
-
-// @media screen and (min-device-width: 769px) and (max-device-width: 815px) {
-//   .container {
-//     // display: none;
-//     // width: 80%;
-//     // top: 30em;
-//     // left: 8.3em;
-//   }
-
-//   .card {
-//     width: 16em;
-//     height: 16em;
-//   }
-//   .card img {
-//     padding-left: 0em;
-//   }
-//   .containerDetails {
-//     // width: 25em;
-//     flex-direction: column;
-//     // width: 230px;
-//     width: 16em;
-//     // height: 20em;
-//     padding: 1em 0 0 0;
-//     // align-self: center;
-//     margin-bottom: 2em;
-//   }
-
-//   .text {
-//     // padding: 5px;
-//     // padding-bottom: 10px;
-//     font-size: 22px;
-//     // padding: 10px;
-//     padding-bottom: 1em;
-//   }
-//   .lorem {
-//     // width: 250px;
-//     width: 16em;
-//     padding: 10px;
-//     // margin-bottom: 20px;
-//     margin-bottom: 0.5em;
-//     font-size: 14px;
-//   }
-
-//   .liveScore {
-//     margin-left: 9px;
-//     width: 50%;
-//     padding: 4px 0;
-//     font-size: 16px;
-//   }
-//   .liveScore:hover {
-//     margin-left: 0;
-//   }
-// }
-
-// @media screen and (min-device-width: 480px) and (max-device-width: 768px) {
-//   .container {
-//     // display: none;
-//     // width: 80%;
-//     // top: 30em;
-//     // left: 8.3em;
-//   }
-
-//   .card {
-//     width: 16em;
-//     height: 16em;
-//   }
-//   .card img {
-//     padding-left: 0em;
-//   }
-//   .containerDetails {
-//     // width: 25em;
-//     flex-direction: column;
-//     // width: 230px;
-//     width: 16em;
-//     // height: 20em;
-//     padding: 1em 0 0 0;
-//     // align-self: center;
-//     margin-bottom: 2em;
-//   }
-
-//   .text {
-//     // padding: 5px;
-//     // padding-bottom: 10px;
-//     font-size: 22px;
-//     // padding: 10px;
-//     padding-bottom: 1em;
-//   }
-//   .lorem {
-//     // width: 250px;
-//     width: 16em;
-//     padding: 10px;
-//     // margin-bottom: 20px;
-//     margin-bottom: 0.5em;
-//     font-size: 14px;
-//   }
-
-//   .liveScore {
-//     margin-left: 9px;
-//     width: 50%;
-//     padding: 4px 0;
-//     font-size: 16px;
-//   }
-//   .liveScore:hover {
-//     margin-left: 0;
-//   }
-// }
-
-// @media screen and (max-device-width: 480px) {
-//   .container {
-//     // display: none;
-//     // width: 80%;
-//     flex-direction: column;
-//     top: 24em;
-//     left: 34.5%;
-
-//     // top: 70%;
-//     // left: 50%;
-//     // transform: translate(-50%, -70%);
-//   }
-
-//   .card {
-//     width: 14em;
-//     height: 14em;
-//     border-radius: 0 10px 10px 0;
-//     // background: none;
-//   }
-//   .card img {
-//     // padding-left: 18px;
-//     padding-left: 0em;
-//   }
-//   .containerDetails {
-//     width: 14em;
-//     padding: 1em 0 0 0;
-//     // padding: 0px 10px;
-//     // align-self: center;
-//     // flex-direction: column;
-//     margin-bottom: 0em;
-//   }
-
-//   .text {
-//     // margin-top: 1em;
-//     font-size: 18px;
-//     padding: 0px;
-//     padding-bottom: 1.2em;
-//   }
-//   .lorem {
-//     // width: 14em;
-//     font-size: 14px;
-//     padding: 1px;
-//     margin-bottom: 1.2em;
-//   }
-//   .liveScore {
-//     // margin-left: 8px;
-//     width: 100%;
-//     padding: 4px 0;
-//     font-size: 16px;
-//     margin-left: 0px;
-//   }
-//   .liveScore:hover {
-//     margin-left: 0;
-//   }
-// }
-
-//@at-root/
-
-//
-//
-//
-//
-//
-//
 
 @media (min-width: 1280px) and (max-width: 1440px) {
   .card img {
@@ -353,19 +85,11 @@
     width: 21em;
   }
 
-  .card img {
-  }
   .containerDetails {
-    // margin-top: 3.5em;
-    // padding-top: 3.5em;
-    // padding: 4.9em 0.75em;
-    // align-self: flex-start;
     margin-bottom: 1em;
   }
   .text {
-    // margin-top: 1em;
     font-size: 31px;
-    // padding: 10px;
     padding-bottom: 1em;
   }
   .lorem {
@@ -376,8 +100,6 @@
   .liveScore {
     width: 40%;
     font-size: 18px;
-    // margin-left: 0px;
-    // margin-bottom: 1em;
   }
   .liveScore:hover {
     margin-left: inherit;
@@ -388,24 +110,16 @@
   .card {
     height: 21em;
     width: 21em;
-    // width: 80%;
-    // display: none;
   }
   .card img {
     padding-left: 0px;
-    // height: 8em;
-    // width: 8em;
   }
   .containerDetails {
     width: 24em;
-    // padding: 0px 10px;
     margin-bottom: 0em;
   }
   .text {
-    // margin-top: 1em;
     font-size: 25px;
-    // padding: 10px;
-    // padding-bottom: 1em;
   }
   .lorem {
     font-size: 22px;
@@ -413,10 +127,7 @@
     margin-bottom: 1em;
   }
   .liveScore {
-    // width: 40%;
     font-size: 18px;
-    // margin-left: 0px;
-    // margin-bottom: 1em;
   }
   .liveScore:hover {
     margin-left: inherit;
@@ -424,13 +135,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 815px) {
-  .container {
-    // display: none;
-    // width: 80%;
-    // top: 30em;
-    // left: 8.3em;
-  }
-
   .card {
     width: 16em;
     height: 16em;
@@ -439,28 +143,19 @@
     padding-left: 0em;
   }
   .containerDetails {
-    // width: 25em;
     flex-direction: column;
-    // width: 230px;
     width: 16em;
-    // height: 20em;
     padding: 1em 0 0 0;
-    // align-self: center;
     margin-bottom: 2em;
   }
 
   .text {
-    // padding: 5px;
-    // padding-bottom: 10px;
     font-size: 22px;
-    // padding: 10px;
     padding-bottom: 1em;
   }
   .lorem {
-    // width: 250px;
     width: 16em;
     padding: 10px;
-    // margin-bottom: 20px;
     margin-bottom: 0.5em;
     font-size: 14px;
   }
@@ -477,13 +172,6 @@
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
-  .container {
-    // display: none;
-    // width: 80%;
-    // top: 30em;
-    // left: 8.3em;
-  }
-
   .card {
     width: 16em;
     height: 16em;
@@ -492,28 +180,19 @@
     padding-left: 0em;
   }
   .containerDetails {
-    // width: 25em;
     flex-direction: column;
-    // width: 230px;
     width: 16em;
-    // height: 20em;
     padding: 1em 0 0 0;
-    // align-self: center;
     margin-bottom: 2em;
   }
 
   .text {
-    // padding: 5px;
-    // padding-bottom: 10px;
     font-size: 22px;
-    // padding: 10px;
     padding-bottom: 1em;
   }
   .lorem {
-    // width: 250px;
     width: 16em;
     padding: 10px;
-    // margin-bottom: 20px;
     margin-bottom: 0.5em;
     font-size: 14px;
   }
@@ -531,50 +210,36 @@
 
 @media (max-width: 480px) {
   .container {
-    // display: none;
-    // width: 80%;
     flex-direction: column;
     top: 23em;
     left: 34.5%;
-
-    // top: 70%;
-    // left: 50%;
-    // transform: translate(-50%, -70%);
   }
 
   .card {
     width: 14em;
     height: 14em;
     border-radius: 0 10px 10px 0;
-    // background: none;
   }
   .card img {
-    // padding-left: 18px;
     padding-left: 0em;
   }
   .containerDetails {
     width: 14em;
     padding: 1em 0 0 0;
-    // padding: 0px 10px;
-    // align-self: center;
-    // flex-direction: column;
     margin-bottom: 0em;
   }
 
   .text {
-    // margin-top: 1em;
     font-size: 18px;
     padding: 0px;
     padding-bottom: 1.2em;
   }
   .lorem {
-    // width: 14em;
     font-size: 14px;
     padding: 1px;
     margin-bottom: 1.2em;
   }
   .liveScore {
-    // margin-left: 8px;
     width: 100%;
     padding: 4px 0;
     font-size: 16px;
