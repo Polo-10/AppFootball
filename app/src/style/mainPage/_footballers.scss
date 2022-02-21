@@ -283,3 +283,234 @@
     box-shadow: 0 0 500px rgba(241, 241, 241, 0);
   }
 }
+
+@media (max-width: 480px) {
+  .containerForm {
+    text-align: center;
+    padding-top: 70px;
+  }
+
+  .searchFootballersText {
+    font-size: 25px;
+  }
+
+  .formFootballers {
+    padding-top: 35px;
+  }
+
+  .inputFootballers {
+    margin: 0px 5px;
+    padding: 1px 0;
+    width: 240px;
+    font-size: 22px;
+  }
+
+  .buttonFootballers {
+    width: 45px;
+    padding: 1px 0px;
+    font-size: 22px;
+  }
+
+  .TeamsSearch {
+    font-size: 25px;
+    line-height: 22px;
+  }
+
+  .FootballersIcon {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .flip-box {
+    width: 250px;
+    height: 370px;
+  }
+  .modalPhoto {
+    width: 180px;
+  }
+  .flip-box-back {
+    width: 250px;
+    height: 370px;
+  }
+  .footballers {
+    width: 8em;
+  }
+
+  .FootballersName {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 25px 20px 0;
+  }
+
+  .FootballersName {
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  .footballersInfo {
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 0 8px 12px;
+    word-wrap: break-word;
+  }
+  .boldTextInfo {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .closeModalFootballers {
+    top: 10%;
+    right: 12%;
+  }
+
+  .containerFootballersBig {
+    width: 80%;
+  }
+
+  .NotFoundFootballers {
+    font-size: 14px;
+    white-space: normal;
+    letter-spacing: 0em;
+  }
+  .checkFootballers {
+    font-size: 19px;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .containerForm {
+    text-align: center;
+    padding-top: 70px;
+  }
+
+  .searchFootballersText {
+    font-size: 25px;
+  }
+
+  .formFootballers {
+    padding-top: 35px;
+  }
+
+  .inputFootballers {
+    margin: 0px 5px;
+    padding: 1px 0;
+    width: 240px;
+    font-size: 22px;
+  }
+
+  .buttonFootballers {
+    width: 45px;
+    padding: 1px 0px;
+    font-size: 22px;
+  }
+
+  .TeamsSearch {
+    font-size: 25px;
+    line-height: 22px;
+  }
+
+  .FootballersIcon {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .flip-box {
+    width: 250px;
+    height: 370px;
+  }
+  .modalPhoto {
+    width: 180px;
+  }
+  .flip-box-back {
+    width: 250px;
+    height: 370px;
+  }
+  .footballers {
+    width: 8em;
+  }
+
+  .FootballersName {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 25px 20px 0;
+  }
+
+  .FootballersName {
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  .footballersInfo {
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 0 8px 12px;
+    word-wrap: break-word;
+  }
+  .boldTextInfo {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .closeModalFootballers {
+    top: 10%;
+    right: 12%;
+  }
+
+  .containerFootballersBig {
+    width: 80%;
+  }
+
+  .NotFoundFootballers {
+    font-size: 14px;
+    white-space: normal;
+    letter-spacing: 0em;
+  }
+  .checkFootballers {
+    font-size: 19px;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .containerFootballersBig {
+    width: calc(100% - 230px);
+  }
+  .NotFoundFootballers {
+    font-size: 24px;
+    white-space: normal;
+    letter-spacing: 0em;
+  }
+  .checkFootballers {
+    font-size: 29px;
+    padding-bottom: 2px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .containerFootballersBig {
+    width: calc(100% - 230px);
+  }
+  .NotFoundFootballers {
+    font-size: 29px;
+    white-space: normal;
+    letter-spacing: 0em;
+  }
+  .checkFootballers {
+    font-size: 34px;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1880px) {
+  .NotFoundFootballers {
+    font-size: 29px;
+    white-space: normal;
+    letter-spacing: 0em;
+  }
+  .checkFootballers {
+    font-size: 34px;
+    padding-bottom: 2px;
+  }
+}

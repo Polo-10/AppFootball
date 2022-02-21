@@ -10,6 +10,7 @@ import "reactjs-popup/dist/index.css";
 
 import { GiSoccerKick } from "react-icons/gi";
 import Zoom from "react-reveal/Zoom";
+import Flash from "react-reveal/Flash";
 import { BiSearchAlt2 } from "react-icons/bi";
 
 import { CgSearchFound } from "react-icons/cg";
@@ -58,9 +59,11 @@ const FootballersElement = ({
       <Popup open={open} onClose={closeModal}>
         {(close) => (
           <div className="closeDivModalFootballers">
-            <button className="closeModalFootballers" onClick={close}>
-              <RiCloseCircleLine />
-            </button>
+            <Zoom duration={1000} delay={600}>
+              <button className="closeModalFootballers" onClick={close}>
+                <RiCloseCircleLine />
+              </button>
+            </Zoom>
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
@@ -227,10 +230,12 @@ const Footballers = () => {
               </Zoom>
             ))
           ) : (
-            <div className="NotFoundFootballers">
-              No data available, check the name of the entered footballers
-              <CgSearchFound className="checkFootballers" />
-            </div>
+            <Flash duration={1000} delay={100}>
+              <div className="NotFoundFootballers">
+                No data available, check the name of the entered footballers
+                <CgSearchFound className="checkFootballers" />
+              </div>
+            </Flash>
           ))
         )}
       </div>
