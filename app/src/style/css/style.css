@@ -617,7 +617,8 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
-  word-wrap: break-word;
+  line-height: 1.5em;
+  height: 3.5em;
 }
 
 .footballers {
@@ -1164,11 +1165,13 @@ body::-webkit-scrollbar-thumb {
 
 .teamsName {
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   padding: 0 0 20px 0;
   text-align: center;
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
+  line-height: 1.5em;
+  height: 3.5em;
 }
 
 .teams {
