@@ -19,9 +19,9 @@ import { RiCloseCircleLine } from "react-icons/ri";
 import CircleLoader from "react-spinners/CircleLoader";
 import { css } from "@emotion/react";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API = `/sport/football/player/search?api_key=${API_KEY}`;
-// const API = `/sport/football/player/search?api_key=eTqEtWk5BjBqlKOS`;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API = `/sport/football/player/search?api_key=${API_KEY}`;
+const API = `/sport/football/player/search?api_key=e6c1DVmtQicOO8lQ`;
 
 const override = css`
   position: fixed;

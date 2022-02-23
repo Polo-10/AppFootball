@@ -19,9 +19,9 @@ import { css } from "@emotion/react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API = `/sport/football/team/search?api_key=${API_KEY}`;
-// const API = `/sport/football/team/search?api_key=eTqEtWk5BjBqlKOS`;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API = `/sport/football/team/search?api_key=${API_KEY}`;
+const API = `/sport/football/team/search?api_key=e6c1DVmtQicOO8lQ`;
 
 const override = css`
   position: fixed;
