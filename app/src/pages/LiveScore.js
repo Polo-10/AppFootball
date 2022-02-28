@@ -29,6 +29,7 @@ const ScoreElement = ({
   team_away_badge,
   team_home_badge,
   goalScorer,
+  cards,
 }) => {
   const addDefaultImg = (e) => {
     e.target.src = "https://apiv3.apifootball.com/badges/1864_clipper.jpg";
@@ -59,6 +60,13 @@ const ScoreElement = ({
                   </p>
                 </div>
               ))}
+            {cards
+              .filter((i) => i.home_fault)
+              .map((i) => (
+                <p>
+                  {i.card} - {i.home_fault} {i.time + " '"}
+                </p>
+              ))}
           </div>
         </div>
 
@@ -84,6 +92,14 @@ const ScoreElement = ({
                     {i.time + " '"}
                     {i.name ? i.name : "Unknown"}
                   </p>
+                  {cards
+                    .filter((i) => i.away_fault)
+                    .map((i) => (
+                      <p>
+                        {/* {i.card} {i.away_fault} {i.time} */}
+                        {i.card} {i.away_fault} {i.time + "'"}
+                      </p>
+                    ))}
                 </div>
               ))}
           </div>
@@ -136,6 +152,7 @@ const LiveScore = () => {
                   team_away_badge={item.team_away_badge}
                   team_home_badge={item.team_home_badge}
                   goalScorer={item.goalscorer}
+                  cards={item.cards}
                 />
               </Zoom>
             ))
