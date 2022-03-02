@@ -158,7 +158,7 @@ const Teams = () => {
       .catch((err) => console.log(err));
   };
 
-  console.log(teams);
+  console.table(teams);
   return (
     <AnimationPages>
       <Helmet>

@@ -92,15 +92,16 @@ const ScoreElement = ({
                     {i.time + " '"}
                     {i.name ? i.name : "Unknown"}
                   </p>
-                  {cards
-                    .filter((i) => i.away_fault)
-                    .map((i) => (
-                      <p>
-                        {/* {i.card} {i.away_fault} {i.time} */}
-                        {i.card} {i.away_fault} {i.time + "'"}
-                      </p>
-                    ))}
                 </div>
+              ))}
+          </div>
+          <div className="goalScorerContainerCard">
+            {cards
+              .filter((i) => i.away_fault)
+              .map((i) => (
+                <p>
+                  {i.card} {i.away_fault} {i.time + "'"}
+                </p>
               ))}
           </div>
         </div>
@@ -123,12 +124,12 @@ const LiveScore = () => {
             setIsLoading(false);
           }, 1200);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => err);
 
     getData();
   }, []);
 
-  console.log(liveScoreState);
+  console.table(liveScoreState);
 
   return (
     <>
