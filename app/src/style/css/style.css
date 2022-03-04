@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .title-box {
-  margin: 25px 0;
+  margin: 57px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,18 +153,9 @@ body::-webkit-scrollbar-thumb {
 
 .goalScorerContainer {
   position: absolute;
-  margin-top: 11px;
+  margin-top: 5px;
   font-family: "Roboto Slab", serif;
-  font-size: 14px;
-  height: 4em;
-}
-
-.goalScorerContainerCard {
-  position: absolute;
-  margin-top: 51px;
-  font-family: "Roboto Slab", serif;
-  font-size: 14px;
-  height: 4em;
+  font-size: 13px;
 }
 
 @media (max-width: 480px) {
@@ -172,7 +163,7 @@ body::-webkit-scrollbar-thumb {
     width: 85%;
   }
   .title-box {
-    margin: 20px 0 0 0;
+    margin: 25px 0 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -231,12 +222,16 @@ body::-webkit-scrollbar-thumb {
   }
   .goalScorerContainer {
     position: absolute;
-    margin-top: 20px;
+    margin-top: 2px;
     font-family: "Roboto Slab", serif;
-    font-size: 6px;
+    font-size: 2px;
+    width: 27.1%;
   }
   .goalScorer {
-    padding: 2px 0 2px 0;
+    padding: 1px 0 1px 0;
+  }
+  .result {
+    font-size: 3px;
   }
 }
 
@@ -301,10 +296,24 @@ body::-webkit-scrollbar-thumb {
     margin-top: 93px;
   }
   .goalScorerContainer {
-    font-size: 10px;
+    font-size: 7px;
   }
   .goalScorer {
-    padding: 2px 0 2px 0;
+    padding: 1px 0 1px 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
+  .container2 {
+    top: 85%;
+    left: 68%;
+    -webkit-transform: translate(-68%, -85%);
+            transform: translate(-68%, -85%);
+    height: 78%;
+    width: 85%;
+  }
+  .goalScorerContainer {
+    font-size: 3px;
   }
 }
 
@@ -365,7 +374,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 12px;
   }
   .goalScorer {
-    padding: 2px 0 2px 0;
+    padding: 1px 0 1px 0;
   }
 }
 
@@ -564,7 +573,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-device-width: 480px) and (max-device-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .icon {
     font-size: 18px;
   }
@@ -575,7 +584,13 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-device-width: 480px) and (max-device-width: 768px) {
+@media (min-width: 480px) and (max-width: 700px) and (orientation: landscape) {
+  .icon {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
   .icon {
     font-size: 22px;
   }
@@ -586,7 +601,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-device-width: 1280px) and (max-device-width: 1440px) {
+@media (min-width: 1280px) and (max-width: 1440px) {
   .icon {
     font-size: 23px;
   }

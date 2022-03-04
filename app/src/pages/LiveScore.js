@@ -94,8 +94,6 @@ const ScoreElement = ({
                   </p>
                 </div>
               ))}
-          </div>
-          <div className="goalScorerContainerCard">
             {cards
               .filter((i) => i.away_fault)
               .map((i) => (

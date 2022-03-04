@@ -66,6 +66,16 @@ const Ul = styled.ul`
       font-size: 18px;
     }
   }
+  @media (min-width: 480px) and (max-width: 700px) and (orientation: landscape) {
+    width: 140px;
+    padding-top: 35px;
+    li {
+      margin-top: 15px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
   @media (min-width: 769px) and (max-width: 1024px) {
     width: 200px;
     li {
