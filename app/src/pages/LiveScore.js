@@ -12,7 +12,7 @@ import filterGoalScorers from "../components/filterGoalScorer";
 import CardLiveScore from "../components/CardLiveSCore";
 
 const url =
-  "https://apiv3.apifootball.com/?action=get_events&APIkey=602e5da902a40c1e77a26c8972fbbc7bf89e41abdcbd7a1eb18075887fcb0ebf&match_live=1";
+  "https://apiv3.apifootball.com/?action=get_events&APIkey=06d774710c49023b3451e09fd7344e697246571d05b5c4d813571e3019dc69fe&match_live=1";
 
 const override = css`
   position: fixed;
