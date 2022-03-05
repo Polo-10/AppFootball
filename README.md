@@ -14,7 +14,7 @@ The application allows you to view the current football games, search for teams 
 
 ## What did I use?
 - React JS
-- CSS
+- SCSS
 - Library for animation - Framer Motion
 
 ## Application video
