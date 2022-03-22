@@ -6,7 +6,6 @@
   align-content: stretch;
   align-items: center;
   margin: 80px auto;
-  // width: 80%;
   width: calc(100% - 444px);
   gap: 40px;
 }
@@ -329,16 +328,12 @@
   }
 
   .teamsInfo {
-    color: white;
-    font-family: "Roboto Slab", serif;
-    font-weight: 600;
     font-size: 16px;
     padding: 0 0 8px 12px;
     word-wrap: break-word;
   }
   .TeamsBoldTextInfo {
     font-size: 14px;
-    font-weight: bold;
     margin-right: 5px;
   }
   .closeModal {
@@ -424,16 +419,12 @@
   }
 
   .teamsInfo {
-    color: white;
-    font-family: "Roboto Slab", serif;
-    font-weight: 600;
     font-size: 16px;
     padding: 0 0 8px 12px;
     word-wrap: break-word;
   }
   .TeamsBoldTextInfo {
     font-size: 14px;
-    font-weight: bold;
     margin-right: 5px;
   }
   .closeModal {
